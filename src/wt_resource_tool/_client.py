@@ -1,4 +1,4 @@
-from typing import Literal, Optional
+from typing import Literal
 
 import httpx
 from pydantic import BaseModel, Field
@@ -11,6 +11,12 @@ type Store = Literal["memory"]
 
 
 class WTPlayerTitleTool(BaseModel):
+    """
+    A tool to get player title data
+
+    """
+
+    # TODO add more source like `local`, `mongodb` etc.
     store: Store = Field(default="memory")
 
     memory_storage: PlayerTitleStorage | None = Field(default=None)
