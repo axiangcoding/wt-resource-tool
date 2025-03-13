@@ -32,17 +32,13 @@ def parse_player_title() -> PlayerTitleStorage:
 
     all_titles: list[PlayerTitleDesc] = []
 
-    resp = httpx.get(
-        f"{resource_prefix}/regional.vromfs.bin_u/lang/regional_titles.csv"
-    )
+    resp = httpx.get(f"{resource_prefix}/regional.vromfs.bin_u/lang/regional_titles.csv")
     content = resp.text
 
     data = csv.DictReader(content.splitlines(), delimiter=";")
     all_titles.extend(_get_dt_from_csv(data))
 
-    resp = httpx.get(
-        f"{resource_prefix}/lang.vromfs.bin_u/lang/unlocks_achievements.csv"
-    )
+    resp = httpx.get(f"{resource_prefix}/lang.vromfs.bin_u/lang/unlocks_achievements.csv")
     content = resp.text
 
     data = csv.DictReader(content.splitlines(), delimiter=";")
@@ -72,11 +68,7 @@ if __name__ == "__main__":
     os.makedirs(latest_folder, exist_ok=True)
 
     json_content = pt_storage.model_dump_json(indent=2)
-    with open(
-        os.path.join(version_folder, "player_title.json"), "w", encoding="utf-8"
-    ) as f:
+    with open(os.path.join(version_folder, "player_title.json"), "w", encoding="utf-8") as f:
         f.write(json_content)
-    with open(
-        os.path.join(latest_folder, "player_title.json"), "w", encoding="utf-8"
-    ) as f:
+    with open(os.path.join(latest_folder, "player_title.json"), "w", encoding="utf-8") as f:
         f.write(json_content)
