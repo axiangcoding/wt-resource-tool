@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class TitleDesc(BaseModel):
+class PlayerTitleDesc(BaseModel):
     id: str
     english: str
     # french: str
@@ -28,6 +28,6 @@ class TitleDesc(BaseModel):
     max_chars: str
 
 
-class WTPlayerTitleStorage(BaseModel):
-    titles_map: dict[str, TitleDesc]
+class PlayerTitleStorage(BaseModel):
+    titles_map: dict[str, PlayerTitleDesc]
     game_version: str

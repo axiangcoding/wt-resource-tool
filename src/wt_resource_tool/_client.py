@@ -1,0 +1,54 @@
+from typing import Literal, Optional
+import httpx
+from pydantic import BaseModel, Field
+
+from wt_resource_tool._schema import PlayerTitleDesc, PlayerTitleStorage
+
+type PlayerTitleSource = Literal["github", "github-jsdelivr", "repo-mirror"]
+
+type Store = Literal["memory"]
+
+
+class WTPlayerTitleTool(BaseModel):
+    store: Store = Field(default="memory")
+
+    memory_storage: Optional[PlayerTitleStorage] = Field(default=None)
+
+    def load_data(
+        self,
+        source: PlayerTitleSource = "github",
+        source_repo_prefiix: Optional[str] = None,
+        store: Store = "memory",
+        game_version: str = "latest",
+    ):
+        game_version_str = game_version.replace(".", "_")
+        if source == "github":
+            resource_url = f"https://raw.githubusercontent.com/axiangcoding/wt-resource-tool/refs/heads/main/static/{game_version_str}/player_title.json"
+        elif source == "github-jsdelivr":
+            resource_url = f"https://cdn.jsdelivr.net/gh/axiangcoding/wt-resource-tool/static/{game_version_str}/player_title.json"
+        elif source == "repo-mirror":
+            if source_repo_prefiix is None:
+                raise ValueError("source_repo_prefiix is required")
+            resource_url = (
+                f"{source_repo_prefiix}/static/{game_version_str}/player_title.json"
+            )
+        else:
+            raise ValueError("Invalid source")
+        with httpx.Client(timeout=60) as client:
+            resp = client.get(resource_url)
+            resp.raise_for_status()
+            storage_text = resp.text
+        if store == "memory":
+            self.memory_storage = PlayerTitleStorage.model_validate_json(storage_text)
+        else:
+            raise ValueError("Invalid store")
+
+    def get_title(self, title_id: str) -> PlayerTitleDesc:
+        if self.memory_storage is None:
+            raise ValueError("No data loaded")
+        return self.memory_storage.titles_map[title_id]
+
+    def get_game_version(self) -> str:
+        if self.memory_storage is None:
+            raise ValueError("No data loaded")
+        return self.memory_storage.game_version

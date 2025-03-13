@@ -1,11 +1,11 @@
 import csv
 import os
 import httpx
-from wt_resource_tool._schema import TitleDesc, WTPlayerTitleStorage
+from wt_resource_tool._schema import PlayerTitleDesc, PlayerTitleStorage
 
 
-def _get_dt_from_csv(data: csv.DictReader) -> list[TitleDesc]:
-    titles: list[TitleDesc] = []
+def _get_dt_from_csv(data: csv.DictReader) -> list[PlayerTitleDesc]:
+    titles: list[PlayerTitleDesc] = []
     for row in data:
         row1 = row["<ID|readonly|noverify>"]
 
@@ -15,7 +15,7 @@ def _get_dt_from_csv(data: csv.DictReader) -> list[TitleDesc]:
             chinese = row["<Chinese>"].replace("\\t", "")
             russian = row["<Russian>"]
 
-            td = TitleDesc(
+            td = PlayerTitleDesc(
                 id=id,
                 english=english,
                 chinese=chinese,
@@ -27,10 +27,10 @@ def _get_dt_from_csv(data: csv.DictReader) -> list[TitleDesc]:
     return titles
 
 
-def parse_player_title() -> WTPlayerTitleStorage:
+def parse_player_title() -> PlayerTitleStorage:
     resource_prefix = "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/refs/heads/master"
 
-    all_titles: list[TitleDesc] = []
+    all_titles: list[PlayerTitleDesc] = []
 
     resp = httpx.get(
         f"{resource_prefix}/regional.vromfs.bin_u/lang/regional_titles.csv"
@@ -60,7 +60,7 @@ def parse_player_title() -> WTPlayerTitleStorage:
 
     game_version = httpx.get(f"{resource_prefix}/version").text
 
-    return WTPlayerTitleStorage(titles_map=title_map, game_version=game_version.strip())
+    return PlayerTitleStorage(titles_map=title_map, game_version=game_version.strip())
 
 
 if __name__ == "__main__":
