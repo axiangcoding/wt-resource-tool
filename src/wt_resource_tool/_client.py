@@ -15,7 +15,7 @@ class WTPlayerTitleTool(BaseModel):
 
     memory_storage: PlayerTitleStorage | None = Field(default=None)
 
-    def load_data(
+    async def load_data(
         self,
         source: PlayerTitleSource = "github",
         source_repo_prefiix: str | None = None,
@@ -35,8 +35,8 @@ class WTPlayerTitleTool(BaseModel):
             resource_url = f"{source_repo_prefiix}/static/{game_version_str}/player_title.json"
         else:
             raise ValueError("Invalid source")
-        with httpx.Client(timeout=60) as client:
-            resp = client.get(resource_url)
+        async with httpx.AsyncClient(timeout=60) as client:
+            resp = await client.get(resource_url)
             resp.raise_for_status()
             storage_text = resp.text
         if store == "memory":
@@ -44,12 +44,12 @@ class WTPlayerTitleTool(BaseModel):
         else:
             raise ValueError("Invalid store")
 
-    def get_title(self, title_id: str) -> PlayerTitleDesc:
+    async def get_title(self, title_id: str) -> PlayerTitleDesc:
         if self.memory_storage is None:
             raise ValueError("No data loaded")
         return self.memory_storage.titles_map[title_id]
 
-    def get_game_version(self) -> str:
+    async def get_game_version(self) -> str:
         if self.memory_storage is None:
             raise ValueError("No data loaded")
         return self.memory_storage.game_version
