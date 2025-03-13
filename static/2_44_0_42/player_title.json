@@ -1,0 +1,4517 @@
+{
+  "titles_map": {
+    "title_reconstructor": {
+      "id": "title_reconstructor",
+      "english": "Re-Enactor",
+      "russian": "Реконструктор",
+      "chinese": "传奇演绎者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_2v2_master": {
+      "id": "title_2v2_master",
+      "english": "2v2 Master-Duelist",
+      "russian": "Мастер-дуэлянт 2v2",
+      "chinese": "2v2 大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_vk_quiz_expert_16": {
+      "id": "title_vk_quiz_expert_16",
+      "english": "War Thunder Mastermind",
+      "russian": "Знаток War Thunder",
+      "chinese": "War Thunder 智多星",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_guardian": {
+      "id": "title_guardian",
+      "english": "Royal Guard",
+      "russian": "Гвардеец",
+      "chinese": "皇家卫队",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_russian_bias": {
+      "id": "title_russian_bias",
+      "english": "Master of Russian Bias",
+      "russian": "Master of Russian Bias",
+      "chinese": "苏维埃亲爹之力",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_defender_realm": {
+      "id": "title_defender_realm",
+      "english": "Defender of the Realm",
+      "russian": "Защитник Королевства",
+      "chinese": "国境守卫者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_steel_legion": {
+      "id": "title_steel_legion",
+      "english": "Steel Legion",
+      "russian": "Стальной Легион",
+      "chinese": "钢铁之心",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_iron_warrior": {
+      "id": "title_iron_warrior",
+      "english": "Iron Warrior",
+      "russian": "Железный Воин",
+      "chinese": "铁血勇士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_gladiators_2x2": {
+      "id": "title_gladiators_2x2",
+      "english": "Gladiators 2x2",
+      "russian": "Гладиаторы 2х2",
+      "chinese": "2v2 角斗士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_one_for_all": {
+      "id": "title_one_for_all",
+      "english": "One for All",
+      "russian": "Один за всех",
+      "chinese": "一骑当千",
+      "comments": "",
+      "max_chars": ""
+    },
+    "enlisted": {
+      "id": "enlisted",
+      "english": "Enlisted",
+      "russian": "Enlisted",
+      "chinese": "应征入伍",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_vaisravana": {
+      "id": "title_vaisravana",
+      "english": "Vaiśravaṇa",
+      "russian": "Вайшравана",
+      "chinese": "毗沙门天",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_brother_in_arms": {
+      "id": "title_brother_in_arms",
+      "english": "Brother in Arms",
+      "russian": "Брат по оружию",
+      "chinese": "浴血兄弟",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_combat_proven": {
+      "id": "title_combat_proven",
+      "english": "Combat Proven",
+      "russian": "Проверенный боец",
+      "chinese": "身经百战",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_faithful_warrior": {
+      "id": "title_faithful_warrior",
+      "english": "Faithful Warrior",
+      "russian": "Верный товарищ",
+      "chinese": "忠诚赞歌",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_old_guard": {
+      "id": "title_the_old_guard",
+      "english": "The Old Guard",
+      "russian": "Старая гвардия",
+      "chinese": "开路先锋",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_golden_legion": {
+      "id": "title_golden_legion",
+      "english": "Golden Legion",
+      "russian": "Золотой Легион",
+      "chinese": "黄金圣域",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_flaming_arrow": {
+      "id": "title_flaming_arrow",
+      "english": "Flaming Arrow",
+      "russian": "Огненная стрела",
+      "chinese": "烈焰穿云",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_panfilov": {
+      "id": "title_panfilov",
+      "english": "Panfilov's Guardsman",
+      "russian": "Панфиловец",
+      "chinese": "潘菲洛夫勇士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_soviet_tanker": {
+      "id": "title_soviet_tanker",
+      "english": "Soviet Tank Expert",
+      "russian": "Знаток советских танков",
+      "chinese": "苏联坦克大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_german_tanker": {
+      "id": "title_german_tanker",
+      "english": "German Tank Expert",
+      "russian": "Знаток немецких танков",
+      "chinese": "德国坦克大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_american_tanker": {
+      "id": "title_american_tanker",
+      "english": "American Tanks Expert",
+      "russian": "Знаток американских танков",
+      "chinese": "美国坦克大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_british_tanker": {
+      "id": "title_british_tanker",
+      "english": "British Tank Expert",
+      "russian": "Знаток британских танков",
+      "chinese": "英国坦克大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_japanese_tanker": {
+      "id": "title_japanese_tanker",
+      "english": "Japanese Tank Expert",
+      "russian": "Знаток японских танков",
+      "chinese": "日本坦克大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_soviet_hammer": {
+      "id": "title_soviet_hammer",
+      "english": "Soviet Hammer",
+      "russian": "Советский молот",
+      "chinese": "慈父之锤",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_youtube_cup_champion": {
+      "id": "title_youtube_cup_champion",
+      "english": "YouTube Cup Champion",
+      "russian": "Чемпион YouTube Cup",
+      "chinese": "YouTube 杯冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_firefront": {
+      "id": "title_firefront",
+      "english": "Fire Front",
+      "russian": "Огненный фронт",
+      "chinese": "烈火前线",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_legionnaire": {
+      "id": "title_legionnaire",
+      "english": "Legionnaire",
+      "russian": "Легионер",
+      "chinese": "军团战士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_centurion": {
+      "id": "title_centurion",
+      "english": "Centurion",
+      "russian": "Центурион",
+      "chinese": "百夫长",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_victorious": {
+      "id": "title_victorious",
+      "english": "Victorious",
+      "russian": "Победоносный",
+      "chinese": "胜券在握",
+      "comments": "",
+      "max_chars": ""
+    },
+    "tl_fan_dislike": {
+      "id": "tl_fan_dislike",
+      "english": "Dislike Team Fan",
+      "russian": "Фанат Dislike Team",
+      "chinese": "Dislike Team 队粉丝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "tl_fan_arcade": {
+      "id": "tl_fan_arcade",
+      "english": "Arcade eSports Fan",
+      "russian": "Фанат Arcade eSports",
+      "chinese": "Arcade eSports 队粉丝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "tl_fan_verve": {
+      "id": "tl_fan_verve",
+      "english": "Verve Team Fan",
+      "russian": "Фанат Verve",
+      "chinese": "Verve Team 队粉丝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "esport_fan_boisinhell": {
+      "id": "esport_fan_boisinhell",
+      "english": "BoisInHell Team Fan",
+      "russian": "Фанат BoisInHell Team",
+      "chinese": "BoisInHell 战队粉丝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "esport_fan_avres": {
+      "id": "esport_fan_avres",
+      "english": "AVReS Team Fan",
+      "russian": "Фанат AVReS Team",
+      "chinese": "AVReS 战队粉丝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "esport_fan_dodec": {
+      "id": "esport_fan_dodec",
+      "english": "DODEC Team Fan",
+      "russian": "Фанат DODEC Team",
+      "chinese": "DODEC 战队粉丝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "esport_fan_hide": {
+      "id": "esport_fan_hide",
+      "english": "Hide Team Fan",
+      "russian": "Фанат Hide Team",
+      "chinese": "Hide 战队粉丝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "esport_fan_rawr": {
+      "id": "esport_fan_rawr",
+      "english": "RAWR Team Fan",
+      "russian": "Фанат RAWR Team",
+      "chinese": "RAWR 战队粉丝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "esport_fan_letsgo": {
+      "id": "esport_fan_letsgo",
+      "english": "LetsGo Team Fan",
+      "russian": "Фанат LetsGo Team",
+      "chinese": "LetsGo 战队粉丝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "esport_fan_leet": {
+      "id": "esport_fan_leet",
+      "english": "LEET Team Fan",
+      "russian": "Фанат LEET Team",
+      "chinese": "LEET 战队粉丝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "esport_fan_restart": {
+      "id": "esport_fan_restart",
+      "english": "Restart Team Fan",
+      "russian": "Фанат Restart Team",
+      "chinese": "Restart 战队粉丝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "thunder_league": {
+      "id": "thunder_league",
+      "english": "Thunder League",
+      "russian": "Лига Грома",
+      "chinese": "雷霆联赛",
+      "comments": "",
+      "max_chars": ""
+    },
+    "thunder_league_stormer": {
+      "id": "thunder_league_stormer",
+      "english": "Stormer",
+      "russian": "Гром и молнии",
+      "chinese": "一往无前",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_superheavy": {
+      "id": "title_superheavy",
+      "english": "Superheavy",
+      "russian": "Сверхтяжёлый",
+      "chinese": "超重量级选手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_teutonic_giant": {
+      "id": "title_teutonic_giant",
+      "english": "Teutonic Giant",
+      "russian": "Стальной гигант",
+      "chinese": "条顿巨兽",
+      "comments": "",
+      "max_chars": ""
+    },
+    "mustache_general": {
+      "id": "mustache_general",
+      "english": "Moustached",
+      "russian": "Усатый",
+      "chinese": "我有胡子",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_incinerator": {
+      "id": "title_incinerator",
+      "english": "Incinerator",
+      "russian": "Испепеляющий",
+      "chinese": "焚烧殆尽",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_creating_the_game": {
+      "id": "title_creating_the_game",
+      "english": "Creating the Game",
+      "russian": "Я создаю игру",
+      "chinese": "属于我的游戏",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_rocketman": {
+      "id": "title_rocketman",
+      "english": "Rocketman",
+      "russian": "Rocketman",
+      "chinese": "火箭狂人",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_five_minutes_of_fame": {
+      "id": "title_five_minutes_of_fame",
+      "english": "Five Minutes of Fame",
+      "russian": "Минута славы",
+      "chinese": "值得纪念的五分钟",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_vengeance_from_above": {
+      "id": "title_vengeance_from_above",
+      "english": "Vengeance From Above",
+      "russian": "Пикирующее возмездие",
+      "chinese": "复仇之翼",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_baptized_by_fire": {
+      "id": "title_baptized_by_fire",
+      "english": "Baptized by Fire",
+      "russian": "Крещенный Огнем",
+      "chinese": "炮火洗礼",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_stiff_upperlipped": {
+      "id": "title_stiff_upperlipped",
+      "english": "Stiff Upperlipped",
+      "russian": "Невозмутимый",
+      "chinese": "处事不惊",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_fangs_of_steel": {
+      "id": "title_fangs_of_steel",
+      "english": "Fangs of Steel",
+      "russian": "Стальные Клыки",
+      "chinese": "披坚执锐",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_die_hard": {
+      "id": "title_die_hard",
+      "english": "Die Hard",
+      "russian": "Крепкий орешек",
+      "chinese": "至死方休",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_horrendous": {
+      "id": "title_horrendous",
+      "english": "Horrendous",
+      "russian": "Вселяющий Ужас",
+      "chinese": "毛骨悚然",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_daredevil": {
+      "id": "title_daredevil",
+      "english": "Daredevil",
+      "russian": "Сорвиголова",
+      "chinese": "胆大妄为",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_follow_me": {
+      "id": "title_follow_me",
+      "english": "Follow me, comrades!",
+      "russian": "За мной, товарищи!",
+      "chinese": "同志们，跟我来！",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_thick_skinned": {
+      "id": "title_thick_skinned",
+      "english": "Thick-Skinned",
+      "russian": "Толстокожий",
+      "chinese": "铁石心肠",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_quiz_mastermind": {
+      "id": "title_quiz_mastermind",
+      "english": "War Thunder Mastermind",
+      "russian": "Знаток War Thunder",
+      "chinese": "War Thunder 智多星",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_battering_ram": {
+      "id": "title_battering_ram",
+      "english": "Battering Ram",
+      "russian": "Пробивной",
+      "chinese": "攻城锤",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_beyond_reproach": {
+      "id": "title_beyond_reproach",
+      "english": "Beyond Reproach",
+      "russian": "Безупречный",
+      "chinese": "完美无瑕",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_hot_shot": {
+      "id": "title_hot_shot",
+      "english": "Hot Shot",
+      "russian": "Горячая голова",
+      "chinese": "炽烈弹丸",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_slasher": {
+      "id": "title_slasher",
+      "english": "Slasher",
+      "russian": "Кромсатель",
+      "chinese": "杀人魔",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_musketeer": {
+      "id": "title_musketeer",
+      "english": "Musketeer",
+      "russian": "Мушкетер",
+      "chinese": "火枪手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_desert_wolf": {
+      "id": "title_desert_wolf",
+      "english": "Desert Wolf",
+      "russian": "Пустынный волк",
+      "chinese": "沙漠之狼",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_bite_hard": {
+      "id": "title_bite_hard",
+      "english": "Bite Hard",
+      "russian": "Кусачий",
+      "chinese": "全力一击",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_battle_hero": {
+      "id": "title_the_battle_hero",
+      "english": "The Battle Hero",
+      "russian": "Богатырь",
+      "chinese": "英雄战士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_impetuous": {
+      "id": "title_impetuous",
+      "english": "Impetuous",
+      "russian": "Стремительный",
+      "chinese": "横冲直撞",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_loyal": {
+      "id": "title_loyal",
+      "english": "Loyal",
+      "russian": "Преданный",
+      "chinese": "忠贞不渝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_merciless": {
+      "id": "title_merciless",
+      "english": "Merciless",
+      "russian": "Беспощадный",
+      "chinese": "残酷无情",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_triple_ace": {
+      "id": "title_triple_ace",
+      "english": "Triple Ace",
+      "russian": "Первоклассный",
+      "chinese": "三张王牌",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_terminator": {
+      "id": "title_terminator",
+      "english": "Terminator",
+      "russian": "Терминатор",
+      "chinese": "终结者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_gallant": {
+      "id": "title_gallant",
+      "english": "Gallant",
+      "russian": "Бравый",
+      "chinese": "勇气之歌",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_possessed": {
+      "id": "title_possessed",
+      "english": "Possessed",
+      "russian": "Одержимый",
+      "chinese": "恶鬼附身",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_diavolo_rosso": {
+      "id": "title_diavolo_rosso",
+      "english": "Diavolo Rosso",
+      "russian": "Diavolo Rosso",
+      "chinese": "红色恶魔",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_hero_colosseum": {
+      "id": "title_hero_colosseum",
+      "english": "Hero of the Colosseum",
+      "russian": "Герой Колизея",
+      "chinese": "斗兽场英雄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_perfectionist": {
+      "id": "title_perfectionist",
+      "english": "Perfectionist",
+      "russian": "Перфекционист",
+      "chinese": "完美主义者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_rattlesnake": {
+      "id": "title_rattlesnake",
+      "english": "Rattlesnake",
+      "russian": "Гремучая змея",
+      "chinese": "响尾蛇",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_griffin": {
+      "id": "title_griffin",
+      "english": "Griffin",
+      "russian": "Грифон",
+      "chinese": "狮鹫",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_fire_breathing": {
+      "id": "title_fire_breathing",
+      "english": "Fire-Breathing",
+      "russian": "Огнедышащий",
+      "chinese": "喷射火焰",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_im_here_to_stay": {
+      "id": "title_im_here_to_stay",
+      "english": "I'm here to stay",
+      "russian": "Я здесь надолго",
+      "chinese": "百年好合",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_his_majestys_finest": {
+      "id": "title_his_majestys_finest",
+      "english": "His Majesty's Finest",
+      "russian": "На страже Его Величества",
+      "chinese": "皇家精英",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_swordfish": {
+      "id": "title_swordfish",
+      "english": "Swordfish",
+      "russian": "Рыба-меч",
+      "chinese": "箭鱼",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_steel_general": {
+      "id": "title_steel_general",
+      "english": "Steel General",
+      "russian": "На страже Его Величества",
+      "chinese": "钢铁上将",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sea_robber": {
+      "id": "title_sea_robber",
+      "english": "Sea Robber",
+      "russian": "Морской разбойник",
+      "chinese": "海贼",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_swimming_with_sharks": {
+      "id": "title_swimming_with_sharks",
+      "english": "Swimming with Sharks",
+      "russian": "Акула среди акул",
+      "chinese": "与鲨共舞",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_triumphant": {
+      "id": "title_triumphant",
+      "english": "Triumphant",
+      "russian": "Триумфатор",
+      "chinese": "高唱凯歌",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_armor_of_victory": {
+      "id": "title_armor_of_victory",
+      "english": "Armor of Victory",
+      "russian": "Броня Победы",
+      "chinese": "胜利战车",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_whispering_death": {
+      "id": "title_whispering_death",
+      "english": "Whispering Death",
+      "russian": "Шепчущая смерть",
+      "chinese": "死亡低语",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_royal_engineer": {
+      "id": "title_royal_engineer",
+      "english": "Royal Engineer",
+      "russian": "Королевский инженер",
+      "chinese": "皇家工兵",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_doppelganger": {
+      "id": "title_doppelganger",
+      "english": "Doppelganger",
+      "russian": "Доппельгенгер",
+      "chinese": "二重身",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sea_sword": {
+      "id": "title_sea_sword",
+      "english": "Sea Sword",
+      "russian": "Морской меч",
+      "chinese": "海洋利剑",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_hammerhead": {
+      "id": "title_hammerhead",
+      "english": "Hammerhead",
+      "russian": "Морской молот",
+      "chinese": "锤头狂鲨",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sea_kraken": {
+      "id": "title_sea_kraken",
+      "english": "Kraken",
+      "russian": "Кракен",
+      "chinese": "北海巨妖",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_revolutionary": {
+      "id": "title_revolutionary",
+      "english": "Revolutionary",
+      "russian": "Революционер",
+      "chinese": "全面革命",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_football_fan": {
+      "id": "title_football_fan",
+      "english": "Football Fan",
+      "russian": "Футбольный болельщик",
+      "chinese": "狂热球迷",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_top_scorer": {
+      "id": "title_top_scorer",
+      "english": "First Striker",
+      "russian": "Первый голеадор",
+      "chinese": "天才射门员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_strike_witcher": {
+      "id": "title_strike_witcher",
+      "english": "Strike Witcher",
+      "russian": "Strike Witcher",
+      "chinese": "第 501 统合战斗航空团",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_elite_strike_witcher": {
+      "id": "title_elite_strike_witcher",
+      "english": "Elite Strike Witcher",
+      "russian": "Elite Strike Witcher",
+      "chinese": "♪ 我所能做的事 ♪",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_dark_strike_witcher": {
+      "id": "title_dark_strike_witcher",
+      "english": "Dark Strike Witcher",
+      "russian": "Dark Strike Witcher",
+      "chinese": "异形军母巢",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sky_piercing_strike_witcher": {
+      "id": "title_sky_piercing_strike_witcher",
+      "english": "Sky Piercing Strike Witcher",
+      "russian": "Sky Piercing Strike Witcher",
+      "chinese": "强袭魔女",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_grasping": {
+      "id": "title_grasping",
+      "english": "Grasping",
+      "russian": "Хваткий",
+      "chinese": "贪得无厌",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_fire_raiser": {
+      "id": "title_fire_raiser",
+      "english": "Fire-Raiser",
+      "russian": "Змей-Горыныч",
+      "chinese": "空中点火者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sergey_strikes_back": {
+      "id": "title_sergey_strikes_back",
+      "english": "Sergey Strikes Back!",
+      "russian": "Серёга мстит!",
+      "chinese": "谢尔盖的反击！",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_disco_tanker": {
+      "id": "title_disco_tanker",
+      "english": "Disco Tanker",
+      "russian": "Танкист диско",
+      "chinese": "迪斯科坦克手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_first_to_fight": {
+      "id": "title_first_to_fight",
+      "english": "First to Fight",
+      "russian": "Первый в Бою",
+      "chinese": "一骑当先",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_hot_headed": {
+      "id": "title_hot_headed",
+      "english": "Hot-Headed",
+      "russian": "Вспыльчивый",
+      "chinese": "鲁莽从事",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_predator": {
+      "id": "title_predator",
+      "english": "Predator",
+      "russian": "Хищник",
+      "chinese": "顶级掠食者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_red_falcon": {
+      "id": "title_red_falcon",
+      "english": "Red Falcon",
+      "russian": "Красный сокол",
+      "chinese": "红色猎鹰",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_teammate": {
+      "id": "title_teammate",
+      "english": "Teammate",
+      "russian": "Напарник",
+      "chinese": "风雨同舟",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sharp-toothed": {
+      "id": "title_sharp-toothed",
+      "english": "Sharp-Toothed",
+      "russian": "Зубастый",
+      "chinese": "钩爪锯牙",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_pathfinder": {
+      "id": "title_pathfinder",
+      "english": "Pathfinder",
+      "russian": "Следопыт",
+      "chinese": "开拓者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_undefeated": {
+      "id": "title_undefeated",
+      "english": "Undefeated",
+      "russian": "Непобежденный",
+      "chinese": "战无不胜",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_content_partner": {
+      "id": "title_content_partner",
+      "english": "Under the Wire",
+      "russian": "Военкор",
+      "chinese": "恰逢其时",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_wall_breaker": {
+      "id": "title_wall_breaker",
+      "english": "Wall Breaker",
+      "russian": "Крушитель Стен",
+      "chinese": "打破高墙",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_vigilant": {
+      "id": "title_vigilant",
+      "english": "Vigilant",
+      "russian": "Зоркий",
+      "chinese": "甄心动惧",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_fightingest": {
+      "id": "title_fightingest",
+      "english": "Fightingest",
+      "russian": "Разящий",
+      "chinese": "头号勇士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sea_dog": {
+      "id": "title_sea_dog",
+      "english": "Watchdog",
+      "russian": "Сторожевой пёс",
+      "chinese": "看门狗",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_stinger": {
+      "id": "title_stinger",
+      "english": "Stinger",
+      "russian": "Жало",
+      "chinese": "致命毒刺",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_slashing_pike": {
+      "id": "title_slashing_pike",
+      "english": "Slashing Pike",
+      "russian": "Разящая Пика",
+      "chinese": "枪出如龙",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_ship_cbt": {
+      "id": "title_ship_cbt",
+      "english": "Sea Master",
+      "russian": "Хозяин морей",
+      "chinese": "乘风破浪",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_down": {
+      "id": "title_down",
+      "english": "Down!",
+      "russian": "На дно!",
+      "chinese": "一路向下！",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_triarius": {
+      "id": "title_triarius",
+      "english": "Triarius",
+      "russian": "Триарий",
+      "chinese": "后备兵",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sentinel": {
+      "id": "title_sentinel",
+      "english": "Sentinel",
+      "russian": "Страж",
+      "chinese": "哨兵",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_scourge": {
+      "id": "title_scourge",
+      "english": "Scourge",
+      "russian": "Кнут",
+      "chinese": "苦痛之鞭",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_victory_marshal": {
+      "id": "title_victory_marshal",
+      "english": "Victory Marshal",
+      "russian": "Маршал Победы",
+      "chinese": "常胜元帅",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_eternal_tank": {
+      "id": "title_the_eternal_tank",
+      "english": "The Eternal Tank",
+      "russian": "Вечный танк",
+      "chinese": "坚如磐石",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_true_action_hero": {
+      "id": "title_true_action_hero",
+      "english": "True Action Hero",
+      "russian": "Настоящий киногерой",
+      "chinese": "武打巨星",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_adamant_fortress": {
+      "id": "title_adamant_fortress",
+      "english": "Adamant Fortress",
+      "russian": "Незыблемая крепость",
+      "chinese": "国之干城",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_matador": {
+      "id": "title_matador",
+      "english": "Matador",
+      "russian": "Матадор",
+      "chinese": "斗牛士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_snake_charmer": {
+      "id": "title_snake_charmer",
+      "english": "Snake Charmer",
+      "russian": "Заклинатель змей",
+      "chinese": "蛇力非凡",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_serpent_rising": {
+      "id": "title_serpent_rising",
+      "english": "Serpent Rising",
+      "russian": "Пробуждение Змеи",
+      "chinese": "地发杀机，龙蛇起陆",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_per_ardua_ad_astra": {
+      "id": "title_per_ardua_ad_astra",
+      "english": "Per Ardua Ad Astra",
+      "russian": "Через тернии к звёздам",
+      "chinese": "循此苦旅，以达天际",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_fitter": {
+      "id": "title_fitter",
+      "english": "Fitter",
+      "russian": "Монтажник",
+      "chinese": "装配匠",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_thunderer": {
+      "id": "title_thunderer",
+      "english": "Lightning Strike",
+      "russian": "Удар молнии",
+      "chinese": "驱雷策电",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_no_one_but_us": {
+      "id": "title_no_one_but_us",
+      "english": "No one but us",
+      "russian": "Никто, кроме нас",
+      "chinese": "舍我其谁",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_rapid_deploy": {
+      "id": "title_rapid_deploy",
+      "english": "Rapid Deployment",
+      "russian": "Быстрое развёртывание",
+      "chinese": "快反部队",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_pitch_black": {
+      "id": "title_pitch_black",
+      "english": "Pitch Black",
+      "russian": "Кромешная тьма",
+      "chinese": "玄兵神武",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_intellectual": {
+      "id": "title_intellectual",
+      "english": "Intellectual",
+      "russian": "Интеллектуал",
+      "chinese": "知识学爆",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_loongs_awakening": {
+      "id": "title_loongs_awakening",
+      "english": "Loong's Awakening",
+      "russian": "Пробуждение дракона",
+      "chinese": "巨龙觉醒",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_top_secret": {
+      "id": "title_top_secret",
+      "english": "Top Secret",
+      "russian": "Под грифом \"секретно\"",
+      "chinese": "窃密必被抓",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_wings_that_protect": {
+      "id": "title_wings_that_protect",
+      "english": "Wings that Protect",
+      "russian": "Крылья-защитники",
+      "chinese": "庇护之翼",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_reaper": {
+      "id": "title_reaper",
+      "english": "Reaper",
+      "russian": "Жнец",
+      "chinese": "飞行收割者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_saber_toothed": {
+      "id": "title_saber_toothed",
+      "english": "Saber-Toothed",
+      "russian": "Саблезубый",
+      "chinese": "剑齿凶兽",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_skyblazer": {
+      "id": "title_skyblazer",
+      "english": "Skyblazer",
+      "russian": "Рассекатель небес",
+      "chinese": "天空传播者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_1v1_racer": {
+      "id": "title_1v1_racer",
+      "english": "1v1 Racer",
+      "russian": "Гонщик 1 на 1",
+      "chinese": "1v1 赛手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_aerial_supremacy": {
+      "id": "title_aerial_supremacy",
+      "english": "Aerial Supremacy",
+      "russian": "Aerial Supremacy",
+      "chinese": "长空霸主",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_air_superiority_contender": {
+      "id": "title_air_superiority_contender",
+      "english": "Air Superiority Contender",
+      "russian": "Участник Air Superiority",
+      "chinese": "苍空卫士参赛者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_air_superiority_2024": {
+      "id": "title_air_superiority_2024",
+      "english": "Air Superiority 2024 Champion",
+      "russian": "Чемпион Air Superiority 2024",
+      "chinese": "2024“苍空卫士”锦标赛冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_armored_apex_2024": {
+      "id": "title_armored_apex_2024",
+      "english": "Armored Apex 2024 Champion",
+      "russian": "Чемпион Armored Apex 2024",
+      "chinese": "2024 重装竞技场冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_fighter_superiority": {
+      "id": "title_fighter_superiority",
+      "english": "Fighter Superiority",
+      "russian": "Fighter Superiority",
+      "chinese": "格斗至上",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_iron_duke": {
+      "id": "title_iron_duke",
+      "english": "Iron Duke",
+      "russian": "Железный герцог",
+      "chinese": "铁公爵",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_oni_no_yamashiro": {
+      "id": "title_oni_no_yamashiro",
+      "english": "Oni no Yamashiro",
+      "russian": "Демон Ямаширо",
+      "chinese": "鬼之山城",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_snailonidas": {
+      "id": "title_snailonidas",
+      "english": "Snailonidas",
+      "russian": "Спартанец",
+      "chinese": "蜗巴达王",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_slick_flanker": {
+      "id": "title_slick_flanker",
+      "english": "Slick flanker",
+      "russian": "Сверхманевренный",
+      "chinese": "人类高质量侧卫",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_snail_enhanced_player": {
+      "id": "title_snail_enhanced_player",
+      "english": "Snail Enhanced Player",
+      "russian": "Улитный продвинутый игрок",
+      "chinese": "蜗牛赐福之力",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_french_tanker": {
+      "id": "title_french_tanker",
+      "english": "French Tank Expert",
+      "russian": "Знаток французских танков",
+      "chinese": "法国坦克大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_tank_hero": {
+      "id": "title_tank_hero",
+      "english": "Tank Tournaments Hero",
+      "russian": "Герой танковых турниров",
+      "chinese": "陆战竞技场英雄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_air_hero": {
+      "id": "title_air_hero",
+      "english": "Air Tournaments Hero",
+      "russian": "Герой авиа-турниров",
+      "chinese": "空战竞技场英雄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_race_hero": {
+      "id": "title_race_hero",
+      "english": "Racing Tournaments Hero",
+      "russian": "Герой гоночных турниров",
+      "chinese": "竞速赛竞技场英雄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_combined_hero": {
+      "id": "title_combined_hero",
+      "english": "Combined Tournaments Hero",
+      "russian": "Герой совместных турниров",
+      "chinese": "联动战斗竞技场英雄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_hero_olympus": {
+      "id": "title_hero_olympus",
+      "english": "Hero of the Olympus",
+      "russian": "Герой Олимпа",
+      "chinese": "奧林匹斯英豪",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_tough_guy": {
+      "id": "title_tough_guy",
+      "english": "Tough Guy",
+      "russian": "Суровый",
+      "chinese": "硬汉",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_crusher": {
+      "id": "title_crusher",
+      "english": "Crusher",
+      "russian": "Крушитель",
+      "chinese": "重拳出击",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_lionhearted": {
+      "id": "title_lionhearted",
+      "english": "Lionhearted",
+      "russian": "Неустрашимый",
+      "chinese": "狮心骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_valiant": {
+      "id": "title_valiant",
+      "english": "Valiant",
+      "russian": "Доблестный",
+      "chinese": "骁勇善战",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_poseidon": {
+      "id": "title_poseidon",
+      "english": "Poseidon",
+      "russian": "Посейдон",
+      "chinese": "波塞冬",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_strategist": {
+      "id": "title_strategist",
+      "english": "Strategist",
+      "russian": "Стратег",
+      "chinese": "雄韬伟略",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_ruthless": {
+      "id": "title_ruthless",
+      "english": "Ruthless",
+      "russian": "Беспощадный",
+      "chinese": "寡恩少义",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_ronin": {
+      "id": "title_ronin",
+      "english": "Ronin",
+      "russian": "Ронин",
+      "chinese": "浪人",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_devastator": {
+      "id": "title_devastator",
+      "english": "Devastator",
+      "russian": "Опустошитель",
+      "chinese": "凌弱暴寡",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_deck_the_halls": {
+      "id": "title_deck_the_halls",
+      "english": "Deck the Halls",
+      "russian": "Светлячок",
+      "chinese": "节日到来乐满堂",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_got_a_cruiser": {
+      "id": "title_got_a_cruiser",
+      "english": "I've got a cruiser!",
+      "russian": "I've got a cruiser!",
+      "chinese": "开上我的巡洋舰！",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_in_the_black": {
+      "id": "title_in_the_black",
+      "english": "In the Black",
+      "russian": "На чёрный день",
+      "chinese": "夜黑金曜",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_brainiac": {
+      "id": "title_brainiac",
+      "english": "Brainiac",
+      "russian": "Мегамозг",
+      "chinese": "超能天才",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_ferocious": {
+      "id": "title_ferocious",
+      "english": "Ferocious",
+      "russian": "Свирепый",
+      "chinese": "狂风肆虐",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_devil_dog": {
+      "id": "title_devil_dog",
+      "english": "Devil Dog",
+      "russian": "Адский пёс",
+      "chinese": "恶魔之犬",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_skylark": {
+      "id": "title_skylark",
+      "english": "Skylark",
+      "russian": "Жаворонок",
+      "chinese": "云雀",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_world_warrior": {
+      "id": "title_world_warrior",
+      "english": "World Warrior",
+      "russian": "Всемирный воин",
+      "chinese": "战火纷飞的世界",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_fuji_school_brigade": {
+      "id": "title_fuji_school_brigade",
+      "english": "Fuji School Brigade",
+      "russian": "Учебная бригада Фудзи",
+      "chinese": "富士教导团",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sky_dragon": {
+      "id": "title_sky_dragon",
+      "english": "Sky Dragon",
+      "russian": "Небесный дракон",
+      "chinese": "空中飞龙",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_knight_of_the_north": {
+      "id": "title_knight_of_the_north",
+      "english": "Knight of the North",
+      "russian": "Рыцарь Севера",
+      "chinese": "北方骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_storm_petrel": {
+      "id": "title_storm_petrel",
+      "english": "Storm Petrel",
+      "russian": "Буревестник",
+      "chinese": "风暴海燕",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_venomous": {
+      "id": "title_venomous",
+      "english": "Venomous",
+      "russian": "Ядовитый",
+      "chinese": "蛇蝎心肠",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_real_free_abrams": {
+      "id": "title_real_free_abrams",
+      "english": "@realFreeAbrams",
+      "russian": "@realFreeAbrams",
+      "chinese": "@realFreeAbrams",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_aye_of_the_tiger": {
+      "id": "title_aye_of_the_tiger",
+      "english": "Aye of the Tigor",
+      "russian": "Aye of the Tigor",
+      "chinese": "脑唬之眼",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_god_thunder_corps": {
+      "id": "title_god_thunder_corps",
+      "english": "God Thunder Corps",
+      "russian": "God Thunder Corps",
+      "chinese": "神雷部队",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_long_lance": {
+      "id": "title_long_lance",
+      "english": "Long Lance",
+      "russian": "Длинное копье",
+      "chinese": "深海长矛",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_risky": {
+      "id": "title_risky",
+      "english": "Risky",
+      "russian": "Рисковый",
+      "chinese": "不可向迩",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_bedouin": {
+      "id": "title_bedouin",
+      "english": "Bedouin",
+      "russian": "Бедуин",
+      "chinese": "贝都因人",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_nomad": {
+      "id": "title_nomad",
+      "english": "Nomad",
+      "russian": "Кочевник",
+      "chinese": "游牧民",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_orochi": {
+      "id": "title_orochi",
+      "english": "Orochi",
+      "russian": "Великий змей",
+      "chinese": "八岐大蛇",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_first_in_deed": {
+      "id": "title_first_in_deed",
+      "english": "First in Deed",
+      "russian": "Первый в деле",
+      "chinese": "敢为人先",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sledgehammer": {
+      "id": "title_sledgehammer",
+      "english": "Sledgehammer",
+      "russian": "Кувалда",
+      "chinese": "破敌重锤",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_overlord": {
+      "id": "title_overlord",
+      "english": "Overlord",
+      "russian": "Оверлорд",
+      "chinese": "战争霸主",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_league_champion": {
+      "id": "title_league_champion",
+      "english": "War Thunder League Champion",
+      "russian": "Чемпион Лиги War Thunder",
+      "chinese": "War Thunder 联赛冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_league_winner": {
+      "id": "title_league_winner",
+      "english": "War Thunder League Winner",
+      "russian": "Победитель Лиги War Thunder",
+      "chinese": "War Thunder 联赛获胜者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_ancient_rus": {
+      "id": "title_ancient_rus",
+      "english": "Ancient Rus",
+      "russian": "Древний Рус",
+      "chinese": "斯拉夫古人",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_lizard": {
+      "id": "title_lizard",
+      "english": "Lizard",
+      "russian": "Ящер",
+      "chinese": "蜥蜴人",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_god_of_vengeance": {
+      "id": "title_god_of_vengeance",
+      "english": "God of Vengeance",
+      "russian": "Бог возмездия",
+      "chinese": "复仇女神",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_deception_master": {
+      "id": "title_deception_master",
+      "english": "Deception Master",
+      "russian": "Мастер Военной Хитрости",
+      "chinese": "兵者诡道",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_gaijin_shogun": {
+      "id": "title_gaijin_shogun",
+      "english": "Gaijin Shogun",
+      "russian": "Гайдзин-сёгун",
+      "chinese": "异邦将军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_adamant": {
+      "id": "title_adamant",
+      "english": "Adamant",
+      "russian": "Несокрушимый",
+      "chinese": "坚定不移",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_esport_master": {
+      "id": "title_esport_master",
+      "english": "eSports Master",
+      "russian": "Мастер киберспорта",
+      "chinese": "eSports 大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_hotshot": {
+      "id": "title_hotshot",
+      "english": "Hotshot",
+      "russian": "Ловкач",
+      "chinese": "炙手可热",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_comrade": {
+      "id": "title_comrade",
+      "english": "Comrade",
+      "russian": "Товарищ",
+      "chinese": "革命同志",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_meister": {
+      "id": "title_meister",
+      "english": "Meister",
+      "russian": "Мейстер",
+      "chinese": "武斗宗师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_dab_hand": {
+      "id": "title_dab_hand",
+      "english": "Dab Hand",
+      "russian": "Знаток",
+      "chinese": "军事行家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_virtuoso": {
+      "id": "title_virtuoso",
+      "english": "Virtuoso",
+      "russian": "Виртуоз",
+      "chinese": "战场老手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_maestro": {
+      "id": "title_maestro",
+      "english": "Maestro",
+      "russian": "Маэстро",
+      "chinese": "战斗大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_meijin": {
+      "id": "title_meijin",
+      "english": "Meijin",
+      "russian": "Мэйдзин",
+      "chinese": "统率名人",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_lightning": {
+      "id": "title_the_lightning",
+      "english": "The Lightning",
+      "russian": "Молниеносный",
+      "chinese": "电闪雷鸣",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_snail_lord": {
+      "id": "title_snail_lord",
+      "english": "Snail Lord",
+      "russian": "Повелитель Улиток",
+      "chinese": "蜗牛领主",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_educator": {
+      "id": "title_educator",
+      "english": "Educator",
+      "russian": "Просветитель",
+      "chinese": "循循善诱",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_silver_cat": {
+      "id": "title_silver_cat",
+      "english": "Silver Cat",
+      "russian": "Серебряный кот",
+      "chinese": "银猫",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_golden_eye": {
+      "id": "title_golden_eye",
+      "english": "Golden Eye",
+      "russian": "Золотой глаз",
+      "chinese": "黄金眼",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_guardian_of_empire": {
+      "id": "title_guardian_of_empire",
+      "english": "Guardian of Empire",
+      "russian": "Страж Империи",
+      "chinese": "国门卫士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_red_dragon": {
+      "id": "title_the_red_dragon",
+      "english": "The Red Dragon",
+      "russian": "Красный дракон",
+      "chinese": "红龙",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_jungle_warrior": {
+      "id": "title_jungle_warrior",
+      "english": "Jungle Warrior",
+      "russian": "Воин джунглей",
+      "chinese": "丛林勇士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_flying_tiger": {
+      "id": "title_flying_tiger",
+      "english": "Flying Tiger",
+      "russian": "Летающий тигр",
+      "chinese": "飞虎",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_chronicle": {
+      "id": "title_chronicle",
+      "english": "Champion of War",
+      "russian": "Победитель войны",
+      "chinese": "战争胜利者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_chainsaw_killer": {
+      "id": "title_chainsaw_killer",
+      "english": "Chainsaw Killer",
+      "russian": "Цепная пила",
+      "chinese": "电锯杀人狂",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_tridactyl": {
+      "id": "title_tridactyl",
+      "english": "Tridactyl",
+      "russian": "Трёхпалый",
+      "chinese": "三指杀手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_black_shark": {
+      "id": "title_black_shark",
+      "english": "Black Shark",
+      "russian": "Чёрная акула",
+      "chinese": "黑鲨",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_fearless": {
+      "id": "title_fearless",
+      "english": "Fearless",
+      "russian": "Бесстрашный",
+      "chinese": "无所畏惧",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_viking": {
+      "id": "title_viking",
+      "english": "Viking",
+      "russian": "Викинг",
+      "chinese": "维京来客",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_tornado": {
+      "id": "title_tornado",
+      "english": "Tornado",
+      "russian": "Торнадо",
+      "chinese": "狂风过境",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_royal_blood": {
+      "id": "title_royal_blood",
+      "english": "Royal Blood",
+      "russian": "Королевская кровь",
+      "chinese": "王室血统",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_god_of_thunder": {
+      "id": "title_god_of_thunder",
+      "english": "God of Thunder",
+      "russian": "Бог грома",
+      "chinese": "雷神",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sleipnir": {
+      "id": "title_sleipnir",
+      "english": "Sleipnir",
+      "russian": "Слейпнир",
+      "chinese": "天马斯莱普尼尔",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_saloon_frequenter": {
+      "id": "title_the_saloon_frequenter",
+      "english": "The Saloon Frequenter",
+      "russian": "Завсегдатай салуна",
+      "chinese": "聚会常客",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_last_one_standing": {
+      "id": "title_the_last_one_standing",
+      "english": "The Last One Standing",
+      "russian": "Последний за столом",
+      "chinese": "“站”至最后一刻",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_pub_crawler": {
+      "id": "title_the_pub_crawler",
+      "english": "The Pub Crawler",
+      "russian": "Барный турист",
+      "chinese": "酒吧串门狂饮人",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_grape_chief": {
+      "id": "title_the_grape_chief",
+      "english": "The Grape Chief",
+      "russian": "Главный шампанье",
+      "chinese": "首席葡萄顾问",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_brandenburg_merrymaker": {
+      "id": "title_the_brandenburg_merrymaker",
+      "english": "The Brandenburg Merrymaker",
+      "russian": "Бранденбургский весельчак",
+      "chinese": "勃兰登堡狂欢者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_party_samurai": {
+      "id": "title_the_party_samurai",
+      "english": "The Party Samurai",
+      "russian": "Полуночный самурай",
+      "chinese": "派对武士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_leaning_hero": {
+      "id": "title_the_leaning_hero",
+      "english": "The Leaning Hero",
+      "russian": "Падающий герой",
+      "chinese": "倾斜舞步豪杰",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_fireworks_expert": {
+      "id": "title_the_fireworks_expert",
+      "english": "The Fireworks Expert",
+      "russian": "Поджигатель фейерверков",
+      "chinese": "烟花专业户",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_new_year_champion": {
+      "id": "title_the_new_year_champion",
+      "english": "The New Year Champion",
+      "russian": "Новогодний чемпион",
+      "chinese": "新年竞技场冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_dancing_dragon": {
+      "id": "title_dancing_dragon",
+      "english": "Dancing dragon",
+      "russian": "Танцующий дракон",
+      "chinese": "龙举云兴",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_worldwar_attack_from_the_sea": {
+      "id": "title_worldwar_attack_from_the_sea",
+      "english": "╫ Veteran of the season: Attack from the Sea",
+      "russian": "╫ Ветеран сезона: Атака с моря",
+      "chinese": "╫ 赛季老兵 • 逐梦深蓝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_worldwar_road_to_the_west": {
+      "id": "title_worldwar_road_to_the_west",
+      "english": "╫ Veteran of the season: Road to the West",
+      "russian": "╫ Ветеран сезона: Дорога на Запад",
+      "chinese": "╫ 赛季老兵 • 西方之路",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_defender_of_the_fatherland": {
+      "id": "title_defender_of_the_fatherland",
+      "english": "Defender of the Fatherland",
+      "russian": "Защитник Отечества",
+      "chinese": "祖国保卫者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_survivor": {
+      "id": "title_survivor",
+      "english": "Survivor",
+      "russian": "Выживший",
+      "chinese": "天神下凡",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_iron_claw": {
+      "id": "title_iron_claw",
+      "english": "Iron Claw",
+      "russian": "Стальной Коготь",
+      "chinese": "爪牙之士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_berserker": {
+      "id": "title_berserker",
+      "english": "Berserker",
+      "russian": "Берсерк",
+      "chinese": "狂战士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_apache": {
+      "id": "title_apache",
+      "english": "Apache",
+      "russian": "Апач",
+      "chinese": "阿帕奇战士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_my_castle": {
+      "id": "title_my_castle",
+      "english": "My castle",
+      "russian": "Моя крепость",
+      "chinese": "我的温馨城堡",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_wolf_of_snail_street": {
+      "id": "title_the_wolf_of_snail_street",
+      "english": "The Wolf of Snail Street",
+      "russian": "Фиксирую прибыль",
+      "chinese": "蜗尔街之狼",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_lets_go": {
+      "id": "title_lets_go",
+      "english": "Let’s go!",
+      "russian": "Поехали!",
+      "chinese": "我出发了！",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sea_hawk": {
+      "id": "title_sea_hawk",
+      "english": "Sea Hawk",
+      "russian": "Морской ястреб",
+      "chinese": "海上雄鹰",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_key_to_victory": {
+      "id": "title_key_to_victory",
+      "english": "Technological Supremacy Dictates the Battle in the Sky",
+      "russian": "Ключ к победе",
+      "chinese": "科学技术是空战胜利之本",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_armed_to_the_teeth": {
+      "id": "title_armed_to_the_teeth",
+      "english": "Armed to the Teeth",
+      "russian": "Во всеоружии",
+      "chinese": "武装到牙齿",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sapper": {
+      "id": "title_sapper",
+      "english": "Sapper",
+      "russian": "Сапёр",
+      "chinese": "战斗工兵",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_bengal_tiger": {
+      "id": "title_bengal_tiger",
+      "english": "Bengal tiger",
+      "russian": "Бенгальский тигр",
+      "chinese": "孟加拉勇虎",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_beachhead_gold": {
+      "id": "title_beachhead_gold",
+      "english": "Beachhead Gold",
+      "russian": "Плацдарм \"Голд\"",
+      "chinese": "浴血黄金滩头",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_beachhead_omaha": {
+      "id": "title_beachhead_omaha",
+      "english": "Beachhead Omaha",
+      "russian": "Плацдарм \"Омаха\"",
+      "chinese": "浴血奥马哈滩头",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_neptune": {
+      "id": "title_neptune",
+      "english": "Neptune",
+      "russian": "Нептун",
+      "chinese": "海王星行动",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_hovering_threat": {
+      "id": "title_hovering_threat",
+      "english": "Hovering Threat",
+      "russian": "Нависшая угроза",
+      "chinese": "空中女武神",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_diving_threat": {
+      "id": "title_diving_threat",
+      "english": "Diving Threat",
+      "russian": "Пикирующая угроза",
+      "chinese": "空中送葬者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_air_superiority": {
+      "id": "title_air_superiority",
+      "english": "Air Superiority",
+      "russian": "Воздушное превосходство",
+      "chinese": "苍空卫士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_copa_hispana": {
+      "id": "title_copa_hispana",
+      "english": "Copa Hispana",
+      "russian": "Copa Hispana",
+      "chinese": "鏖战“西班牙杯”",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sea_wolf": {
+      "id": "title_sea_wolf",
+      "english": "Sea Wolf",
+      "russian": "Морской волк",
+      "chinese": "海狼",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_chief_mate": {
+      "id": "title_chief_mate",
+      "english": "Chief mate",
+      "russian": "Старпом",
+      "chinese": "海军大副",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_on_full_alert": {
+      "id": "title_on_full_alert",
+      "english": "On Full Alert",
+      "russian": "Боевая готовность",
+      "chinese": "全面警戒",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_savate_master": {
+      "id": "title_savate_master",
+      "english": "Savate Master",
+      "russian": "Мастер савата",
+      "chinese": "法式拳术大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_melomaniac": {
+      "id": "title_melomaniac",
+      "english": "Melomaniac",
+      "russian": "Меломан",
+      "chinese": "音乐狂",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_defender_of_london": {
+      "id": "title_defender_of_london",
+      "english": "Defender of London",
+      "russian": "Защитник Лондона",
+      "chinese": "伦敦守护者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_wind_of_change": {
+      "id": "title_wind_of_change",
+      "english": "Wind of Change",
+      "russian": "Ветер перемен",
+      "chinese": "变迁之风",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_thunder_front": {
+      "id": "title_thunder_front",
+      "english": "Thunder Front",
+      "russian": "Грозовой фронт",
+      "chinese": "雷霆前线",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_on_a_roll": {
+      "id": "title_on_a_roll",
+      "english": "On a roll",
+      "russian": "В ударе",
+      "chinese": "好运连连",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_desert_lion": {
+      "id": "title_desert_lion",
+      "english": "Desert Lion",
+      "russian": "Лев пустыни",
+      "chinese": "沙漠之狮",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_imperial_japanese_navy": {
+      "id": "title_imperial_japanese_navy",
+      "english": "Imperial Japanese Navy",
+      "russian": "Imperial Japanese Navy",
+      "chinese": "軍海國帝本日大",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_one_in_a_phillion": {
+      "id": "title_one_in_a_phillion",
+      "english": "One In A Phillion",
+      "russian": "One In A Phillion",
+      "chinese": "百万 Phly 粉",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_spear_of_the_nation": {
+      "id": "title_spear_of_the_nation",
+      "english": "Spear of the Nation",
+      "russian": "Копьё нации",
+      "chinese": "护国长枪",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_primus_pilus": {
+      "id": "title_primus_pilus",
+      "english": "Primus Pilus",
+      "russian": "Primus Pilus",
+      "chinese": "首列百夫长",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_strong_role_model": {
+      "id": "title_strong_role_model",
+      "english": "Strong role model",
+      "russian": "Образец для подражания",
+      "chinese": "宝刀未老",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_steel_shell": {
+      "id": "title_steel_shell",
+      "english": "Steel shell",
+      "russian": "Стальной панцирь",
+      "chinese": "钢铁之躯",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_dark_menace": {
+      "id": "title_dark_menace",
+      "english": "Dark Menace",
+      "russian": "Тёмная угроза",
+      "chinese": "暗影危机",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_air_test_evaluation_department": {
+      "id": "title_air_test_evaluation_department",
+      "english": "Air Test and Evaluation Department",
+      "russian": "Air Test and Evaluation Department",
+      "chinese": "飞行实验部",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_scarper_to_the_clouds": {
+      "id": "title_scarper_to_the_clouds",
+      "english": "Scarper to the clouds",
+      "russian": "Уйдём по небу!",
+      "chinese": "云中舞者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_fullsterkur": {
+      "id": "title_fullsterkur",
+      "english": "Fullsterkur",
+      "russian": "Fullsterkur",
+      "chinese": "力敌千钧",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_aggressor": {
+      "id": "title_aggressor",
+      "english": "Aggressor",
+      "russian": "Агрессор",
+      "chinese": "入侵者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_indra": {
+      "id": "title_indra",
+      "english": "Indra",
+      "russian": "Индра",
+      "chinese": "因陀罗",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_dmm_achiever_of_wt": {
+      "id": "title_dmm_achiever_of_wt",
+      "english": "Achiever of War Thunder 2021",
+      "russian": "Участник турнира War Thunder в Японии 2021",
+      "chinese": "2021 • War Thunder 见证者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_unconquerable_resolve": {
+      "id": "title_unconquerable_resolve",
+      "english": "The Unconquerable Resolve",
+      "russian": "Несгибаемая решимость",
+      "chinese": "不屈的意志",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_mighty_endeavor": {
+      "id": "title_mighty_endeavor",
+      "english": "The Mighty Endeavor",
+      "russian": "Великий подвиг",
+      "chinese": "卓绝的努力",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_liberator": {
+      "id": "title_liberator",
+      "english": "Liberator",
+      "russian": "Освободитель",
+      "chinese": "解放者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_action_hero": {
+      "id": "title_action_hero",
+      "english": "Action hero",
+      "russian": "Герой боевиков",
+      "chinese": "动作剧英雄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_piercing_arrow": {
+      "id": "title_piercing_arrow",
+      "english": "Piercing Arrow",
+      "russian": "Разящая стрела",
+      "chinese": "百步穿杨",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_runestone_dragon": {
+      "id": "title_runestone_dragon",
+      "english": "Runestone Dragon",
+      "russian": "Рунический дракон",
+      "chinese": "卢恩石之龙",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_on_the_plus_side": {
+      "id": "title_on_the_plus_side",
+      "english": "On the plus side",
+      "russian": "В плюсе",
+      "chinese": "居高临下",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_shifu": {
+      "id": "title_shifu",
+      "english": "Shifu",
+      "russian": "Шифу",
+      "chinese": "百世之师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_skald": {
+      "id": "title_skald",
+      "english": "Skald",
+      "russian": "Скальд",
+      "chinese": "边塞诗雄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_brt": {
+      "id": "title_brt",
+      "english": "Brrrrrrrrrrrrrrrrrrrrrrrt",
+      "russian": "Брррррррррррррррррррррррт",
+      "chinese": "Brrrrrrrrrrrrrrrrrrrrrrrt",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_war_kite": {
+      "id": "title_war_kite",
+      "english": "War kite",
+      "russian": "Боевой коршун",
+      "chinese": "战鸢",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_green_dragon": {
+      "id": "title_green_dragon",
+      "english": "Green Dragon",
+      "russian": "Зелёный дракон",
+      "chinese": "青龙偃月",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_experimental": {
+      "id": "title_experimental",
+      "english": "Experimental",
+      "russian": "Экспериментальный",
+      "chinese": "实践出真知",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_gold_must_flow": {
+      "id": "title_gold_must_flow",
+      "english": "The Gold must flow",
+      "russian": "Золото должно поступать",
+      "chinese": "金鹰必须流动",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_irony_of_shooting": {
+      "id": "title_the_irony_of_shooting",
+      "english": "The Irony of Shooting",
+      "russian": "Ирония стрельбы",
+      "chinese": "命中的捉弄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_armor_hard": {
+      "id": "title_armor_hard",
+      "english": "Armor Hard",
+      "russian": "Бронированный орешек",
+      "chinese": "钢胆神威",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_guns_actually": {
+      "id": "title_guns_actually",
+      "english": "Guns Actually",
+      "russian": "Реальные пушки",
+      "chinese": "口径至上",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_snails_apprentice": {
+      "id": "title_snails_apprentice",
+      "english": "Snail's Apprentice",
+      "russian": "Ученик Улитки",
+      "chinese": "窝弹老人的学徒",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_gunner_for_one": {
+      "id": "title_gunner_for_one",
+      "english": "Gunner for one",
+      "russian": "Наводчик для одного",
+      "chinese": "一个人的装填",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_slimy_relative": {
+      "id": "title_slimy_relative",
+      "english": "Slimy Relative",
+      "russian": "Склизкий родственник",
+      "chinese": "蛞蝓的亲戚，软体的关系",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_let_the_shells_fly": {
+      "id": "title_let_the_shells_fly",
+      "english": "Let the Shells Fly",
+      "russian": "Пусть летят снаряды",
+      "chinese": "让榴弹飞",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_shell_alone": {
+      "id": "title_shell_alone",
+      "english": "Shell alone",
+      "russian": "Один в панцире",
+      "chinese": "小鬼蹲家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_snail_and_his_friends": {
+      "id": "title_snail_and_his_friends",
+      "english": "Snail and His Friends",
+      "russian": "Улитка и друзья",
+      "chinese": "欢乐蜗的朋友们",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_fanboy": {
+      "id": "title_fanboy",
+      "english": "Fanboy",
+      "russian": "Фанат",
+      "chinese": "蜗牛小迷弟",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_demon_camber": {
+      "id": "title_demon_camber",
+      "english": "Demon of Camber",
+      "russian": "Демон развала",
+      "chinese": "恶魔改装",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sea_eagle": {
+      "id": "title_sea_eagle",
+      "english": "Sea Eagle",
+      "russian": "Морской орёл",
+      "chinese": "海鹰",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_the_last_all_gun": {
+      "id": "title_the_last_all_gun",
+      "english": "The last all-gun",
+      "russian": "Последний канонир",
+      "chinese": "重炮绝唱",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_connoisseur": {
+      "id": "title_connoisseur",
+      "english": "Connoisseur",
+      "russian": "Знаток",
+      "chinese": "载具鉴赏家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_treasure_hunter": {
+      "id": "title_treasure_hunter",
+      "english": "Treasure Hunter",
+      "russian": "Охотник за сокровищами",
+      "chinese": "宝藏猎人",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_above_all": {
+      "id": "title_above_all",
+      "english": "Above All",
+      "russian": "Выше всех",
+      "chinese": "凌云之志",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_shopaholic": {
+      "id": "title_shopaholic",
+      "english": "Shopaholic",
+      "russian": "Шопоголик",
+      "chinese": "超市是我家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_snailmas_special": {
+      "id": "title_snailmas_special",
+      "english": "Snailmas special",
+      "russian": "Улиткин огонек",
+      "chinese": "蜗诞节特映",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_esport_manager": {
+      "id": "title_esport_manager",
+      "english": "eSport Manager",
+      "russian": "Менеджер киберспорта",
+      "chinese": "电竞赛事经理",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_esport_enjoyer": {
+      "id": "title_esport_enjoyer",
+      "english": "eSport Enjoyer",
+      "russian": "Любитель киберспорта",
+      "chinese": "电竞赛事忠实观众",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_ace_of_the_sky": {
+      "id": "title_ace_of_the_sky",
+      "english": "Ace of the Sky",
+      "russian": "Ас Неба",
+      "chinese": "长空之王",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_beach_heroes": {
+      "id": "title_beach_heroes",
+      "english": "Beach Heroes",
+      "russian": "Герой Пляжа",
+      "chinese": "喋血滩头",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_grand_final_champion": {
+      "id": "title_grand_final_champion",
+      "english": "Grand Final Champion",
+      "russian": "Чемпион Суперфинала",
+      "chinese": "天梯总决赛冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_best_buddies": {
+      "id": "title_best_buddies",
+      "english": "Best Buddies",
+      "russian": "Лучшие Друзья",
+      "chinese": "战场兄弟",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_djinn_of_all_deserts": {
+      "id": "title_djinn_of_all_deserts",
+      "english": "Djinn of All Deserts",
+      "russian": "Владыка всех Пустынь",
+      "chinese": "大漠灯神",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_blue_blood": {
+      "id": "title_blue_blood",
+      "english": "Blue Blood",
+      "russian": "Голубая кровь",
+      "chinese": "蓝血贵族",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_future_belongs_to_the_snail": {
+      "id": "title_future_belongs_to_the_snail",
+      "english": "Future belongs to the Snail",
+      "russian": "Будущее принадлежит Улитке",
+      "chinese": "未来属于蜗们！",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_riding_to_snailhalla": {
+      "id": "title_riding_to_snailhalla",
+      "english": "Riding to Snailhalla",
+      "russian": "На дороге к Слизгалле",
+      "chinese": "奔赴蜗尔哈拉",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_aerial_predator": {
+      "id": "title_aerial_predator",
+      "english": "Aerial Predator",
+      "russian": "Воздушный хищник",
+      "chinese": "鲨影贯空",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_golden_tank": {
+      "id": "title_golden_tank",
+      "english": "Golden Tank",
+      "russian": "Золотой танк",
+      "chinese": "黄金坦",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_purple_thunder": {
+      "id": "title_purple_thunder",
+      "english": "Purple Thunder",
+      "russian": "Фиолетовый гром",
+      "chinese": "紫电青霜",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cyber_warrior": {
+      "id": "title_cyber_warrior",
+      "english": "Cyber Warrior",
+      "russian": "Кибер-воин",
+      "chinese": "赛博战士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_breton_corsair": {
+      "id": "title_breton_corsair",
+      "english": "Breton Corsair",
+      "russian": "Бретонский корсар",
+      "chinese": "布列塔尼海盗",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_devils_disciple": {
+      "id": "title_devils_disciple",
+      "english": "The Devil's Disciple",
+      "russian": "Ученик дьявола",
+      "chinese": "魔鬼使徒",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_tenkahubu": {
+      "id": "title_tenkahubu",
+      "english": "Tenka Fubu",
+      "russian": "Tenka Fubu",
+      "chinese": "天下布武",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_voltigeur": {
+      "id": "title_voltigeur",
+      "english": "Voltigeur",
+      "russian": "Вольтижёр",
+      "chinese": "腾跃兵",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_phantom_forever": {
+      "id": "title_phantom_forever",
+      "english": "Phantom Forever",
+      "russian": "Phantom Forever",
+      "chinese": "永远的鬼怪",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_river_hunter": {
+      "id": "title_river_hunter",
+      "english": "River Hunter",
+      "russian": "Речной охотник",
+      "chinese": "河道猎手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_150_level_attack_pilot": {
+      "id": "title_150_level_attack_pilot",
+      "english": "Level 150 Attack Pilot",
+      "russian": "Штурмовик 150-го уровня",
+      "chinese": "150 级攻击机飞行员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cinnamon_collector": {
+      "id": "title_cinnamon_collector",
+      "english": "Cinnamon collector",
+      "russian": "Сборщик корицы",
+      "chinese": "调料收藏家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_skillful_mahout": {
+      "id": "title_skillful_mahout",
+      "english": "Skillful Mahout",
+      "russian": "Умелый махаут",
+      "chinese": "驯象大手子",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_test_engineer": {
+      "id": "title_test_engineer",
+      "english": "Test engineer",
+      "russian": "Инженер-испытатель",
+      "chinese": "测试工程师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_yamato_damashii": {
+      "id": "title_yamato_damashii",
+      "english": "Yamato-damashii",
+      "russian": "Yamato-damashii",
+      "chinese": "大和魂",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_prince": {
+      "id": "title_prince",
+      "english": "Prince",
+      "russian": "Prince",
+      "chinese": "王储",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_beard_man": {
+      "id": "title_beard_man",
+      "english": "Beard man",
+      "russian": "Beard man",
+      "chinese": "胡须男",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_etranger": {
+      "id": "title_etranger",
+      "english": "étranger",
+      "russian": "étranger",
+      "chinese": "异乡人",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_silver_sky_fox": {
+      "id": "title_silver_sky_fox",
+      "english": "Silver sky fox",
+      "russian": "Silver sky fox",
+      "chinese": "空中银狐",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_crimson_angel": {
+      "id": "title_crimson_angel",
+      "english": "Crimson angel",
+      "russian": "Crimson angel",
+      "chinese": "猩红天使",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_death_gods": {
+      "id": "title_death_gods",
+      "english": "Reaper",
+      "russian": "Reaper",
+      "chinese": "收割者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_anti_government_army": {
+      "id": "title_anti_government_army",
+      "english": "Anti-government army",
+      "russian": "Anti-government army",
+      "chinese": "反抗军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_00_section": {
+      "id": "title_00_section",
+      "english": "00 section",
+      "russian": "00 section",
+      "chinese": "00 区域",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_mercenary": {
+      "id": "title_mercenary",
+      "english": "Mercenary",
+      "russian": "Mercenary",
+      "chinese": "雇佣兵",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_royal_asran_air_force": {
+      "id": "title_royal_asran_air_force",
+      "english": "ROYAL ASLAN AIR FORCE",
+      "russian": "ROYAL ASLAN AIR FORCE",
+      "chinese": "亚斯兰皇家空军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_area88": {
+      "id": "title_area88",
+      "english": "AREA 88",
+      "russian": "AREA 88",
+      "chinese": "战区 88",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_fireball": {
+      "id": "title_fireball",
+      "english": "Fire Ball",
+      "russian": "Fire Ball",
+      "chinese": "火球",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_hidalgo": {
+      "id": "title_hidalgo",
+      "english": "Hidalgo",
+      "russian": "Идальго",
+      "chinese": "西班牙贵族",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_silver_swallow": {
+      "id": "title_silver_swallow",
+      "english": "Silver Swallow",
+      "russian": "Серебряная ласточка",
+      "chinese": "银翼飞燕",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_phantom_menace": {
+      "id": "title_phantom_menace",
+      "english": "Phantom Menace",
+      "russian": "Фантомная угроза",
+      "chinese": "魅影危机",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_pioneering": {
+      "id": "title_pioneering",
+      "english": "Pioneering",
+      "russian": "Прорывной",
+      "chinese": "先锋队",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_swing_wing": {
+      "id": "title_swing_wing",
+      "english": "Swing Wing",
+      "russian": "Стреловидный",
+      "chinese": "摇摆机翼",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_lion_cub": {
+      "id": "title_lion_cub",
+      "english": "Lion Cub",
+      "russian": "Львёнок",
+      "chinese": "幼狮",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_star_fighter": {
+      "id": "title_star_fighter",
+      "english": "Star Fighter",
+      "russian": "Звёздный боец",
+      "chinese": "星战士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_janissary": {
+      "id": "title_janissary",
+      "english": "Janissary",
+      "russian": "Янычар",
+      "chinese": "耶尼切里",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_rating_battle_tester": {
+      "id": "title_rating_battle_tester",
+      "english": "Rankings Challenge Tester",
+      "russian": "Испытатель рейтинговых боёв",
+      "chinese": "勇攀天梯",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_best_striker_2023": {
+      "id": "title_best_striker_2023",
+      "english": "Best Striker 2023",
+      "russian": "Лучший бомбардир 2023",
+      "chinese": "最佳前锋 2023",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_best_winger_2023": {
+      "id": "title_best_winger_2023",
+      "english": "Best Winger 2023",
+      "russian": "Лучший ассистент 2023",
+      "chinese": "最佳边锋 2023",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_best_goalkeeper_2023": {
+      "id": "title_best_goalkeeper_2023",
+      "english": "Best Goalkeeper 2023",
+      "russian": "Лучший вратарь 2023",
+      "chinese": "最佳门将 2023",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_best_striker_2024": {
+      "id": "title_best_striker_2024",
+      "english": "Best Striker 2024",
+      "russian": "Лучший бомбардир 2024",
+      "chinese": "最佳前锋 2024",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_best_winger_2024": {
+      "id": "title_best_winger_2024",
+      "english": "Best Winger 2024",
+      "russian": "Лучший ассистент 2024",
+      "chinese": "最佳边锋 2024",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_best_goalkeeper_2024": {
+      "id": "title_best_goalkeeper_2024",
+      "english": "Best Goalkeeper 2024",
+      "russian": "Лучший вратарь 2024",
+      "chinese": "最佳门将 2024",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_red_scare": {
+      "id": "title_red_scare",
+      "english": "Red Scare",
+      "russian": "Красная угроза",
+      "chinese": "赤色恐惧",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_all_you_need_is_snail": {
+      "id": "title_all_you_need_is_snail",
+      "english": "All You Need is Snail",
+      "russian": "Всё, что тебе нужно - Улитка",
+      "chinese": "蜗壳轮回",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_crawl_buy_repeat": {
+      "id": "title_crawl_buy_repeat",
+      "english": "Crawl. Buy. Repeat.",
+      "russian": "Ползи. Купи. И снова.",
+      "chinese": "爬行·消费·轮回",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_peoples_avenger": {
+      "id": "title_peoples_avenger",
+      "english": "People's Avenger",
+      "russian": "Народный мститель",
+      "chinese": "抗争怒潮",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_royal_canadian": {
+      "id": "title_royal_canadian",
+      "english": "Royal Canadian",
+      "russian": "Королевский канадец",
+      "chinese": "加拿大皇家军团",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_falcon_slayer": {
+      "id": "title_falcon_slayer",
+      "english": "Falcon Slayer",
+      "russian": "Истребитель соколов",
+      "chinese": "猎隼对决",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_honour_and_glory": {
+      "id": "title_honour_and_glory",
+      "english": "Honour and Glory",
+      "russian": "Честь и слава",
+      "chinese": "光荣颂歌",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_desert_wind": {
+      "id": "title_desert_wind",
+      "english": "Desert Wind",
+      "russian": "Ветер пустыни",
+      "chinese": "沙漠之风",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_flying_tank": {
+      "id": "title_flying_tank",
+      "english": "Flying Tank",
+      "russian": "Летающий танк",
+      "chinese": "飞行坦克",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cool_hand": {
+      "id": "title_cool_hand",
+      "english": "Cool Hand",
+      "russian": "Хладнокровный",
+      "chinese": "无情铁手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_black_luxury": {
+      "id": "title_black_luxury",
+      "english": "Black Luxury",
+      "russian": "Чёрная роскошь",
+      "chinese": "黑色致臻",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_mans_dignity": {
+      "id": "title_mans_dignity",
+      "english": "Man's Dignity",
+      "russian": "Man's Dignity",
+      "chinese": "挽尊",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_don_quixote": {
+      "id": "title_don_quixote",
+      "english": "Don Quixote",
+      "russian": "Don Quixote",
+      "chinese": "唐·吉坷德",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_ground_attack_genius": {
+      "id": "title_ground_attack_genius",
+      "english": "Ground attack genius",
+      "russian": "Ground attack genius",
+      "chinese": "舔地小天才",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_rookie": {
+      "id": "title_rookie",
+      "english": "Rookie",
+      "russian": "Rookie",
+      "chinese": "菜鸟",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_knight_of_the_azure_sky": {
+      "id": "title_knight_of_the_azure_sky",
+      "english": "Knight of the Azure Sky",
+      "russian": "Knight of the Azure Sky",
+      "chinese": "碧空骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_gaijin_legion": {
+      "id": "title_gaijin_legion",
+      "english": "Gaijin Legion",
+      "russian": "Gaijin Legion",
+      "chinese": "蜗牛军团",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_rev_the_engine": {
+      "id": "title_rev_the_engine",
+      "english": "Rev the engine!!",
+      "russian": "Rev the engine!!",
+      "chinese": "发动引擎！！",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_yamato_air_lines": {
+      "id": "title_yamato_air_lines",
+      "english": "Yamato Air Lines",
+      "russian": "Yamato Air Lines",
+      "chinese": "大和航空",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_signed_the_sleepover_certificate": {
+      "id": "title_signed_the_sleepover_certificate",
+      "english": "Signed the Sleepover certificate",
+      "russian": "Signed the Sleepover certificate",
+      "chinese": "狂欢契约署名者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_supersonic_samurai": {
+      "id": "title_supersonic_samurai",
+      "english": "Supersonic Samurai",
+      "russian": "Сверхзвуковой самурай",
+      "chinese": "音速武士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_firebringer": {
+      "id": "title_firebringer",
+      "english": "Firebringer",
+      "russian": "Несущий пламя",
+      "chinese": "传火者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_10th_anniversary": {
+      "id": "title_10th_anniversary",
+      "english": "╊10╋",
+      "russian": "╊10╋",
+      "chinese": "╊十╋",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_defender_of_pandora": {
+      "id": "title_defender_of_pandora",
+      "english": "Defender of Pandora",
+      "russian": "Защитник Пандоры",
+      "chinese": "潘多拉星守护者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_conqueror_of_pandora": {
+      "id": "title_conqueror_of_pandora",
+      "english": "Conqueror of Pandora",
+      "russian": "Завоеватель Пандоры",
+      "chinese": "潘多拉星征服者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_chevalier": {
+      "id": "title_chevalier",
+      "english": "Chevalier",
+      "russian": "Шевалье",
+      "chinese": "荣誉骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_mobile_warrior": {
+      "id": "title_mobile_warrior",
+      "english": "Mobile Warrior",
+      "russian": "Мобильный воин",
+      "chinese": "机动步兵",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_dashing_hussar": {
+      "id": "title_dashing_hussar",
+      "english": "Dashing Hussar",
+      "russian": "Лихой гусар",
+      "chinese": "骑兵队，进攻！",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_omega_predator": {
+      "id": "title_omega_predator",
+      "english": "Omega Predator",
+      "russian": "Омега-хищник",
+      "chinese": "欧米茄掠食者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_atomic_heart": {
+      "id": "title_atomic_heart",
+      "english": "Atomic Heart",
+      "russian": "Атомное сердце",
+      "chinese": "原子之心",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_ambush_master": {
+      "id": "title_ambush_master",
+      "english": "Ambush Master",
+      "russian": "Засадный мастер",
+      "chinese": "草丛在说话",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_storm_rider": {
+      "id": "title_storm_rider",
+      "english": "Rider on the Storm",
+      "russian": "Штормовой наездник",
+      "chinese": "掣风御暴",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sampoer": {
+      "id": "title_sampoer",
+      "english": "Sampoer",
+      "russian": "Sampoer",
+      "chinese": "游戏漫谈家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_screaming_eagle": {
+      "id": "title_screaming_eagle",
+      "english": "Screaming Eagle",
+      "russian": "Кричащий орёл",
+      "chinese": "呼啸神鹰",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_furinkazan": {
+      "id": "title_furinkazan",
+      "english": "Fūrinkazan",
+      "russian": "Фууринкадзан",
+      "chinese": "风林火山",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_loot_carrier": {
+      "id": "title_loot_carrier",
+      "english": "Loot carrier",
+      "russian": "Лутовоз",
+      "chinese": "废土之光",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_artist_of_war": {
+      "id": "title_artist_of_war",
+      "english": "Artist of War",
+      "russian": "Artist of War",
+      "chinese": "战场艺术家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_tiger_from_north": {
+      "id": "title_tiger_from_north",
+      "english": "Tiger from the North",
+      "russian": "Тигр с севера",
+      "chinese": "雪国凶虎",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_skilled_marksman": {
+      "id": "title_skilled_marksman",
+      "english": "Skilled Marksman",
+      "russian": "Опытный стрелок",
+      "chinese": "天兵神射手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_master_harpooner": {
+      "id": "title_master_harpooner",
+      "english": "Master Harpooner",
+      "russian": "Мастер-гарпунщик",
+      "chinese": "炸鱼高手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_last_legionnaire": {
+      "id": "title_last_legionnaire",
+      "english": "The Last Legionnaire",
+      "russian": "Последний легионер",
+      "chinese": "最后的军团战士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_dial_m_for_marder": {
+      "id": "title_dial_m_for_marder",
+      "english": "Dial M for Marder",
+      "russian": "M значит Marder",
+      "chinese": "转轮金枪客",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_any_time_wingman": {
+      "id": "title_any_time_wingman",
+      "english": "Any time Wingman",
+      "russian": "Напарник на все времена",
+      "chinese": "忠诚僚机",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_iron_heart": {
+      "id": "title_iron_heart",
+      "english": "Iron Heart",
+      "russian": "Железное сердце",
+      "chinese": "钢胆雄心",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_deeds_not_words": {
+      "id": "title_deeds_not_words",
+      "english": "Deeds not Words",
+      "russian": "Дела, а не слова",
+      "chinese": "行胜于言",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_opposing_force": {
+      "id": "title_opposing_force",
+      "english": "Opposing force",
+      "russian": "Противостоящая сила",
+      "chinese": "针锋相对",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_golden_eagle": {
+      "id": "title_golden_eagle",
+      "english": "Golden Eagle",
+      "russian": "Золотой орел",
+      "chinese": "金色雄鹰",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_support_and_destruction": {
+      "id": "title_support_and_destruction",
+      "english": "Support and Destruction",
+      "russian": "Поддержка и разрушение",
+      "chinese": "助阵铁雨",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title": {
+      "id": "title",
+      "english": "Title",
+      "russian": "Титул",
+      "chinese": "头衔",
+      "comments": "",
+      "max_chars": ""
+    },
+    "clear_title": {
+      "id": "clear_title",
+      "english": "Clear title",
+      "russian": "Убрать титул",
+      "chinese": "清除头衔",
+      "comments": "",
+      "max_chars": ""
+    },
+    "empty_title": {
+      "id": "empty_title",
+      "english": "Choose title",
+      "russian": "Выберите титул",
+      "chinese": "选择头衔",
+      "comments": "",
+      "max_chars": ""
+    },
+    "no_titles": {
+      "id": "no_titles",
+      "english": "No titles to choose",
+      "russian": "Нет титулов для выбора",
+      "chinese": "没有可用的头衔",
+      "comments": "",
+      "max_chars": ""
+    },
+    "all_titles": {
+      "id": "all_titles",
+      "english": "All titles",
+      "russian": "Все титулы",
+      "chinese": "所有头衔",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_rammer": {
+      "id": "title_rammer",
+      "english": "Rammer",
+      "russian": "Таранщик",
+      "chinese": "灾星",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cannon_fodder": {
+      "id": "title_cannon_fodder",
+      "english": "Cannon Fodder",
+      "russian": "Пушечное мясо",
+      "chinese": "炮灰",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_inapproachable": {
+      "id": "title_inapproachable",
+      "english": "Unapproachable",
+      "russian": "Неприступный",
+      "chinese": "飞行刺猬",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_champion": {
+      "id": "title_champion",
+      "english": "Champion",
+      "russian": "Чемпион",
+      "chinese": "我是冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_conqueror": {
+      "id": "title_conqueror",
+      "english": "Conqueror",
+      "russian": "Завоеватель",
+      "chinese": "征服者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_nine_lived": {
+      "id": "title_nine_lived",
+      "english": "Nine Lives",
+      "russian": "Девять жизней",
+      "chinese": "九条命",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_disguise_expert": {
+      "id": "title_disguise_expert",
+      "english": "Master of Disguise",
+      "russian": "Мастер маскировки",
+      "chinese": "伪装大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_virtual_pilot": {
+      "id": "title_virtual_pilot",
+      "english": "Virtual Pilot",
+      "russian": "Виртуальный пилот",
+      "chinese": "模飞专家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_explorer": {
+      "id": "title_explorer",
+      "english": "Explorer",
+      "russian": "Странник",
+      "chinese": "探险家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_brother_of_the_brush": {
+      "id": "title_brother_of_the_brush",
+      "english": "Brother of the Brush",
+      "russian": "Художник",
+      "chinese": "油漆工",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_fine_art_expert": {
+      "id": "title_fine_art_expert",
+      "english": "Fine Art Expert",
+      "russian": "Искусствовед",
+      "chinese": "艺术家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_anarchist": {
+      "id": "title_anarchist",
+      "english": "Blaster",
+      "russian": "Анархист",
+      "chinese": "火箭狂",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_elite_commander": {
+      "id": "title_elite_commander",
+      "english": "Elite Commander",
+      "russian": "Командир элиты",
+      "chinese": "精英指挥官",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_jet_powered": {
+      "id": "title_jet_powered",
+      "english": "Jet-Powered",
+      "russian": "Реактивный",
+      "chinese": "喷气动力",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_superior": {
+      "id": "title_superior",
+      "english": "Superior",
+      "russian": "Исключительный",
+      "chinese": "胜人一等",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_research_pilot": {
+      "id": "title_research_pilot",
+      "english": "Research Pilot",
+      "russian": "Знаток самолётов",
+      "chinese": "飞行研究员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_chief_research_pilot": {
+      "id": "title_chief_research_pilot",
+      "english": "Senior Research Pilot",
+      "russian": "Эксперт по самолётам",
+      "chinese": "高级飞行研究员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_aircraft_designer": {
+      "id": "title_aircraft_designer",
+      "english": "Flight Model Designer",
+      "russian": "Авиаконструктор",
+      "chinese": "气动模型设计师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_master_aircraft_designer": {
+      "id": "title_master_aircraft_designer",
+      "english": "Senior Flight Model Designer",
+      "russian": "Старший авиаконструктор",
+      "chinese": "高级气动模型设计师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_game_master": {
+      "id": "title_game_master",
+      "english": "Game Master",
+      "russian": "Гейм-мастер",
+      "chinese": "游戏管理员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_forum_moderator": {
+      "id": "title_forum_moderator",
+      "english": "Forum Moderator",
+      "russian": "Модератор форума",
+      "chinese": "论坛管理员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_chat_moderator": {
+      "id": "title_chat_moderator",
+      "english": "Chat Moderator",
+      "russian": "Модератор чата",
+      "chinese": "聊天频道管理员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_community_manager": {
+      "id": "title_community_manager",
+      "english": "Community Manager",
+      "russian": "Комьюнити-менеджер",
+      "chinese": "社区管理员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_air_master_4x4": {
+      "id": "title_air_master_4x4",
+      "english": "Combat master 4x4",
+      "russian": "Мастер боя 4x4",
+      "chinese": "作战大师 4×4",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_alpha_tester": {
+      "id": "title_alpha_tester",
+      "english": "Alpha Tester",
+      "russian": "Aльфа-тестер",
+      "chinese": "内测人员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_helper": {
+      "id": "title_helper",
+      "english": "Forum Helper",
+      "russian": "Форумный помощник",
+      "chinese": "论坛帮手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_alpha_test_veteran": {
+      "id": "title_alpha_test_veteran",
+      "english": "Alpha Test Veteran",
+      "russian": "Ветеран альфа-теста",
+      "chinese": "资深内测人员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_hero_of_stalingrad": {
+      "id": "title_hero_of_stalingrad",
+      "english": "Hero of Stalingrad",
+      "russian": "Герой Сталинграда",
+      "chinese": "斯大林格勒英雄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_hero_of_dover": {
+      "id": "title_hero_of_dover",
+      "english": "Hero of Dover",
+      "russian": "Герой Дувра",
+      "chinese": "多佛英雄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_hero_of_midway": {
+      "id": "title_hero_of_midway",
+      "english": "Hero of Midway",
+      "russian": "Герой Мидуэя",
+      "chinese": "中途岛英雄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_developer": {
+      "id": "title_developer",
+      "english": "Developer",
+      "russian": "Разработчик",
+      "chinese": "开发人员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_promising_pilot": {
+      "id": "title_promising_pilot",
+      "english": "Pilot",
+      "russian": "Пилот",
+      "chinese": "空战老手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_experienced_pilot": {
+      "id": "title_experienced_pilot",
+      "english": "Fighter",
+      "russian": "Истребитель",
+      "chinese": "空战专家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_flying_ace": {
+      "id": "title_flying_ace",
+      "english": "Ace",
+      "russian": "Ас",
+      "chinese": "空战王牌",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_god_of_war": {
+      "id": "title_god_of_war",
+      "english": "God of War",
+      "russian": "Бог войны",
+      "chinese": "战争教父",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_hornet": {
+      "id": "title_hornet",
+      "english": "Demolition Man",
+      "russian": "Подрывник",
+      "chinese": "破坏者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_demolition_man": {
+      "id": "title_demolition_man",
+      "english": "Destroyer",
+      "russian": "Разрушитель",
+      "chinese": "毁灭者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_annihiltator": {
+      "id": "title_annihiltator",
+      "english": "Thunderer",
+      "russian": "Громовержец",
+      "chinese": "唤雷者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sea_raider": {
+      "id": "title_sea_raider",
+      "english": "Sea hunter",
+      "russian": "Морской охотник",
+      "chinese": "大洋猎手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_kraken": {
+      "id": "title_kraken",
+      "english": "Sea dog",
+      "russian": "Морской волк",
+      "chinese": "海妖",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_chameleon": {
+      "id": "title_chameleon",
+      "english": "Chameleon",
+      "russian": "Хамелеон",
+      "chinese": "变色龙",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_virtual_ace": {
+      "id": "title_virtual_ace",
+      "english": "Virtual Ace",
+      "russian": "Виртуальный ас",
+      "chinese": "模飞王牌",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_aaa": {
+      "id": "title_aaa",
+      "english": "Anti-Aircraft",
+      "russian": "Зенитчик",
+      "chinese": "专业防空",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_tank": {
+      "id": "title_tank",
+      "english": "Tankman",
+      "russian": "Танкист",
+      "chinese": "坦克专家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_tank_experienced": {
+      "id": "title_tank_experienced",
+      "english": "Armored Officer",
+      "russian": "Офицер-танкист",
+      "chinese": "坦克大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_tank_destroyer": {
+      "id": "title_tank_destroyer",
+      "english": "Tank Destroyer",
+      "russian": "Истребитель танков",
+      "chinese": "坦克猎手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_tanks_pioneer": {
+      "id": "title_tanks_pioneer",
+      "english": "Tank Pioneer",
+      "russian": "Танковый пионер",
+      "chinese": "坦克先锋",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_t34_test_engineer": {
+      "id": "title_t34_test_engineer",
+      "english": "T-34 Test Engineer",
+      "russian": "Испытатель Т-34",
+      "chinese": "T-34 测试工程师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sherman_capturer": {
+      "id": "title_sherman_capturer",
+      "english": "Sherman Hunter",
+      "russian": "Захватчик \"Шермана\"",
+      "chinese": "智取“谢尔曼”",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_greasemonkey": {
+      "id": "title_greasemonkey",
+      "english": "Greasemonkey",
+      "russian": "Мазута",
+      "chinese": "专业维修",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_first_on_the_track": {
+      "id": "title_first_on_the_track",
+      "english": "First on the Track",
+      "russian": "Первый танкист",
+      "chinese": "抢先试驾",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_hero_of_kursk": {
+      "id": "title_hero_of_kursk",
+      "english": "Hero of Kursk",
+      "russian": "Герой Курска",
+      "chinese": "库尔斯克英雄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_pyromaniac": {
+      "id": "title_pyromaniac",
+      "english": "Pyromaniac",
+      "russian": "Пироман",
+      "chinese": "纵火师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_superhero": {
+      "id": "title_superhero",
+      "english": "Superhero",
+      "russian": "Супергерой",
+      "chinese": "超级英雄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_topracer": {
+      "id": "title_topracer",
+      "english": "Top Racer",
+      "russian": "Гонщик",
+      "chinese": "头号赛手",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_footballer": {
+      "id": "title_footballer",
+      "english": "Footballer",
+      "russian": "Футболист",
+      "chinese": "足球运动员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_2v2_duelist": {
+      "id": "title_2v2_duelist",
+      "english": "2v2 Duelist",
+      "russian": "Дуэлянт 2v2",
+      "chinese": "2v2 行家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_tank_universiade": {
+      "id": "title_tank_universiade",
+      "english": "Universiade Fighter",
+      "russian": "Боец Универсиады",
+      "chinese": "作战运动会",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_1v1_duelist": {
+      "id": "title_1v1_duelist",
+      "english": "1v1 Duelist",
+      "russian": "Дуэлянт 1v1",
+      "chinese": "1v1 行家",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_1v1_master": {
+      "id": "title_1v1_master",
+      "english": "1v1 Master-duelist",
+      "russian": "Мастер-дуэлянт 1v1",
+      "chinese": "1v1 大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_1v1_hero": {
+      "id": "title_1v1_hero",
+      "english": "Duelist-hero",
+      "russian": "Дуэлянт-герой",
+      "chinese": "决斗英雄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_wings_of_victory": {
+      "id": "title_wings_of_victory",
+      "english": "Wings of Victory",
+      "russian": "Крылья Победы",
+      "chinese": "胜利之翼",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_normandy_ace": {
+      "id": "title_normandy_ace",
+      "english": "Normandy Ace",
+      "russian": "Ас Нормандии",
+      "chinese": "诺曼底王牌",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_gladiators4v4": {
+      "id": "title_gladiators4v4",
+      "english": "Gladiators 4v4",
+      "russian": "Gladiators 4v4",
+      "chinese": "4v4 角斗士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_beeline": {
+      "id": "title_beeline",
+      "english": "Bzzzzzzz",
+      "russian": "Вжжжжжжж",
+      "chinese": "嗡嗡嗡嗡",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_council_member": {
+      "id": "title_council_member",
+      "english": "Council Member",
+      "russian": "Совет игроков",
+      "chinese": "玩家理事会成员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_suggestion_helper": {
+      "id": "title_suggestion_helper",
+      "english": "Suggestion Moderator",
+      "russian": "Совет игроков",
+      "chinese": "玩家建议整理团队",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_community_helper": {
+      "id": "title_community_helper",
+      "english": "Community Helper",
+      "russian": "Комьюнити-хелпер",
+      "chinese": "社区助理",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_target_for_tonight": {
+      "id": "title_target_for_tonight",
+      "english": "Target for Tonight",
+      "russian": "Цель на сегодня",
+      "chinese": "今夜目标",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_live_moderator": {
+      "id": "title_live_moderator",
+      "english": "Live Moderator",
+      "russian": "Модератор Live",
+      "chinese": "Live 团队",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_steam_moderator": {
+      "id": "title_steam_moderator",
+      "english": "Steam Moderator",
+      "russian": "Стим модератор",
+      "chinese": "Steam 管理团队",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_gaijin_administrator": {
+      "id": "title_gaijin_administrator",
+      "english": "Gaijin Administrator",
+      "russian": "Администратор",
+      "chinese": "Gaijin 高管",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_wiki_team": {
+      "id": "title_wiki_team",
+      "english": "Wiki Team",
+      "russian": "Команда Wiki",
+      "chinese": "百科团队",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_national_coordinator": {
+      "id": "title_national_coordinator",
+      "english": "National Coordinator",
+      "russian": "Национальный координатор",
+      "chinese": "社区协调员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_technical_moderator": {
+      "id": "title_technical_moderator",
+      "english": "Technical Moderator",
+      "russian": "Технический модератор",
+      "chinese": "技术团队",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_author": {
+      "id": "title_author",
+      "english": "Author",
+      "russian": "Автор",
+      "chinese": "原创者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_china_cbt_hero": {
+      "id": "title_china_cbt_hero",
+      "english": "CBT Hero",
+      "russian": "CBT Hero",
+      "chinese": "集结精英",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_china_cbt_elite": {
+      "id": "title_china_cbt_elite",
+      "english": "CBT Elite",
+      "russian": "CBT Elite",
+      "chinese": "内测元勋",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_legion_of_honour": {
+      "id": "title_cavalier_legion_of_honour",
+      "english": "Chevalier of the Legion of Honour",
+      "russian": "Кавалер ордена Почётного легиона",
+      "chinese": "国家荣誉军团勋章勋位骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_liberation": {
+      "id": "title_cavalier_liberation",
+      "english": "Cavalier of the Order of Liberation",
+      "russian": "Кавалер ордена Освобождения",
+      "chinese": "法国解放勋章勋位骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_chevalier_of_france": {
+      "id": "title_chevalier_of_france",
+      "english": "Chevalier of the Order of Merit of France",
+      "russian": "Кавалер ордена Заслуг Франции",
+      "chinese": "国家功勋勋章勋位骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_santa_ny2014": {
+      "id": "title_santa_ny2014",
+      "english": "Santa's Little Helper",
+      "russian": "Помощник Деда Мороза",
+      "chinese": "圣诞送温暖",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_vk_quiz_expert": {
+      "id": "title_vk_quiz_expert",
+      "english": "Answer 7 of 10 questions correctly using FB application.",
+      "russian": "Ответь правильно на 7 из 10 вопросов в приложении ВКонтакте.",
+      "chinese": "Answer 7 of 10 questions correctly using FB application.",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_fb_quiz_expert": {
+      "id": "title_fb_quiz_expert",
+      "english": "Answer 7 of 10 questions correctly using FB application.",
+      "russian": "Ответь правильно на 7 из 10 вопросов в приложении Facebook.",
+      "chinese": "Answer 7 of 10 questions correctly using FB application.",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_lookout": {
+      "id": "title_lookout",
+      "english": "Lookout",
+      "russian": "Впередсмотрящий",
+      "chinese": "蓝海守望者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_siege_master": {
+      "id": "title_siege_master",
+      "english": "Siege Master",
+      "russian": "Мастер Осады",
+      "chinese": "攻城师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_high_roller": {
+      "id": "title_high_roller",
+      "english": "High Roller",
+      "russian": "Финансовый магнат",
+      "chinese": "挥金如土",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_order_savoy": {
+      "id": "title_cavalier_order_savoy",
+      "english": "Cavalier of the Order of Savoy",
+      "russian": "Кавалер Савойского ордена",
+      "chinese": "萨伏依军功勋章勋位骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_cross_distinguished_service": {
+      "id": "title_cavalier_cross_distinguished_service",
+      "english": "Cavalier of the Distinguished Service Cross",
+      "russian": "Кавалер креста За выдающиеся заслуги",
+      "chinese": "杰出服役十字章获得者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_cross_merit_of_war": {
+      "id": "title_cavalier_cross_merit_of_war",
+      "english": "Cavalier of the Cross of Merit of War",
+      "russian": "Кавалер креста Боевых заслуг",
+      "chinese": "战功十字章勋位骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_german_gold_cross": {
+      "id": "title_cavalier_german_gold_cross",
+      "english": "Cavalier of the German Cross in Gold",
+      "russian": "Кавалер Золотого креста",
+      "chinese": "金质德意志十字战争勋章获得者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_knight_kross": {
+      "id": "title_cavalier_knight_kross",
+      "english": "Cavalier of the Knights Cross",
+      "russian": "Кавалер Рыцарского креста",
+      "chinese": "骑士铁十字章获得者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_medal_of_honor": {
+      "id": "title_cavalier_medal_of_honor",
+      "english": "Cavalier of the Medal of Honor",
+      "russian": "Кавалер медали Почёта",
+      "chinese": "荣誉勋章获得者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_order_crown_italy": {
+      "id": "title_cavalier_order_crown_italy",
+      "english": "Cavalier of the Order of the Crown of Italy",
+      "russian": "Кавалер ордена Короны",
+      "chinese": "意大利王冠勋章勋位骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_order_distinguished_service": {
+      "id": "title_cavalier_order_distinguished_service",
+      "english": "Cavalier of the Distinguished Service Order",
+      "russian": "Кавалер ордена Выдающихся заслуг",
+      "chinese": "杰出服务勋章勋位骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_order_golden_kite": {
+      "id": "title_cavalier_order_golden_kite",
+      "english": "Cavalier of the Order of the Golden Kite",
+      "russian": "Кавалер ордена Золотого коршуна",
+      "chinese": "获颁金鸱勋章",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_order_of_glory": {
+      "id": "title_cavalier_order_of_glory",
+      "english": "Cavalier of the Order of Glory",
+      "russian": "Кавалер ордена Славы",
+      "chinese": "荣膺光荣勋章",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_order_patriotic_war": {
+      "id": "title_cavalier_order_patriotic_war",
+      "english": "Cavalier of the Order of the Patriotic War",
+      "russian": "Кавалер ордена Отечественной войны",
+      "chinese": "荣膺卫国战争勋章",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_order_red_banner": {
+      "id": "title_cavalier_order_red_banner",
+      "english": "Cavalier of the Order of the Red Banner",
+      "russian": "Кавалер ордена Красного знамени",
+      "chinese": "荣膺红旗勋章",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_order_red_star": {
+      "id": "title_cavalier_order_red_star",
+      "english": "Cavalier of the Order of the Red Star",
+      "russian": "Кавалер ордена Красной звезды",
+      "chinese": "荣膺红星勋章",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_order_rising_sun": {
+      "id": "title_cavalier_order_rising_sun",
+      "english": "Cavalier of the Order of the Rising Sun",
+      "russian": "Кавалер ордена Восходящего солнца",
+      "chinese": "获颁旭日章",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_order_sacred_treasure": {
+      "id": "title_cavalier_order_sacred_treasure",
+      "english": "Cavalier of the Order of the Sacred Treasure",
+      "russian": "Кавалер ордена Священного сокровища",
+      "chinese": "获颁瑞宝章",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_victoria_cross": {
+      "id": "title_cavalier_victoria_cross",
+      "english": "Cavalier of the Victoria Cross",
+      "russian": "Кавалер креста Виктории",
+      "chinese": "维多利亚十字章勋位骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cowboy": {
+      "id": "title_cowboy",
+      "english": "▃ Cowboy ▃",
+      "russian": "▃ Ковбой ▃",
+      "chinese": "▃ 牛仔 ▃",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_samurai": {
+      "id": "title_samurai",
+      "english": "▅ Samurai ▅",
+      "russian": "▅ Самурай ▅",
+      "chinese": "▅ 武士 ▅",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_knight": {
+      "id": "title_knight",
+      "english": "▄ Knight ▄",
+      "russian": "▄ Рыцарь ▄",
+      "chinese": "▄ 骑士 ▄",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_eagle": {
+      "id": "title_eagle",
+      "english": "▀ Eagle ▀",
+      "russian": "▀ Орел ▀",
+      "chinese": "▀ 战鹰 ▀",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_falcon": {
+      "id": "title_falcon",
+      "english": "▂ Falcon ▂",
+      "russian": "▂ Сокол ▂",
+      "chinese": "▂ 猎鹰 ▂",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_all": {
+      "id": "title_all",
+      "english": "▂▀▄▅▃",
+      "russian": "▂▀▄▅▃",
+      "chinese": "▂▀▄▅▃",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_3_years": {
+      "id": "title_3_years",
+      "english": "-- III --",
+      "russian": "-- III --",
+      "chinese": "-- III --",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_true_australian": {
+      "id": "title_true_australian",
+      "english": "True Australian",
+      "russian": "Настоящий Австралиец",
+      "chinese": "澳洲人",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_madman": {
+      "id": "title_madman",
+      "english": "Madman!",
+      "russian": "Безумец!",
+      "chinese": "狂人！",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_order_precious_tripod": {
+      "id": "title_cavalier_order_precious_tripod",
+      "english": "Cavalier of the Order of Precious Tripod",
+      "russian": "Кавалер ордена Драгоценного треножника",
+      "chinese": "宝鼎勋章受章者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_order_cloud_banner": {
+      "id": "title_cavalier_order_cloud_banner",
+      "english": "Cavalier of the Order of the Cloud and Banner",
+      "russian": "Кавалер ордена Заоблачной хоругви",
+      "chinese": "云麾勋章受章者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_grand_sword_cross": {
+      "id": "title_cavalier_grand_sword_cross",
+      "english": "Knight of the Grand Sword Cross",
+      "russian": "Рыцарь большого креста ордена Мечей",
+      "chinese": "皇家骑士大十字宝剑勋章勋位骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cavalier_sword_cross": {
+      "id": "title_cavalier_sword_cross",
+      "english": "Cavalier of the Order of the Sword Cross",
+      "russian": "Кавалер военного креста ордена Мечей",
+      "chinese": "皇家宝剑徽章勋位骑士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "battlepass_season_1_champion": {
+      "id": "battlepass_season_1_champion",
+      "english": "Champion of the BattlePass 1st Season",
+      "russian": "Чемпион первого сезона \"Боевого пропуска\"",
+      "chinese": "战斗通行证 • 征服第 1 赛季",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_sky_pirate": {
+      "id": "title_sky_pirate",
+      "english": "Sky Pirate",
+      "russian": "Воздушный пират",
+      "chinese": "空中海盗",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_veteran_2077": {
+      "id": "title_veteran_2077",
+      "english": "Veteran 2077",
+      "russian": "Ветеран 2077",
+      "chinese": "2077 战争老兵",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_prowler_in_the_night": {
+      "id": "title_prowler_in_the_night",
+      "english": "Prowler in the Night",
+      "russian": "Крадущийся в ночи",
+      "chinese": "暗夜徘徊者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_warrior_of_the_night": {
+      "id": "title_warrior_of_the_night",
+      "english": "Warrior of the Night",
+      "russian": "Воин ночи",
+      "chinese": "黯影战士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_lord_of_the_night": {
+      "id": "title_lord_of_the_night",
+      "english": "Lord of the Night",
+      "russian": "Повелитель ночи",
+      "chinese": "终夜霸主",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_ranking_season_1_participant": {
+      "id": "title_ranking_season_1_participant",
+      "english": "Rankings Challenge Season 1 Participant",
+      "russian": "Участник 1-го сезона Рейтинговых боёв",
+      "chinese": "勇攀天梯第 1 赛季参赛者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_cyber_competitor": {
+      "id": "title_cyber_competitor",
+      "english": "Cyber-Competitor",
+      "russian": "Кибер-соперник",
+      "chinese": "赛博行者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_legendary_pilot": {
+      "id": "title_legendary_pilot",
+      "english": "Legendary Pilot",
+      "russian": "Легендарный пилот",
+      "chinese": "传奇飞行员",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_master_of_destruction": {
+      "id": "title_master_of_destruction",
+      "english": "Master of Destruction",
+      "russian": "Мастер разрушения",
+      "chinese": "毁灭宗师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_jack_of_all_trades": {
+      "id": "title_jack_of_all_trades",
+      "english": "Jack of all Trades",
+      "russian": "Мастер на все руки",
+      "chinese": "全能战士",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_grandmaster": {
+      "id": "title_grandmaster",
+      "english": "Grandmaster",
+      "russian": "Грандмастер",
+      "chinese": "决斗大师",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_esportsready_champion": {
+      "id": "title_esportsready_champion",
+      "english": "eSportsReady Champion",
+      "russian": "Чемпион eSportsReady",
+      "chinese": "专业电竞游戏大赛冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_esportsready_contender": {
+      "id": "title_esportsready_contender",
+      "english": "eSportsReady Contender",
+      "russian": "Участник eSportsReady",
+      "chinese": "专业电竞游戏大赛参与者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_esportsready_fan": {
+      "id": "title_esportsready_fan",
+      "english": "eSportsReady Fan",
+      "russian": "Фанат eSportsReady",
+      "chinese": "专业电竞游戏粉丝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_olyst_champion": {
+      "id": "title_olyst_champion",
+      "english": "OlySt CUP Champion",
+      "russian": "Чемпион OlySt CUP",
+      "chinese": "OlySt 杯冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_olyst_contender": {
+      "id": "title_olyst_contender",
+      "english": "OlySt CUP Contender",
+      "russian": "Участник OlySt CUP",
+      "chinese": "OlySt 杯参赛者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_olyst_fan": {
+      "id": "title_olyst_fan",
+      "english": "OlySt Team Fan",
+      "russian": "Фанат команды OlySt",
+      "chinese": "OlySt 队粉丝",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_olyst_champion_2": {
+      "id": "title_olyst_champion_2",
+      "english": "OlySt CUP II Champion",
+      "russian": "Чемпион OlySt CUP II",
+      "chinese": "第二届 OlySt 杯冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_olyst_contender_2": {
+      "id": "title_olyst_contender_2",
+      "english": "OlySt CUP II Contender",
+      "russian": "Участник OlySt CUP II",
+      "chinese": "第二届 OlySt 杯参赛者",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_victorycup_champion": {
+      "id": "title_victorycup_champion",
+      "english": "Victory Cup Champion",
+      "russian": "Чемпион кубка Победы",
+      "chinese": "胜利杯冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_thunder_cup_champion": {
+      "id": "title_thunder_cup_champion",
+      "english": "Thunder CUP Champion",
+      "russian": "Чемпион Thunder CUP",
+      "chinese": "雷霆杯冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_thunder_cup_2024_champion": {
+      "id": "title_thunder_cup_2024_champion",
+      "english": "Thunder CUP 2024 Champion",
+      "russian": "Чемпион Thunder CUP 2024",
+      "chinese": "雷霆杯 2024 冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_thunder_cup_2023_champion": {
+      "id": "title_thunder_cup_2023_champion",
+      "english": "Thunder CUP 2023 Champion",
+      "russian": "Чемпион Thunder CUP 2023",
+      "chinese": "雷霆杯 2023 冠军",
+      "comments": "",
+      "max_chars": ""
+    },
+    "title_thunder_cup_2023_contender": {
+      "id": "title_thunder_cup_2023_contender",
+      "english": "Thunder CUP 2023 Contender",
+      "russian": "Участник Thunder CUP 2023",
+      "chinese": "雷霆杯 2023 参赛者",
+      "comments": "",
+      "max_chars": ""
+    }
+  },
+  "game_version": "2.44.0.42"
+}
