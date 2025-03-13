@@ -1,7 +1,7 @@
 # WT Resource Tool
 
-!!! warning
-    This project is still in development, PRs are welcome!
+> [!warning]
+> This project is still in development, PRs are welcome!
 
 As a War Thunder community developer, interested in unpacking data but turned off by the complexity of the results? Try the WT Resource Tool!
 
@@ -17,15 +17,15 @@ We did the hard work for you, parsing the data and making it human-readable, so 
 
 - **Player titles**: All player titles in the game, including their localization.
 
-!!! warning
-    More data will be added soon!
+> [!note]
+> More data will be added soon!
 
 ## Installation
 
 ### Use python package `wt-resource-tool`
 
-!!! warning
-    WIP. Not available yet.
+> [!warning]
+> This package is not available on PyPi yet. You can install it from source.
 
 ### I don't want to use python package `wt-resource-tool`
 
