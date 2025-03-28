@@ -1,0 +1,34 @@
+[project]
+name = "wt-resource-tool"
+version = "0.1.0"
+description = ""
+authors = [{ name = "axiangcoding", email = "axiangcoding@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "pydantic (>=2.10.6,<3.0.0)",
+    "pydantic-settings (>=2.8.1,<3.0.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "aiofiles (>=24.1.0,<25.0.0)",
+    "loguru (>=0.7.3,<0.8.0)",
+]
+
+[tool.poetry]
+packages = [{ include = "wt_resource_tool", from = "src" }]
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.10"
+pytest = "^8.3.5"
+ipykernel = "^6.29.5"
+mypy = "^1.15.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+line-length = 120
+lint.select = ["I", "N", "UP", "B", "A", "ASYNC"]
