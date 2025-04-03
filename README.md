@@ -24,7 +24,7 @@ This project is not affiliated with Gaijin Entertainment.
 
 - **Player titles**: All player titles in the game, including their localization.
 - **Player medals**: All player medals in the game, including their localization and image at different sizes.
-
+- **Vehicle data**: All vehicle data in the game
 
 > [!note]
 > More data will be added soon!
