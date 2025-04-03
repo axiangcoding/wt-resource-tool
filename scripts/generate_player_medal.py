@@ -1,55 +1,13 @@
-import csv
 import os
 
 from dotenv import load_dotenv
 
-from wt_resource_tool._schema import PlayerMedalDesc, PlayerMedalStorage
-
-
-def _get_dt_from_csv(data: csv.DictReader) -> list[PlayerMedalDesc]:
-    titles: list[PlayerMedalDesc] = []
-    for row in data:
-        row1 = row["<ID|readonly|noverify>"]
-
-        if row1.endswith("/name"):
-            mid = row["<ID|readonly|noverify>"].replace("/name", "")
-
-            td = PlayerMedalDesc(
-                id=mid,
-                english=row["<English>"],
-                french=row["<French>"],
-                italian=row["<Italian>"],
-                german=row["<German>"],
-                spanish=row["<Spanish>"],
-                japanese=row["<Japanese>"].replace("\\t", ""),
-                chinese=row["<Chinese>"].replace("\\t", ""),
-                russian=row["<Russian>"],
-                comments=row["<Comments>"],
-                max_chars=row["<max_chars>"],
-            )
-            titles.append(td)
-    return titles
-
-
-def parse_player_medal() -> PlayerMedalStorage:
-    repo_path = os.environ["DATAMINE_REPO_PATH"]
-    all_medals: list[PlayerMedalDesc] = []
-
-    with open(os.path.join(repo_path, "lang.vromfs.bin_u/lang/unlocks_medals.csv"), encoding="utf-8") as f:
-        data = csv.DictReader(f, delimiter=";")
-        all_medals.extend(_get_dt_from_csv(data))
-
-    medals_map = {}
-    for title in all_medals:
-        medals_map[title.id] = title
-
-    game_version = open(os.path.join(repo_path, "version"), encoding="utf-8").read()
-    return PlayerMedalStorage(medals_map=medals_map, game_version=game_version.strip())
-
+from wt_resource_tool.parser import player_medal_parser
 
 if __name__ == "__main__":
     load_dotenv()
-    pt_storage = parse_player_medal()
+    repo_path = os.environ["DATAMINE_REPO_PATH"]
+    pt_storage = player_medal_parser.parse_player_medal(repo_path)
 
     version_folder = os.path.join("static/", pt_storage.game_version.replace(".", "_"))
     latest_folder = os.path.join("static/latest")

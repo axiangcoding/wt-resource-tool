@@ -1,13 +1,6 @@
-from calendar import c
-from typing import Annotated, Literal, Optional
+from typing import Literal
 
 from pydantic import BaseModel, Field
-
-type DataSource = Literal["github", "github-jsdelivr"]
-
-type Store = Literal["memory"]
-
-type DataType = Literal["player_title", "player_medal", "vehicle"]
 
 
 class PlayerTitleDesc(BaseModel):
@@ -71,14 +64,10 @@ class PlayerMedalDesc(BaseModel):
     def get_image_url(
         self,
         mode: Literal["normal", "big", "ribbon"] = "normal",
-        source: DataSource = "github-jsdelivr",
     ) -> str:
-        if source == "github":
-            prefix = "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/refs/heads/master/atlases.vromfs.bin_u/medals"
-        elif source == "github-jsdelivr":
-            prefix = "https://cdn.jsdelivr.net/gh/gszabi99/War-Thunder-Datamine@refs/heads/master/atlases.vromfs.bin_u/medals"
-        else:
-            raise ValueError("Invalid source")
+        prefix = (
+            "https://cdn.jsdelivr.net/gh/gszabi99/War-Thunder-Datamine@refs/heads/master/atlases.vromfs.bin_u/medals"
+        )
         if mode == "normal":
             return f"{prefix}/{self.id}.png"
         elif mode == "big":
@@ -170,17 +159,8 @@ class Vehicle(BaseModel):
 
     def get_icon_url(
         self,
-        source: DataSource = "github-jsdelivr",
     ) -> str:
-        if source == "github":
-            prefix = "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/refs/heads/master/atlases.vromfs.bin_u/units"
-        elif source == "github-jsdelivr":
-            prefix = (
-                "https://cdn.jsdelivr.net/gh/gszabi99/War-Thunder-Datamine@refs/heads/master/atlases.vromfs.bin_u/units"
-            )
-        else:
-            raise ValueError("Invalid source")
-        return f"{prefix}/{self.id}.png"
+        return f"https://cdn.jsdelivr.net/gh/gszabi99/War-Thunder-Datamine@refs/heads/master/atlases.vromfs.bin_u/units/{self.id}.png"
 
 
 class VehicleStorage(BaseModel):
