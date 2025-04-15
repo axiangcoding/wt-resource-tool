@@ -29,61 +29,6 @@ class WTResourceTool(BaseModel):
 
     """
 
-    async def load_parsed_data(
-        self,
-        data_types: list[DataType],
-        game_version: str = "latest",
-        source: DataSource = "github-jsdelivr",
-    ):
-        """
-        Load pre-parsed data from remote.
-        The data is stored in the static folder of the repository.
-
-        Args:
-            data_types (list[DataType]): The data types to load.
-            game_version (str): The game version to load. Default is "latest".
-            source (DataSource): The source of the data. Default is "github-jsdelivr". It can be "github", "github-jsdelivr" or a custom url.
-        """
-        start_time = time.perf_counter()
-        if source == "github":
-            resource_url_prefix = (
-                "https://raw.githubusercontent.com/axiangcoding/wt-resource-tool/refs/heads/main/static"
-            )
-        elif source == "github-jsdelivr":
-            resource_url_prefix = "https://cdn.jsdelivr.net/gh/axiangcoding/wt-resource-tool/static"
-        else:
-            if not source.startswith("https:// "):
-                raise ValueError("Custom source must be a valid safe url")
-            resource_url_prefix = source
-        game_version_folder_str = game_version.replace(".", "_")
-
-        if "player_title" in data_types:
-            resource_url = f"{resource_url_prefix}/{game_version_folder_str}/player_title.json"
-            logger.debug("Loading player title data from {}", resource_url)
-            title_data = await self.__get_data_from_remote(resource_url)
-            title_storage = ParsedPlayerTitleData.model_validate_json(title_data)
-            await self.save_player_title_data(title_storage)
-
-        if "player_medal" in data_types:
-            resource_url = f"{resource_url_prefix}/{game_version_folder_str}/player_medal.json"
-            logger.debug("Loading player medal data from {}", resource_url)
-            medal_data = await self.__get_data_from_remote(resource_url)
-            medal_storage = ParsedPlayerMedalData.model_validate_json(medal_data)
-            await self.save_player_medal_data(medal_storage)
-
-        if "vehicle" in data_types:
-            resource_url = f"{resource_url_prefix}/{game_version_folder_str}/vehicle.json"
-            logger.debug("Loading vehicle data from {}", resource_url)
-            vehicle_data = await self.__get_data_from_remote(resource_url)
-            vehicle_storage = ParsedVehicleData.model_validate_json(vehicle_data)
-            await self.save_vehicle_data(vehicle_storage)
-
-        end_time = time.perf_counter()
-        logger.debug(
-            "Loaded data in {} seconds",
-            round(end_time - start_time, 2),
-        )
-
     async def parse_and_load_data(
         self,
         data_types: list[DataType],
@@ -155,16 +100,6 @@ class WTResourceTool(BaseModel):
 
         """
         return await self.get_vehicle_data(vehicle_id, game_version=game_version)
-
-    async def __get_data_from_remote(
-        self,
-        resource_url: str,
-    ) -> str:
-        async with httpx.AsyncClient(timeout=60) as client:
-            resp = await client.get(resource_url)
-            resp.raise_for_status()
-            storage_text = resp.text
-        return storage_text
 
     @abstractmethod
     async def save_player_title_data(
