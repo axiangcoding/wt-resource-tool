@@ -9,9 +9,7 @@ if __name__ == "__main__":
     repo_path = os.environ["DATAMINE_REPO_PATH"]
     pt_storage = player_medal_parser.parse_player_medal(repo_path)
 
-    version_folder = os.path.join("static/", pt_storage.game_version.replace(".", "_"))
     latest_folder = os.path.join("static/latest")
-    os.makedirs(version_folder, exist_ok=True)
     os.makedirs(latest_folder, exist_ok=True)
 
     json_content = pt_storage.model_dump_json(indent=2)

@@ -2,85 +2,6 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
-
-class PlayerTitleDesc(BaseModel):
-    id: str
-    english: str
-    french: str
-    italian: str
-    german: str
-    spanish: str
-    russian: str
-    # polish: str
-    # czech: str
-    # turkish: str
-    chinese: str
-    japanese: str
-    # portuguese: str
-    # ukrainian: str
-    # serbian: str
-    # hungarian: str
-    # korean: str
-    # belarusian: str
-    # romanian: str
-    # vietnamese: str
-    # t_chinese: str
-    # h_chinese: str
-    comments: str
-    max_chars: str
-
-
-class PlayerTitleStorage(BaseModel):
-    titles_map: dict[str, PlayerTitleDesc]
-    game_version: str
-
-
-class PlayerMedalDesc(BaseModel):
-    id: str
-    english: str
-    french: str
-    italian: str
-    german: str
-    spanish: str
-    russian: str
-    # polish: str
-    # czech: str
-    # turkish: str
-    chinese: str
-    japanese: str
-    # portuguese: str
-    # ukrainian: str
-    # serbian: str
-    # hungarian: str
-    # korean: str
-    # belarusian: str
-    # romanian: str
-    # vietnamese: str
-    # t_chinese: str
-    # h_chinese: str
-    comments: str
-    max_chars: str
-
-    def get_image_url(
-        self,
-        mode: Literal["normal", "big", "ribbon"] = "normal",
-    ) -> str:
-        prefix = (
-            "https://cdn.jsdelivr.net/gh/gszabi99/War-Thunder-Datamine@refs/heads/master/atlases.vromfs.bin_u/medals"
-        )
-        if mode == "normal":
-            return f"{prefix}/{self.id}.png"
-        elif mode == "big":
-            return f"{prefix}/{self.id}_big.png"
-        elif mode == "ribbon":
-            return f"{prefix}/{self.id}_ribbon.png"
-
-
-class PlayerMedalStorage(BaseModel):
-    medals_map: dict[str, PlayerMedalDesc]
-    game_version: str
-
-
 type Country = Literal[
     "country_usa",
     "country_germany",
@@ -92,11 +13,75 @@ type Country = Literal[
     "country_china",
     "country_sweden",
     "country_israel",
+    "unknown",
 ]
 
 
-class Vehicle(BaseModel):
-    id: str
+class NameI18N(BaseModel):
+    english: str
+    french: str
+    italian: str
+    german: str
+    spanish: str
+    russian: str
+    # polish: str
+    # czech: str
+    # turkish: str
+    chinese: str
+    japanese: str
+    # portuguese: str
+    # ukrainian: str
+    # serbian: str
+    # hungarian: str
+    # korean: str
+    # belarusian: str
+    # romanian: str
+    # vietnamese: str
+    # t_chinese: str
+    # h_chinese: str
+
+
+class PlayerTitleDesc(BaseModel):
+    title_id: str
+    name_i18n: NameI18N
+
+
+class ParsedPlayerTitleData(BaseModel):
+    titles: list[PlayerTitleDesc]
+    game_version: str
+
+
+class PlayerMedalDesc(BaseModel):
+    medal_id: str
+    country: Country
+    name_i18n: NameI18N
+
+    def get_image_url(
+        self,
+        mode: Literal["normal", "big", "ribbon"] = "normal",
+    ) -> str:
+        prefix = (
+            "https://cdn.jsdelivr.net/gh/gszabi99/War-Thunder-Datamine@refs/heads/master/atlases.vromfs.bin_u/medals"
+        )
+        if mode == "normal":
+            return f"{prefix}/{self.medal_id}.png"
+        elif mode == "big":
+            return f"{prefix}/{self.medal_id}_big.png"
+        elif mode == "ribbon":
+            return f"{prefix}/{self.medal_id}_ribbon.png"
+
+
+class ParsedPlayerMedalData(BaseModel):
+    medals: list[PlayerMedalDesc]
+    game_version: str
+
+
+class VehicleDesc(BaseModel):
+    vehicle_id: str
+    # name_shop_i18n: NameI18N
+    # name_0_i18n: NameI18N
+    # name_1_i18n: NameI18N
+    # name_2_i18n: NameI18N
     rank: int
     economic_rank_arcade: int
     economic_rank_historical: int
@@ -160,9 +145,9 @@ class Vehicle(BaseModel):
     def get_icon_url(
         self,
     ) -> str:
-        return f"https://cdn.jsdelivr.net/gh/gszabi99/War-Thunder-Datamine@refs/heads/master/atlases.vromfs.bin_u/units/{self.id}.png"
+        return f"https://cdn.jsdelivr.net/gh/gszabi99/War-Thunder-Datamine@refs/heads/master/atlases.vromfs.bin_u/units/{self.vehicle_id}.png"
 
 
-class VehicleStorage(BaseModel):
-    vehicles_map: dict[str, Vehicle]
+class ParsedVehicleData(BaseModel):
+    vehicles: list[VehicleDesc]
     game_version: str

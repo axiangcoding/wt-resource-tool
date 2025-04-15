@@ -1,20 +1,22 @@
 import asyncio
 import time
-from tracemalloc import start
+from abc import abstractmethod
 from typing import Literal
 
 import httpx
+import numpy as np
 from loguru import logger
-from pydantic import BaseModel, Field
+from pandas import DataFrame
+from pydantic import BaseModel
 
 from wt_resource_tool.parser import player_medal_parser, player_title_parser, vehicle_data_parser
 from wt_resource_tool.schema._wt_schema import (
+    ParsedPlayerMedalData,
+    ParsedPlayerTitleData,
+    ParsedVehicleData,
     PlayerMedalDesc,
-    PlayerMedalStorage,
     PlayerTitleDesc,
-    PlayerTitleStorage,
-    Vehicle,
-    VehicleStorage,
+    VehicleDesc,
 )
 
 type DataType = Literal["player_title", "player_medal", "vehicle"]
@@ -26,10 +28,6 @@ class WTResourceTool(BaseModel):
     A tool to parse and get data about War Thunder.
 
     """
-
-    title_storage: PlayerTitleStorage | None = Field(default=None)
-    medal_storage: PlayerMedalStorage | None = Field(default=None)
-    vehicle_storage: VehicleStorage | None = Field(default=None)
 
     async def load_parsed_data(
         self,
@@ -46,7 +44,7 @@ class WTResourceTool(BaseModel):
             game_version (str): The game version to load. Default is "latest".
             source (DataSource): The source of the data. Default is "github-jsdelivr". It can be "github", "github-jsdelivr" or a custom url.
         """
-        start_time = time.time()
+        start_time = time.perf_counter()
         if source == "github":
             resource_url_prefix = (
                 "https://raw.githubusercontent.com/axiangcoding/wt-resource-tool/refs/heads/main/static"
@@ -63,22 +61,24 @@ class WTResourceTool(BaseModel):
             resource_url = f"{resource_url_prefix}/{game_version_folder_str}/player_title.json"
             logger.debug("Loading player title data from {}", resource_url)
             title_data = await self.__get_data_from_remote(resource_url)
-            self.title_storage = PlayerTitleStorage.model_validate_json(title_data)
+            title_storage = ParsedPlayerTitleData.model_validate_json(title_data)
+            await self.save_player_title_data(title_storage)
 
         if "player_medal" in data_types:
             resource_url = f"{resource_url_prefix}/{game_version_folder_str}/player_medal.json"
             logger.debug("Loading player medal data from {}", resource_url)
             medal_data = await self.__get_data_from_remote(resource_url)
-
-            self.medal_storage = PlayerMedalStorage.model_validate_json(medal_data)
+            medal_storage = ParsedPlayerMedalData.model_validate_json(medal_data)
+            await self.save_player_medal_data(medal_storage)
 
         if "vehicle" in data_types:
             resource_url = f"{resource_url_prefix}/{game_version_folder_str}/vehicle.json"
             logger.debug("Loading vehicle data from {}", resource_url)
             vehicle_data = await self.__get_data_from_remote(resource_url)
-            self.vehicle_storage = VehicleStorage.model_validate_json(vehicle_data)
+            vehicle_storage = ParsedVehicleData.model_validate_json(vehicle_data)
+            await self.save_vehicle_data(vehicle_storage)
 
-        end_time = time.time()
+        end_time = time.perf_counter()
         logger.debug(
             "Loaded data in {} seconds",
             round(end_time - start_time, 2),
@@ -101,58 +101,60 @@ class WTResourceTool(BaseModel):
             git_pull_when_empty (bool): Whether to pull the repo when it is empty. Default is False.
         """
         # TODO check if the repo is empty and pull it if it is empty
-        start_time = time.time()
+        start_time = time.perf_counter()
         if "player_title" in data_types:
             logger.debug("Parsing player title data from {}", local_repo_path)
-            ms = await asyncio.to_thread(lambda: player_medal_parser.parse_player_medal(local_repo_path))
-            self.medal_storage = ms
+            ts = await asyncio.to_thread(lambda: player_title_parser.parse_player_title(local_repo_path))
+            await self.save_player_title_data(ts)
+
         if "player_medal" in data_types:
             logger.debug("Parsing player medal data from {}", local_repo_path)
-            ts = await asyncio.to_thread(lambda: player_title_parser.parse_player_title(local_repo_path))
-            self.title_storage = ts
+            ms = await asyncio.to_thread(lambda: player_medal_parser.parse_player_medal(local_repo_path))
+            await self.save_player_medal_data(ms)
+
         if "vehicle" in data_types:
             logger.debug("Parsing vehicle data from {}", local_repo_path)
             vs = await asyncio.to_thread(lambda: vehicle_data_parser.parse_vehicle_data(local_repo_path))
-            self.vehicle_storage = vs
-        end_time = time.time()
+            await self.save_vehicle_data(vs)
+
+        end_time = time.perf_counter()
         logger.debug(
             "Parsed data in {} seconds",
             round(end_time - start_time, 2),
         )
 
-    async def get_loaded_data_version(self) -> dict[DataType, str | None]:
-        return {
-            "player_title": self.title_storage.game_version if self.title_storage else None,
-            "player_medal": self.medal_storage.game_version if self.medal_storage else None,
-            "vehicle": self.vehicle_storage.game_version if self.vehicle_storage else None,
-        }
-
-    async def get_title(self, title_id: str) -> PlayerTitleDesc:
+    async def get_title(
+        self,
+        title_id: str,
+        game_version: str = "latest",
+    ) -> PlayerTitleDesc:
         """
         Get title data by id.
 
         """
-        if self.title_storage is None:
-            raise ValueError("No data loaded")
-        return self.title_storage.titles_map[title_id]
+        return await self.get_player_title_data(title_id, game_version=game_version)
 
-    async def get_medal(self, medal_id: str) -> PlayerMedalDesc:
+    async def get_medal(
+        self,
+        medal_id: str,
+        game_version: str = "latest",
+    ) -> PlayerMedalDesc:
         """
         Get medal data by id.
 
         """
-        if self.medal_storage is None:
-            raise ValueError("No data loaded")
-        return self.medal_storage.medals_map[medal_id]
+        return await self.get_player_medal_data(medal_id, game_version=game_version)
 
-    async def get_vehicle(self, vehicle_id: str) -> Vehicle:
+    async def get_vehicle(
+        self,
+        vehicle_id: str,
+        game_version: str = "latest",
+    ) -> VehicleDesc:
         """
         Get vehicle data by id.
 
         """
-        if self.vehicle_storage is None:
-            raise ValueError("No data loaded")
-        return self.vehicle_storage.vehicles_map[vehicle_id]
+        return await self.get_vehicle_data(vehicle_id, game_version=game_version)
 
     async def __get_data_from_remote(
         self,
@@ -163,3 +165,139 @@ class WTResourceTool(BaseModel):
             resp.raise_for_status()
             storage_text = resp.text
         return storage_text
+
+    @abstractmethod
+    async def save_player_title_data(
+        self,
+        title_data: ParsedPlayerTitleData,
+    ): ...
+
+    @abstractmethod
+    async def get_player_title_data(
+        self,
+        title_id: str,
+        game_version: str,
+    ) -> PlayerTitleDesc: ...
+
+    @abstractmethod
+    async def save_player_medal_data(
+        self,
+        medal_data: ParsedPlayerMedalData,
+    ): ...
+
+    @abstractmethod
+    async def get_player_medal_data(
+        self,
+        medal_id: str,
+        game_version: str,
+    ) -> PlayerMedalDesc: ...
+
+    @abstractmethod
+    async def save_vehicle_data(
+        self,
+        vehicle_data: ParsedVehicleData,
+    ): ...
+
+    @abstractmethod
+    async def get_vehicle_data(
+        self,
+        vehicle_id: str,
+        game_version: str,
+    ) -> VehicleDesc: ...
+
+
+class WTResourceToolMemory(WTResourceTool):
+    """
+    This class stores the data in memory.
+    """
+
+    model_config = {"arbitrary_types_allowed": True}
+
+    player_title_storage: DataFrame | None = None
+    """title storage"""
+
+    player_title_latest_version: str | None = None
+    """latest version of title storage"""
+
+    player_medal_storage: DataFrame | None = None
+    """medal storage"""
+
+    player_medal_latest_version: str | None = None
+    """latest version of medal storage"""
+
+    vehicle_storage: DataFrame | None = None
+    """vehicle storage"""
+
+    vehicle_latest_version: str | None = None
+    """latest version of vehicle storage"""
+
+    async def save_player_title_data(
+        self,
+        title_data: ParsedPlayerTitleData,
+    ):
+        data = []
+        for title in title_data.titles:
+            data.append({"game_version": title_data.game_version, **title.model_dump()})
+        self.player_title_storage = DataFrame(data)
+        self.player_title_latest_version = title_data.game_version
+
+    async def get_player_title_data(
+        self,
+        title_id: str,
+        game_version: str = "latest",
+    ):
+        if self.player_title_storage is None:
+            raise ValueError("Player title data not loaded")
+        if game_version == "latest":
+            if self.player_title_latest_version is None:
+                raise ValueError("Player title version not loaded")
+            game_version = self.player_title_latest_version
+        title_data = self.player_title_storage[self.player_title_storage["game_version"] == game_version]
+        title_data = title_data[title_data["title_id"] == title_id]
+        return PlayerTitleDesc.model_validate(title_data.iloc[0].to_dict())
+
+    async def save_player_medal_data(self, medal_data: ParsedPlayerMedalData):
+        data = []
+        for medal in medal_data.medals:
+            data.append({"game_version": medal_data.game_version, **medal.model_dump()})
+        self.player_medal_storage = DataFrame(data)
+        self.player_medal_latest_version = medal_data.game_version
+
+    async def get_player_medal_data(
+        self,
+        medal_id: str,
+        game_version: str = "latest",
+    ) -> PlayerMedalDesc:
+        if self.player_medal_storage is None:
+            raise ValueError("Player medal data not loaded")
+        if game_version == "latest":
+            if self.player_medal_latest_version is None:
+                raise ValueError("Player medal version not loaded")
+            game_version = self.player_medal_latest_version
+        medal_data = self.player_medal_storage[self.player_medal_storage["game_version"] == game_version]
+        medal_data = medal_data[medal_data["medal_id"] == medal_id]
+        return PlayerMedalDesc.model_validate(medal_data.iloc[0].to_dict())
+
+    async def save_vehicle_data(self, vehicle_data: ParsedVehicleData):
+        data = []
+        for vehicle in vehicle_data.vehicles:
+            data.append({"game_version": vehicle_data.game_version, **vehicle.model_dump()})
+        df = DataFrame(data)
+        df = df.replace({np.nan: None})
+        self.vehicle_storage = df
+        self.vehicle_latest_version = vehicle_data.game_version
+
+    async def get_vehicle_data(
+        self,
+        vehicle_id: str,
+        game_version: str = "latest",
+    ) -> VehicleDesc:
+        if self.vehicle_storage is None:
+            raise ValueError("Vehicle data not loaded")
+        if game_version == "latest":
+            if self.vehicle_latest_version is None:
+                raise ValueError("Vehicle version not loaded")
+            game_version = self.vehicle_latest_version
+        vehicle_data = self.vehicle_storage[self.vehicle_storage["game_version"] == game_version]
+        vehicle_data = vehicle_data[vehicle_data["vehicle_id"] == vehicle_id]
+        return VehicleDesc.model_validate(vehicle_data.iloc[0].to_dict())

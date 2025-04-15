@@ -7,7 +7,7 @@ As a War Thunder community developer, interested in unpacking data but turned of
 
 We did the hard work for you, parsing the data and making it human-readable, so you can focus on what you do best: creating awesome projects for the War Thunder community.
 
-## Not official
+## Not affiliated with Gaijin Entertainment
 
 This project is not affiliated with Gaijin Entertainment.
 
@@ -17,7 +17,7 @@ This project is not affiliated with Gaijin Entertainment.
 
 - **Easy to use**: Install `wt-resource-tool` via pip and start using it right away.
 - **Human-readable**: All data is parsed and presented in a human-readable format.
-- **Accessible**: Don't need to download entire data to your local environment everytime.
+- **Accessible**: We provide easy-to-use api to access the data.
 - **Up-to-date**: We keep the data up-to-date with the [War-Thunder-Datamine](https://github.com/gszabi99/War-Thunder-Datamine) repository. Thanks to the contributors!
 
 ## Data
@@ -27,7 +27,7 @@ This project is not affiliated with Gaijin Entertainment.
 - **Vehicle data**: All vehicle data in the game
 
 > [!note]
-> More data will be added soon!
+> More data will be added!
 
 ## Usage
 
@@ -35,14 +35,11 @@ This project is not affiliated with Gaijin Entertainment.
 
 Install the package using pip:
 
-> [!warning]
-> This package is not available on PyPi yet. You can install it from source.
+```bash
+% pip install wt-resource-tool
+```
 
 Then you can use it in your python code. We provide some examples to get you started, take a look at the [playground](playground) folder.
-
-### Use static data in json format
-
-You can find data we parsed ahead in json format under `/static` folder.
 
 ## Credits
 

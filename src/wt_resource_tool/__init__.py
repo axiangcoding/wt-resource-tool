@@ -1,3 +1,3 @@
-from wt_resource_tool._client import WTResourceTool
+from wt_resource_tool._client import WTResourceTool, WTResourceToolMemory
 
-__all__ = ["WTResourceTool"]
+__all__ = ["WTResourceTool", "WTResourceToolMemory"]

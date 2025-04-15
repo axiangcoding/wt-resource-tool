@@ -12,6 +12,7 @@ dependencies = [
     "python-dotenv (>=1.1.0,<2.0.0)",
     "aiofiles (>=24.1.0,<25.0.0)",
     "loguru (>=0.7.3,<0.8.0)",
+    "pandas (>=2.2.3,<3.0.0)",
 ]
 
 [tool.poetry]
@@ -23,6 +24,10 @@ ruff = "^0.9.10"
 pytest = "^8.3.5"
 ipykernel = "^6.29.5"
 mypy = "^1.15.0"
+
+
+[tool.poetry.group.types.dependencies]
+pandas-stubs = "^2.2.3.250308"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

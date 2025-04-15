@@ -3,10 +3,10 @@ from os import path
 
 from loguru import logger
 
-from wt_resource_tool.schema._wt_schema import Vehicle, VehicleStorage
+from wt_resource_tool.schema._wt_schema import ParsedVehicleData, VehicleDesc
 
 
-def parse_vehicle_data(repo_path: str) -> VehicleStorage:
+def parse_vehicle_data(repo_path: str) -> ParsedVehicleData:
     game_version = open(path.join(repo_path, "version"), encoding="utf-8").read()
 
     wpcost_path = path.join(repo_path, "char.vromfs.bin_u", "config", "wpcost.blkx")
@@ -53,15 +53,15 @@ def parse_vehicle_data(repo_path: str) -> VehicleStorage:
         "economicRankTankSimulation": "economic_rank_tank_simulation",
     }
 
-    vehicles = {}
+    vehicles: list[VehicleDesc] = []
     for key in data.keys():
         if not isinstance(data[key], dict):
-            logger.warning("key {} is not a dict, skip.", key)
+            logger.warning(f"key {key} is not a dict, so it's not vehicle data, skip")
             continue
         try:
             v_data: dict = data[key]
             n_data = {
-                "id": key,
+                "vehicle_id": key,
             }
 
             for k, v in v_data.items():
@@ -70,8 +70,8 @@ def parse_vehicle_data(repo_path: str) -> VehicleStorage:
                 else:
                     n_data[k] = v
 
-            vehicles[key] = Vehicle.model_validate(n_data)
+            vehicles.append(VehicleDesc.model_validate(n_data))
         except Exception as e:
             logger.warning("error when parsing vehicle id: {}, skip", key)
             raise e
-    return VehicleStorage(vehicles_map=vehicles, game_version=game_version.strip())
+    return ParsedVehicleData(vehicles=vehicles, game_version=game_version.strip())
