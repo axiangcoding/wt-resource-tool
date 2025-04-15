@@ -72,7 +72,7 @@ class WTResourceTool(BaseModel):
         self,
         title_id: str,
         game_version: str = "latest",
-    ) -> PlayerTitleDesc:
+    ) -> PlayerTitleDesc | None:
         """
         Get title data by id.
 
@@ -83,7 +83,7 @@ class WTResourceTool(BaseModel):
         self,
         medal_id: str,
         game_version: str = "latest",
-    ) -> PlayerMedalDesc:
+    ) -> PlayerMedalDesc | None:
         """
         Get medal data by id.
 
@@ -94,7 +94,7 @@ class WTResourceTool(BaseModel):
         self,
         vehicle_id: str,
         game_version: str = "latest",
-    ) -> VehicleDesc:
+    ) -> VehicleDesc | None:
         """
         Get vehicle data by id.
 
@@ -112,7 +112,7 @@ class WTResourceTool(BaseModel):
         self,
         title_id: str,
         game_version: str,
-    ) -> PlayerTitleDesc: ...
+    ) -> PlayerTitleDesc | None: ...
 
     @abstractmethod
     async def save_player_medal_data(
@@ -125,7 +125,7 @@ class WTResourceTool(BaseModel):
         self,
         medal_id: str,
         game_version: str,
-    ) -> PlayerMedalDesc: ...
+    ) -> PlayerMedalDesc | None: ...
 
     @abstractmethod
     async def save_vehicle_data(
@@ -138,11 +138,12 @@ class WTResourceTool(BaseModel):
         self,
         vehicle_id: str,
         game_version: str,
-    ) -> VehicleDesc: ...
+    ) -> VehicleDesc | None: ...
 
 
 class WTResourceToolMemory(WTResourceTool):
-    """
+    """A tool to parse and get data about War Thunder.
+
     This class stores the data in memory.
     """
 
@@ -180,7 +181,7 @@ class WTResourceToolMemory(WTResourceTool):
         self,
         title_id: str,
         game_version: str = "latest",
-    ):
+    ) -> PlayerTitleDesc | None:
         if self.player_title_storage is None:
             raise ValueError("Player title data not loaded")
         if game_version == "latest":
@@ -189,6 +190,8 @@ class WTResourceToolMemory(WTResourceTool):
             game_version = self.player_title_latest_version
         title_data = self.player_title_storage[self.player_title_storage["game_version"] == game_version]
         title_data = title_data[title_data["title_id"] == title_id]
+        if title_data.empty:
+            return None
         return PlayerTitleDesc.model_validate(title_data.iloc[0].to_dict())
 
     async def save_player_medal_data(self, medal_data: ParsedPlayerMedalData):
@@ -202,7 +205,7 @@ class WTResourceToolMemory(WTResourceTool):
         self,
         medal_id: str,
         game_version: str = "latest",
-    ) -> PlayerMedalDesc:
+    ) -> PlayerMedalDesc | None:
         if self.player_medal_storage is None:
             raise ValueError("Player medal data not loaded")
         if game_version == "latest":
@@ -211,6 +214,8 @@ class WTResourceToolMemory(WTResourceTool):
             game_version = self.player_medal_latest_version
         medal_data = self.player_medal_storage[self.player_medal_storage["game_version"] == game_version]
         medal_data = medal_data[medal_data["medal_id"] == medal_id]
+        if medal_data.empty:
+            return None
         return PlayerMedalDesc.model_validate(medal_data.iloc[0].to_dict())
 
     async def save_vehicle_data(self, vehicle_data: ParsedVehicleData):
@@ -226,7 +231,7 @@ class WTResourceToolMemory(WTResourceTool):
         self,
         vehicle_id: str,
         game_version: str = "latest",
-    ) -> VehicleDesc:
+    ) -> VehicleDesc | None:
         if self.vehicle_storage is None:
             raise ValueError("Vehicle data not loaded")
         if game_version == "latest":
@@ -235,4 +240,6 @@ class WTResourceToolMemory(WTResourceTool):
             game_version = self.vehicle_latest_version
         vehicle_data = self.vehicle_storage[self.vehicle_storage["game_version"] == game_version]
         vehicle_data = vehicle_data[vehicle_data["vehicle_id"] == vehicle_id]
+        if vehicle_data.empty:
+            return None
         return VehicleDesc.model_validate(vehicle_data.iloc[0].to_dict())

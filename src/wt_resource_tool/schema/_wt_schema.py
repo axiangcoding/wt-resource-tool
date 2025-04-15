@@ -78,10 +78,10 @@ class ParsedPlayerMedalData(BaseModel):
 
 class VehicleDesc(BaseModel):
     vehicle_id: str
-    # name_shop_i18n: NameI18N
-    # name_0_i18n: NameI18N
-    # name_1_i18n: NameI18N
-    # name_2_i18n: NameI18N
+    name_shop_i18n: NameI18N | None
+    name_0_i18n: NameI18N | None
+    name_1_i18n: NameI18N | None
+    name_2_i18n: NameI18N | None
     rank: int
     economic_rank_arcade: int
     economic_rank_historical: int

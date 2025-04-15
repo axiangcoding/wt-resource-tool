@@ -1,9 +1,32 @@
+import csv
 import json
+import keyword
 from os import path
+from typing import Any
 
 from loguru import logger
 
 from wt_resource_tool.schema._wt_schema import ParsedVehicleData, VehicleDesc
+
+
+def get_lang_units_data(repo_path: str) -> dict[str, dict[str, str]]:
+    units_path = path.join(repo_path, "lang.vromfs.bin_u", "lang", "units.csv")
+    with open(units_path, encoding="utf-8") as f:
+        lang_units = f.read()
+    data = csv.DictReader(lang_units.splitlines(), delimiter=";")
+    result: dict[str, dict[str, str]] = {}
+    for row in data:
+        result[row["<ID|readonly|noverify>"]] = {
+            "english": row["<English>"],
+            "french": row["<French>"],
+            "italian": row["<Italian>"],
+            "german": row["<German>"],
+            "spanish": row["<Spanish>"],
+            "japanese": row["<Japanese>"].replace("\\t", ""),
+            "chinese": row["<Chinese>"].replace("\\t", ""),
+            "russian": row["<Russian>"],
+        }
+    return result
 
 
 def parse_vehicle_data(repo_path: str) -> ParsedVehicleData:
@@ -53,6 +76,8 @@ def parse_vehicle_data(repo_path: str) -> ParsedVehicleData:
         "economicRankTankSimulation": "economic_rank_tank_simulation",
     }
 
+    lang_units = get_lang_units_data(repo_path)
+
     vehicles: list[VehicleDesc] = []
     for key in data.keys():
         if not isinstance(data[key], dict):
@@ -62,6 +87,10 @@ def parse_vehicle_data(repo_path: str) -> ParsedVehicleData:
             v_data: dict = data[key]
             n_data = {
                 "vehicle_id": key,
+                "name_shop_i18n": lang_units.get(f"{key}_shop"),
+                "name_0_i18n": lang_units.get(f"{key}_0"),
+                "name_1_i18n": lang_units.get(f"{key}_1"),
+                "name_2_i18n": lang_units.get(f"{key}_2"),
             }
 
             for k, v in v_data.items():
