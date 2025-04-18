@@ -105,40 +105,64 @@ class WTResourceTool(BaseModel):
     async def save_player_title_data(
         self,
         title_data: ParsedPlayerTitleData,
-    ): ...
+    ):
+        """
+        Save player title data.
+        """
+        ...
 
     @abstractmethod
     async def get_player_title_data(
         self,
         title_id: str,
         game_version: str,
-    ) -> PlayerTitleDesc | None: ...
+    ) -> PlayerTitleDesc | None:
+        """
+        Get player title data by id.
+        """
+        ...
 
     @abstractmethod
     async def save_player_medal_data(
         self,
         medal_data: ParsedPlayerMedalData,
-    ): ...
+    ):
+        """
+        Save player medal data.
+        """
+        ...
 
     @abstractmethod
     async def get_player_medal_data(
         self,
         medal_id: str,
         game_version: str,
-    ) -> PlayerMedalDesc | None: ...
+    ) -> PlayerMedalDesc | None:
+        """
+        Get player medal data by id.
+        """
+        ...
 
     @abstractmethod
     async def save_vehicle_data(
         self,
         vehicle_data: ParsedVehicleData,
-    ): ...
+    ):
+        """
+        Save vehicle data.
+        """
+        ...
 
     @abstractmethod
     async def get_vehicle_data(
         self,
         vehicle_id: str,
         game_version: str,
-    ) -> VehicleDesc | None: ...
+    ) -> VehicleDesc | None:
+        """
+        Get vehicle data by id.
+        """
+        ...
 
 
 class WTResourceToolMemory(WTResourceTool):
@@ -243,3 +267,28 @@ class WTResourceToolMemory(WTResourceTool):
         if vehicle_data.empty:
             return None
         return VehicleDesc.model_validate(vehicle_data.iloc[0].to_dict())
+
+
+class WTResourceToolMongo(WTResourceTool):
+    """A tool to parse and get data about War Thunder.
+
+    This class stores the data in MongoDB.
+    """
+
+    async def save_player_title_data(self, title_data: ParsedPlayerTitleData):
+        raise NotImplementedError
+
+    async def get_player_title_data(self, title_id: str, game_version: str) -> PlayerTitleDesc | None:
+        raise NotImplementedError
+
+    async def save_player_medal_data(self, medal_data: ParsedPlayerMedalData):
+        raise NotImplementedError
+
+    async def get_player_medal_data(self, medal_id: str, game_version: str) -> PlayerMedalDesc | None:
+        raise NotImplementedError
+
+    async def save_vehicle_data(self, vehicle_data: ParsedVehicleData):
+        raise NotImplementedError
+
+    async def get_vehicle_data(self, vehicle_id: str, game_version: str) -> VehicleDesc | None:
+        raise NotImplementedError

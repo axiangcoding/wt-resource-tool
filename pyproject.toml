@@ -15,6 +15,9 @@ dependencies = [
     "pandas (>=2.2.3,<3.0.0)",
 ]
 
+[project.optional-dependencies]
+mongodb = ["beanie (>=1.29.0,<2.0.0)"]
+
 [tool.poetry]
 packages = [{ include = "wt_resource_tool", from = "src" }]
 
