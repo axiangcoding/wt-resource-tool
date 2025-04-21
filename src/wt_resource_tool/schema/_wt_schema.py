@@ -44,17 +44,18 @@ class NameI18N(BaseModel):
 class PlayerTitleDesc(BaseModel):
     title_id: str
     name_i18n: NameI18N
+    game_version: str
 
 
 class ParsedPlayerTitleData(BaseModel):
     titles: list[PlayerTitleDesc]
-    game_version: str
 
 
 class PlayerMedalDesc(BaseModel):
     medal_id: str
     country: Country
     name_i18n: NameI18N
+    game_version: str
 
     def get_image_url(
         self,
@@ -73,7 +74,6 @@ class PlayerMedalDesc(BaseModel):
 
 class ParsedPlayerMedalData(BaseModel):
     medals: list[PlayerMedalDesc]
-    game_version: str
 
 
 class VehicleDesc(BaseModel):
@@ -142,6 +142,8 @@ class VehicleDesc(BaseModel):
 
     research_type: str | None = Field(default=None)
 
+    game_version: str
+
     def get_icon_url(
         self,
     ) -> str:
@@ -150,4 +152,3 @@ class VehicleDesc(BaseModel):
 
 class ParsedVehicleData(BaseModel):
     vehicles: list[VehicleDesc]
-    game_version: str

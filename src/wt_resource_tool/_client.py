@@ -3,7 +3,6 @@ import time
 from abc import abstractmethod
 from typing import Literal
 
-import httpx
 import numpy as np
 from loguru import logger
 from pandas import DataFrame
@@ -20,7 +19,6 @@ from wt_resource_tool.schema._wt_schema import (
 )
 
 type DataType = Literal["player_title", "player_medal", "vehicle"]
-type DataSource = Literal["github", "github-jsdelivr"] | str
 
 
 class WTResourceTool(BaseModel):
@@ -63,9 +61,8 @@ class WTResourceTool(BaseModel):
             await self.save_vehicle_data(vs)
 
         end_time = time.perf_counter()
-        logger.debug(
-            "Parsed data in {} seconds",
-            round(end_time - start_time, 2),
+        logger.info(
+            f"Parsed and load data {data_types} in {round(end_time - start_time, 2)} seconds",
         )
 
     async def get_title(
@@ -173,9 +170,9 @@ class WTResourceToolMemory(WTResourceTool):
     ):
         data = []
         for title in title_data.titles:
-            data.append({"game_version": title_data.game_version, **title.model_dump()})
+            data.append(title.model_dump())
         self.player_title_storage = DataFrame(data)
-        self.player_title_latest_version = title_data.game_version
+        self.player_title_latest_version = title_data.titles[0].game_version
 
     async def get_player_title_data(
         self,
@@ -197,9 +194,9 @@ class WTResourceToolMemory(WTResourceTool):
     async def save_player_medal_data(self, medal_data: ParsedPlayerMedalData):
         data = []
         for medal in medal_data.medals:
-            data.append({"game_version": medal_data.game_version, **medal.model_dump()})
+            data.append(medal.model_dump())
         self.player_medal_storage = DataFrame(data)
-        self.player_medal_latest_version = medal_data.game_version
+        self.player_medal_latest_version = medal_data.medals[0].game_version
 
     async def get_player_medal_data(
         self,
@@ -221,11 +218,11 @@ class WTResourceToolMemory(WTResourceTool):
     async def save_vehicle_data(self, vehicle_data: ParsedVehicleData):
         data = []
         for vehicle in vehicle_data.vehicles:
-            data.append({"game_version": vehicle_data.game_version, **vehicle.model_dump()})
+            data.append(vehicle.model_dump())
         df = DataFrame(data)
         df = df.replace({np.nan: None})
         self.vehicle_storage = df
-        self.vehicle_latest_version = vehicle_data.game_version
+        self.vehicle_latest_version = vehicle_data.vehicles[0].game_version
 
     async def get_vehicle_data(
         self,

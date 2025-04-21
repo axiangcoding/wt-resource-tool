@@ -1,7 +1,7 @@
 # WT Resource Tool
 
 > [!warning]
-> This project is still in development, PRs are welcome!
+> This project is still in development, Api is not stable yet! Please use at your own risk.
 
 As a War Thunder community developer, interested in unpacking data but turned off by the complexity of the results? Try the WT Resource Tool!
 

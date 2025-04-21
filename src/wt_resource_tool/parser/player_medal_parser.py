@@ -4,7 +4,7 @@ from os import path
 from wt_resource_tool.schema._wt_schema import Country, NameI18N, ParsedPlayerMedalData, PlayerMedalDesc
 
 
-def _get_dt_from_csv(data: csv.DictReader) -> list[PlayerMedalDesc]:
+def _get_dt_from_csv(data: csv.DictReader, game_version: str) -> list[PlayerMedalDesc]:
     titles: list[PlayerMedalDesc] = []
     for row in data:
         row1 = row["<ID|readonly|noverify>"]
@@ -47,6 +47,7 @@ def _get_dt_from_csv(data: csv.DictReader) -> list[PlayerMedalDesc]:
                     chinese=row["<Chinese>"].replace("\\t", ""),
                     russian=row["<Russian>"],
                 ),
+                game_version=game_version,
             )
             titles.append(td)
     return titles
@@ -54,10 +55,10 @@ def _get_dt_from_csv(data: csv.DictReader) -> list[PlayerMedalDesc]:
 
 def parse_player_medal(repo_path: str) -> ParsedPlayerMedalData:
     all_medals: list[PlayerMedalDesc] = []
-
+    game_version = open(path.join(repo_path, "version"), encoding="utf-8").read().strip()
     with open(path.join(repo_path, "lang.vromfs.bin_u/lang/unlocks_medals.csv"), encoding="utf-8") as f:
         data = csv.DictReader(f, delimiter=";")
-        all_medals.extend(_get_dt_from_csv(data))
-
-    game_version = open(path.join(repo_path, "version"), encoding="utf-8").read()
-    return ParsedPlayerMedalData(medals=all_medals, game_version=game_version.strip())
+        all_medals.extend(
+            _get_dt_from_csv(data, game_version),
+        )
+    return ParsedPlayerMedalData(medals=all_medals)

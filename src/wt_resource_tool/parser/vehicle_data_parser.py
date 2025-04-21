@@ -30,7 +30,7 @@ def get_lang_units_data(repo_path: str) -> dict[str, dict[str, str]]:
 
 
 def parse_vehicle_data(repo_path: str) -> ParsedVehicleData:
-    game_version = open(path.join(repo_path, "version"), encoding="utf-8").read()
+    game_version = open(path.join(repo_path, "version"), encoding="utf-8").read().strip()
 
     wpcost_path = path.join(repo_path, "char.vromfs.bin_u", "config", "wpcost.blkx")
     with open(wpcost_path, encoding="utf-8") as f:
@@ -91,6 +91,7 @@ def parse_vehicle_data(repo_path: str) -> ParsedVehicleData:
                 "name_0_i18n": lang_units.get(f"{key}_0"),
                 "name_1_i18n": lang_units.get(f"{key}_1"),
                 "name_2_i18n": lang_units.get(f"{key}_2"),
+                "game_version": game_version,
             }
 
             for k, v in v_data.items():
@@ -103,4 +104,4 @@ def parse_vehicle_data(repo_path: str) -> ParsedVehicleData:
         except Exception as e:
             logger.warning("error when parsing vehicle id: {}, skip", key)
             raise e
-    return ParsedVehicleData(vehicles=vehicles, game_version=game_version.strip())
+    return ParsedVehicleData(vehicles=vehicles)
