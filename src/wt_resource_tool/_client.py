@@ -3,11 +3,11 @@ import time
 from abc import abstractmethod
 from typing import Literal
 
-import httpx
 import numpy as np
 from loguru import logger
 from pandas import DataFrame
 from pydantic import BaseModel
+from rapidfuzz import fuzz, process
 
 from wt_resource_tool.parser import player_medal_parser, player_title_parser, vehicle_data_parser
 from wt_resource_tool.schema._wt_schema import (
@@ -25,7 +25,11 @@ type DataSource = Literal["github", "github-jsdelivr"] | str
 
 class WTResourceTool(BaseModel):
     """
-    A tool to parse and get data about War Thunder.
+    A superclass for War Thunder resource tool.
+
+    This class is used to parse and get data about War Thunder.
+
+    Inherit this class to implement your own data source.
 
     """
 
@@ -101,6 +105,17 @@ class WTResourceTool(BaseModel):
         """
         return await self.get_vehicle_data(vehicle_id, game_version=game_version)
 
+    async def search_vehicle(
+        self,
+        fuzzy_name: str,
+        limit: int = 5,
+        game_version: str = "latest",
+    ) -> list[VehicleDesc]:
+        """
+        Search vehicle data by fuzzy name.
+        """
+        return await self.search_vehicle_data(fuzzy_name, limit=limit, game_version=game_version)
+
     @abstractmethod
     async def save_player_title_data(
         self,
@@ -139,6 +154,14 @@ class WTResourceTool(BaseModel):
         vehicle_id: str,
         game_version: str,
     ) -> VehicleDesc | None: ...
+
+    @abstractmethod
+    async def search_vehicle_data(
+        self,
+        fuzzy_name: str,
+        limit: int,
+        game_version: str,
+    ) -> list[VehicleDesc]: ...
 
 
 class WTResourceToolMemory(WTResourceTool):
@@ -243,3 +266,33 @@ class WTResourceToolMemory(WTResourceTool):
         if vehicle_data.empty:
             return None
         return VehicleDesc.model_validate(vehicle_data.iloc[0].to_dict())
+
+    async def search_vehicle_data(
+        self,
+        fuzzy_name: str,
+        limit: int,
+        game_version: str,
+    ) -> list[VehicleDesc]:
+        if self.vehicle_storage is None:
+            raise ValueError("Vehicle data not loaded")
+        if game_version == "latest":
+            if self.vehicle_latest_version is None:
+                raise ValueError("Vehicle version not loaded")
+            game_version = self.vehicle_latest_version
+        vehicle_data_df = self.vehicle_storage[self.vehicle_storage["game_version"] == game_version]
+        vehicles = [VehicleDesc.model_validate(row.to_dict()) for _, row in vehicle_data_df.iterrows()]
+        name_id_map = {}
+        for vehicle in vehicles:
+            name_id_map[vehicle.vehicle_id] = vehicle.vehicle_id
+            if vehicle.name_shop_i18n is not None:
+                name_id_map[vehicle.name_shop_i18n.english] = vehicle.vehicle_id
+                name_id_map[vehicle.name_shop_i18n.chinese] = vehicle.vehicle_id
+                name_id_map[vehicle.name_shop_i18n.russian] = vehicle.vehicle_id
+            if vehicle.name_0_i18n is not None:
+                name_id_map[vehicle.name_0_i18n.english] = vehicle.vehicle_id
+                name_id_map[vehicle.name_0_i18n.chinese] = vehicle.vehicle_id
+                name_id_map[vehicle.name_0_i18n.russian] = vehicle.vehicle_id
+        choices = list(name_id_map.keys())
+        result = process.extract(fuzzy_name, choices, scorer=fuzz.WRatio, limit=limit)
+        found_ids = [name_id_map[choice[0]] for choice in result]
+        return [vehicle for vehicle in vehicles if vehicle.vehicle_id in found_ids]
