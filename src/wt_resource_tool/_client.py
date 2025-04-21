@@ -295,4 +295,5 @@ class WTResourceToolMemory(WTResourceTool):
         choices = list(name_id_map.keys())
         result = process.extract(fuzzy_name, choices, scorer=fuzz.WRatio, limit=limit)
         found_ids = [name_id_map[choice[0]] for choice in result]
+        # FIXME maybe duplicate vehicle data
         return [vehicle for vehicle in vehicles if vehicle.vehicle_id in found_ids]
