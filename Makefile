@@ -2,15 +2,15 @@
 
 setup:
 	@echo "Setting up environment"
-	poetry install --with dev,types --sync
+	uv sync --group dev
 
 lint:
 	@echo "Running lint"
-	poetry run ruff check ./src ./tests ./scripts
-	poetry run mypy ./src ./tests ./scripts
+	uv run ruff check ./src ./tests ./scripts
+	uv run mypy ./src ./tests ./scripts
 
 format:
 	@echo "Running format"
-	poetry run ruff check --fix ./src ./tests ./scripts
-	poetry run ruff format ./src ./tests ./scripts
+	uv run ruff check --fix ./src ./tests ./scripts
+	uv run ruff format ./src ./tests ./scripts
 

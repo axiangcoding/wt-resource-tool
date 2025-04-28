@@ -1,6 +1,6 @@
 import asyncio
 import time
-from abc import abstractmethod
+from abc import ABC, abstractmethod
 from typing import Literal
 
 import numpy as np
@@ -21,9 +21,12 @@ from wt_resource_tool.schema._wt_schema import (
 type DataType = Literal["player_title", "player_medal", "vehicle"]
 
 
-class WTResourceTool(BaseModel):
+class WTResourceToolABC(BaseModel, ABC):
     """
     A tool to parse and get data about War Thunder.
+
+    This class is the base class for all War Thunder resource tools.
+    It provides the basic interface for parsing and getting data.
 
     """
 
@@ -65,7 +68,8 @@ class WTResourceTool(BaseModel):
             f"Parsed and load data {data_types} in {round(end_time - start_time, 2)} seconds",
         )
 
-    async def get_title(
+    @abstractmethod
+    async def get_player_title(
         self,
         title_id: str,
         game_version: str = "latest",
@@ -74,9 +78,21 @@ class WTResourceTool(BaseModel):
         Get title data by id.
 
         """
-        return await self.get_player_title_data(title_id, game_version=game_version)
+        raise NotImplementedError("get_player_title not implemented")
 
-    async def get_medal(
+    @abstractmethod
+    async def search_player_title(
+        self,
+        game_version: str = "latest",
+    ) -> list[PlayerTitleDesc]:
+        """
+        Search title data by filter.
+
+        """
+        raise NotImplementedError("search_player_title not implemented")
+
+    @abstractmethod
+    async def get_player_medal(
         self,
         medal_id: str,
         game_version: str = "latest",
@@ -85,8 +101,20 @@ class WTResourceTool(BaseModel):
         Get medal data by id.
 
         """
-        return await self.get_player_medal_data(medal_id, game_version=game_version)
+        raise NotImplementedError("get_player_medal not implemented")
 
+    @abstractmethod
+    async def search_player_medal(
+        self,
+        game_version: str = "latest",
+    ) -> list[PlayerMedalDesc]:
+        """
+        Search medal data by filter.
+
+        """
+        raise NotImplementedError("search_player_medal not implemented")
+
+    @abstractmethod
     async def get_vehicle(
         self,
         vehicle_id: str,
@@ -96,7 +124,18 @@ class WTResourceTool(BaseModel):
         Get vehicle data by id.
 
         """
-        return await self.get_vehicle_data(vehicle_id, game_version=game_version)
+        raise NotImplementedError("get_vehicle not implemented")
+
+    @abstractmethod
+    async def search_vehicle(
+        self,
+        game_version: str = "latest",
+    ) -> list[VehicleDesc]:
+        """
+        Search vehicle data by filter.
+
+        """
+        raise NotImplementedError("search_vehicle not implemented")
 
     @abstractmethod
     async def save_player_title_data(
@@ -105,24 +144,10 @@ class WTResourceTool(BaseModel):
     ): ...
 
     @abstractmethod
-    async def get_player_title_data(
-        self,
-        title_id: str,
-        game_version: str,
-    ) -> PlayerTitleDesc | None: ...
-
-    @abstractmethod
     async def save_player_medal_data(
         self,
         medal_data: ParsedPlayerMedalData,
     ): ...
-
-    @abstractmethod
-    async def get_player_medal_data(
-        self,
-        medal_id: str,
-        game_version: str,
-    ) -> PlayerMedalDesc | None: ...
 
     @abstractmethod
     async def save_vehicle_data(
@@ -130,15 +155,8 @@ class WTResourceTool(BaseModel):
         vehicle_data: ParsedVehicleData,
     ): ...
 
-    @abstractmethod
-    async def get_vehicle_data(
-        self,
-        vehicle_id: str,
-        game_version: str,
-    ) -> VehicleDesc | None: ...
 
-
-class WTResourceToolMemory(WTResourceTool):
+class WTResourceToolMemory(WTResourceToolABC):
     """A tool to parse and get data about War Thunder.
 
     This class stores the data in memory.
@@ -164,79 +182,82 @@ class WTResourceToolMemory(WTResourceTool):
     vehicle_latest_version: str | None = None
     """latest version of vehicle storage"""
 
-    async def save_player_title_data(
-        self,
-        title_data: ParsedPlayerTitleData,
-    ):
-        data = []
-        for title in title_data.titles:
-            data.append(title.model_dump())
-        self.player_title_storage = DataFrame(data)
-        self.player_title_latest_version = title_data.titles[0].game_version
-
-    async def get_player_title_data(
-        self,
-        title_id: str,
-        game_version: str = "latest",
-    ) -> PlayerTitleDesc | None:
-        if self.player_title_storage is None:
+    async def get_player_title(self, title_id: str, game_version: str = "latest") -> PlayerTitleDesc | None:
+        if self.player_title_storage is None or self.player_title_latest_version is None:
             raise ValueError("Player title data not loaded")
         if game_version == "latest":
-            if self.player_title_latest_version is None:
-                raise ValueError("Player title version not loaded")
             game_version = self.player_title_latest_version
-        title_data = self.player_title_storage[self.player_title_storage["game_version"] == game_version]
-        title_data = title_data[title_data["title_id"] == title_id]
-        if title_data.empty:
+        df = self.player_title_storage
+        df_result = df[(df["game_version"] == game_version) & (df["title_id"] == title_id)]
+        if df_result.empty:
             return None
-        return PlayerTitleDesc.model_validate(title_data.iloc[0].to_dict())
+        return PlayerTitleDesc.model_validate(df_result.iloc[0].to_dict())
 
-    async def save_player_medal_data(self, medal_data: ParsedPlayerMedalData):
-        data = []
-        for medal in medal_data.medals:
-            data.append(medal.model_dump())
-        self.player_medal_storage = DataFrame(data)
-        self.player_medal_latest_version = medal_data.medals[0].game_version
+    async def search_player_title(self, game_version: str = "latest") -> list[PlayerTitleDesc]:
+        if self.player_title_storage is None or self.player_title_latest_version is None:
+            raise ValueError("Player title data not loaded")
+        if game_version == "latest":
+            game_version = self.player_title_latest_version
+        df = self.player_title_storage
+        df_result = df[df["game_version"] == game_version]
+        if df_result.empty:
+            return []
+        return [PlayerTitleDesc.model_validate(item) for item in df_result.to_dict(orient="records")]
 
-    async def get_player_medal_data(
-        self,
-        medal_id: str,
-        game_version: str = "latest",
-    ) -> PlayerMedalDesc | None:
-        if self.player_medal_storage is None:
+    async def get_player_medal(self, medal_id: str, game_version: str = "latest") -> PlayerMedalDesc | None:
+        if self.player_medal_storage is None or self.player_medal_latest_version is None:
             raise ValueError("Player medal data not loaded")
         if game_version == "latest":
-            if self.player_medal_latest_version is None:
-                raise ValueError("Player medal version not loaded")
             game_version = self.player_medal_latest_version
-        medal_data = self.player_medal_storage[self.player_medal_storage["game_version"] == game_version]
-        medal_data = medal_data[medal_data["medal_id"] == medal_id]
-        if medal_data.empty:
+        df = self.player_medal_storage
+        df_result = df[(df["game_version"] == game_version) & (df["medal_id"] == medal_id)]
+        if df_result.empty:
             return None
-        return PlayerMedalDesc.model_validate(medal_data.iloc[0].to_dict())
+        return PlayerMedalDesc.model_validate(df_result.iloc[0].to_dict())
+
+    async def search_player_medal(self, game_version: str = "latest") -> list[PlayerMedalDesc]:
+        if self.player_medal_storage is None or self.player_medal_latest_version is None:
+            raise ValueError("Player medal data not loaded")
+        if game_version == "latest":
+            game_version = self.player_medal_latest_version
+        df = self.player_medal_storage
+        df_result = df[df["game_version"] == game_version]
+        if df_result.empty:
+            return []
+        return [PlayerMedalDesc.model_validate(item) for item in df_result.to_dict(orient="records")]
+
+    async def get_vehicle(self, vehicle_id: str, game_version: str = "latest") -> VehicleDesc | None:
+        if self.vehicle_storage is None or self.vehicle_latest_version is None:
+            raise ValueError("Vehicle data not loaded")
+        if game_version == "latest":
+            game_version = self.vehicle_latest_version
+        df = self.vehicle_storage
+        df_result = df[(df["game_version"] == game_version) & (df["vehicle_id"] == vehicle_id)]
+        if df_result.empty:
+            return None
+        return VehicleDesc.model_validate(df_result.iloc[0].to_dict())
+
+    async def search_vehicle(self, game_version: str = "latest") -> list[VehicleDesc]:
+        if self.vehicle_storage is None or self.vehicle_latest_version is None:
+            raise ValueError("Vehicle data not loaded")
+        if game_version == "latest":
+            game_version = self.vehicle_latest_version
+        df = self.vehicle_storage
+        df_result = df[df["game_version"] == game_version]
+        if df_result.empty:
+            return []
+        return [VehicleDesc.model_validate(item) for item in df_result.to_dict(orient="records")]
+
+    async def save_player_title_data(self, title_data: ParsedPlayerTitleData):
+        self.player_title_storage = DataFrame([item.model_dump() for item in title_data.titles])
+        self.player_title_latest_version = title_data.titles[0].game_version
+
+    async def save_player_medal_data(self, medal_data: ParsedPlayerMedalData):
+        self.player_medal_storage = DataFrame([item.model_dump() for item in medal_data.medals])
+        self.player_medal_latest_version = medal_data.medals[0].game_version
 
     async def save_vehicle_data(self, vehicle_data: ParsedVehicleData):
-        data = []
-        for vehicle in vehicle_data.vehicles:
-            data.append(vehicle.model_dump())
-        df = DataFrame(data)
+        df = DataFrame([item.model_dump() for item in vehicle_data.vehicles])
         df = df.replace({np.nan: None})
         self.vehicle_storage = df
         self.vehicle_latest_version = vehicle_data.vehicles[0].game_version
-
-    async def get_vehicle_data(
-        self,
-        vehicle_id: str,
-        game_version: str = "latest",
-    ) -> VehicleDesc | None:
-        if self.vehicle_storage is None:
-            raise ValueError("Vehicle data not loaded")
-        if game_version == "latest":
-            if self.vehicle_latest_version is None:
-                raise ValueError("Vehicle version not loaded")
-            game_version = self.vehicle_latest_version
-        vehicle_data = self.vehicle_storage[self.vehicle_storage["game_version"] == game_version]
-        vehicle_data = vehicle_data[vehicle_data["vehicle_id"] == vehicle_id]
-        if vehicle_data.empty:
-            return None
-        return VehicleDesc.model_validate(vehicle_data.iloc[0].to_dict())
