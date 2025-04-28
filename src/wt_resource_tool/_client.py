@@ -202,7 +202,7 @@ class WTResourceToolMemory(WTResourceToolABC):
         df_result = df[df["game_version"] == game_version]
         if df_result.empty:
             return []
-        return [PlayerTitleDesc.model_validate(item) for item in df_result.to_dict()]
+        return [PlayerTitleDesc.model_validate(item) for item in df_result.to_dict(orient="records")]
 
     async def get_player_medal(self, medal_id: str, game_version: str = "latest") -> PlayerMedalDesc | None:
         if self.player_medal_storage is None or self.player_medal_latest_version is None:
@@ -224,7 +224,7 @@ class WTResourceToolMemory(WTResourceToolABC):
         df_result = df[df["game_version"] == game_version]
         if df_result.empty:
             return []
-        return [PlayerMedalDesc.model_validate(item) for item in df_result.to_dict()]
+        return [PlayerMedalDesc.model_validate(item) for item in df_result.to_dict(orient="records")]
 
     async def get_vehicle(self, vehicle_id: str, game_version: str = "latest") -> VehicleDesc | None:
         if self.vehicle_storage is None or self.vehicle_latest_version is None:
@@ -246,7 +246,7 @@ class WTResourceToolMemory(WTResourceToolABC):
         df_result = df[df["game_version"] == game_version]
         if df_result.empty:
             return []
-        return [VehicleDesc.model_validate(item) for item in df_result.to_dict()]
+        return [VehicleDesc.model_validate(item) for item in df_result.to_dict(orient="records")]
 
     async def save_player_title_data(self, title_data: ParsedPlayerTitleData):
         self.player_title_storage = DataFrame([item.model_dump() for item in title_data.titles])
