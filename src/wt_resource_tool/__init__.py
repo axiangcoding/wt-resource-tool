@@ -1,4 +1,4 @@
-from wt_resource_tool._client import WTResourceTool, WTResourceToolMemory
+from wt_resource_tool._client import WTResourceToolABC, WTResourceToolMemory
 from wt_resource_tool.schema._wt_schema import (
     ParsedPlayerMedalData,
     ParsedPlayerTitleData,
@@ -9,7 +9,7 @@ from wt_resource_tool.schema._wt_schema import (
 )
 
 __all__ = [
-    "WTResourceTool",
+    "WTResourceToolABC",
     "WTResourceToolMemory",
     "ParsedPlayerTitleData",
     "ParsedVehicleData",
