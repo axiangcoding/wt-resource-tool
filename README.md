@@ -20,15 +20,6 @@ This project is not affiliated with Gaijin Entertainment.
 - **Accessible**: We provide easy-to-use api to access the data.
 - **Up-to-date**: We keep the data up-to-date with the [War-Thunder-Datamine](https://github.com/gszabi99/War-Thunder-Datamine) repository. Thanks to the contributors!
 
-## Data
-
-- **Player titles**: All player titles in the game, including their localization.
-- **Player medals**: All player medals in the game, including their localization and image at different sizes.
-- **Vehicle data**: All vehicle data in the game
-
-> [!note]
-> More data will be added!
-
 ## Usage
 
 ### Use python package `wt-resource-tool`
@@ -40,6 +31,15 @@ Install the package using pip:
 ```
 
 Then you can use it in your python code. We provide some examples to get you started, take a look at the [playground](playground) folder.
+
+## Data
+
+- **Player titles**: All player titles in the game, including their localization.
+- **Player medals**: All player medals in the game, including their localization and image at different sizes.
+- **Vehicle data**: All vehicle data in the game
+
+> [!note]
+> More data will be added! And data structure may change in the future. Stay tuned!
 
 ## Credits
 
