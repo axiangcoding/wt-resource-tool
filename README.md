@@ -11,8 +11,6 @@ We did the hard work for you, parsing the data and making it human-readable, so 
 
 This project is not affiliated with Gaijin Entertainment.
 
-> However, we did get in touch with Gaijin, maybe some interesting things will happen in the future. WHO KNOWS?
-
 ## Features
 
 - **Easy to use**: Install `wt-resource-tool` via pip and start using it right away.
