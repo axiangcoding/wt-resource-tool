@@ -1,11 +1,10 @@
 import csv
 import json
-import keyword
 from os import path
-from typing import Any
 
 from loguru import logger
 
+from wt_resource_tool.parser.tools import clean_text
 from wt_resource_tool.schema._wt_schema import ParsedVehicleData, VehicleDesc
 
 
@@ -22,8 +21,8 @@ def get_lang_units_data(repo_path: str) -> dict[str, dict[str, str]]:
             "italian": row["<Italian>"],
             "german": row["<German>"],
             "spanish": row["<Spanish>"],
-            "japanese": row["<Japanese>"].replace("\\t", ""),
-            "chinese": row["<Chinese>"].replace("\\t", ""),
+            "japanese": clean_text(row["<Japanese>"]),
+            "chinese": clean_text(row["<Chinese>"]),
             "russian": row["<Russian>"],
         }
     return result

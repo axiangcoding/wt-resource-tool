@@ -1,6 +1,7 @@
 import csv
 from os import path
 
+from wt_resource_tool.parser.tools import clean_text
 from wt_resource_tool.schema._wt_schema import Country, NameI18N, ParsedPlayerMedalData, PlayerMedalDesc
 
 
@@ -43,8 +44,8 @@ def _get_dt_from_csv(data: csv.DictReader, game_version: str) -> list[PlayerMeda
                     italian=row["<Italian>"],
                     german=row["<German>"],
                     spanish=row["<Spanish>"],
-                    japanese=row["<Japanese>"].replace("\\t", ""),
-                    chinese=row["<Chinese>"].replace("\\t", ""),
+                    japanese=clean_text(row["<Japanese>"]),
+                    chinese=clean_text(row["<Chinese>"]),
                     russian=row["<Russian>"],
                 ),
                 game_version=game_version,
