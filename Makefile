@@ -2,7 +2,7 @@
 
 setup:
 	@echo "Setting up environment"
-	uv sync --group dev
+	uv sync --group dev,types
 
 lint:
 	@echo "Running lint"
