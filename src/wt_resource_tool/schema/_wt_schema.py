@@ -43,7 +43,6 @@ class NameI18N(BaseModel):
 
 class PlayerTitleDesc(BaseModel):
     title_id: str
-    description: str | None = Field(default=None)
     description_i18n: NameI18N | None = Field(default=None)
     name_i18n: NameI18N
     game_version: str

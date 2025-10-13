@@ -1,67 +1,95 @@
-import csv
-from os import path
+from pathlib import Path
+
+import pandas as pd
 
 from wt_resource_tool.parser.tools import clean_text
 from wt_resource_tool.schema._wt_schema import Country, NameI18N, ParsedPlayerMedalData, PlayerMedalDesc
 
+KEY_FIELD = "<ID|readonly|noverify>"
 
-def _get_dt_from_csv(data: csv.DictReader, game_version: str) -> list[PlayerMedalDesc]:
-    titles: list[PlayerMedalDesc] = []
-    for row in data:
-        row1 = row["<ID|readonly|noverify>"]
 
-        if row1.endswith("/name"):
-            country: Country = "unknown"
-            mid = row["<ID|readonly|noverify>"].replace("/name", "")
-            if mid.startswith("usa_"):
-                country = "country_usa"
-            elif mid.startswith("ge_") or mid.startswith("ger_"):
-                country = "country_germany"
-            elif mid.startswith("ussr_"):
-                country = "country_ussr"
-            elif mid.startswith("uk_") or mid.startswith("raaf_"):
-                country = "country_britain"
-            elif mid.startswith("jap_"):
-                country = "country_japan"
-            elif mid.startswith("cn_"):
-                country = "country_china"
-            elif mid.startswith("it_"):
-                country = "country_italy"
-            elif mid.startswith("fr_"):
-                country = "country_france"
-            elif mid.startswith("sw_"):
-                country = "country_sweden"
-            elif mid.startswith("il_"):
-                country = "country_israel"
-            else:
-                country = "unknown"
-            td = PlayerMedalDesc(
-                medal_id=mid,
-                country=country,
-                name_i18n=NameI18N(
-                    english=row["<English>"],
-                    french=row["<French>"],
-                    italian=row["<Italian>"],
-                    german=row["<German>"],
-                    spanish=row["<Spanish>"],
-                    japanese=clean_text(row["<Japanese>"]),
-                    chinese=clean_text(row["<Chinese>"]),
-                    russian=row["<Russian>"],
-                    h_chinese=clean_text(row["<HChinese>"]),
-                    t_chinese=clean_text(row["<TChinese>"]),
-                ),
-                game_version=game_version,
-            )
-            titles.append(td)
-    return titles
+def is_medal_row(key: str) -> bool:
+    """end with /name"""
+    return key.endswith("/name")
+
+
+def is_desc_row(key: str) -> bool:
+    """end with /desc"""
+    return key.endswith("/desc")
+
+
+def get_medal_id_from_key(key: str) -> str:
+    """Extract medal ID by removing /name or /desc suffix."""
+    if key.endswith("/name"):
+        return key.removesuffix("/name")
+    elif key.endswith("/desc"):
+        return key.removesuffix("/desc")
+    return key
+
+
+def guess_country_from_medal_id(medal_id: str) -> Country:
+    if medal_id.startswith("usa_"):
+        return "country_usa"
+    elif medal_id.startswith("ge_") or medal_id.startswith("ger_"):
+        return "country_germany"
+    elif medal_id.startswith("ussr_"):
+        return "country_ussr"
+    elif medal_id.startswith("uk_") or medal_id.startswith("raaf_"):
+        return "country_britain"
+    elif medal_id.startswith("jap_"):
+        return "country_japan"
+    elif medal_id.startswith("cn_"):
+        return "country_china"
+    elif medal_id.startswith("it_"):
+        return "country_italy"
+    elif medal_id.startswith("fr_"):
+        return "country_france"
+    elif medal_id.startswith("sw_"):
+        return "country_sweden"
+    elif medal_id.startswith("il_"):
+        return "country_israel"
+    else:
+        return "unknown"
+
+
+def create_name_i18n_from_row(row) -> NameI18N:
+    return NameI18N(
+        english=row["<English>"],
+        french=row["<French>"],
+        italian=row["<Italian>"],
+        german=row["<German>"],
+        spanish=row["<Spanish>"],
+        japanese=clean_text(row["<Japanese>"]),
+        chinese=clean_text(row["<Chinese>"]),
+        russian=row["<Russian>"],
+        h_chinese=clean_text(row["<HChinese>"]),
+        t_chinese=clean_text(row["<TChinese>"]),
+    )
 
 
 def parse_player_medal(repo_path: str) -> ParsedPlayerMedalData:
-    all_medals: list[PlayerMedalDesc] = []
-    game_version = open(path.join(repo_path, "version"), encoding="utf-8").read().strip()
-    with open(path.join(repo_path, "lang.vromfs.bin_u/lang/unlocks_medals.csv"), encoding="utf-8") as f:
-        data = csv.DictReader(f, delimiter=";")
-        all_medals.extend(
-            _get_dt_from_csv(data, game_version),
+    repo_dir = Path(repo_path)
+    game_version = (repo_dir / "version").read_text(encoding="utf-8").strip()
+
+    csv_file = repo_dir / "lang.vromfs.bin_u/lang/unlocks_medals.csv"
+
+    df = pd.read_csv(csv_file, delimiter=";")
+
+    # divide into medal and desc
+    medal_df = df[df[KEY_FIELD].apply(is_medal_row)].copy()
+
+    # add medal_id to both medal_df and desc_df
+    medal_df["medal_id"] = medal_df[KEY_FIELD].apply(get_medal_id_from_key)
+    medal_df["country"] = medal_df["medal_id"].apply(guess_country_from_medal_id)
+
+    medal_records = medal_df.to_dict("records")
+    all_medals = [
+        PlayerMedalDesc(
+            medal_id=record["medal_id"],
+            country=record["country"],
+            name_i18n=create_name_i18n_from_row(record),
+            game_version=game_version,
         )
+        for record in medal_records
+    ]
     return ParsedPlayerMedalData(medals=all_medals)

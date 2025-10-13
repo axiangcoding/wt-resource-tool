@@ -9,20 +9,20 @@ from wt_resource_tool.schema._wt_schema import NameI18N, ParsedPlayerTitleData, 
 KEY_FIELD = "<ID|readonly|noverify>"
 
 
-def is_title_key(key: str) -> bool:
+def is_title_row(key: str) -> bool:
     """start with title/ or title_, and not end with /desc"""
     return key.startswith("title") and not key.endswith("/desc")
 
 
-def is_desc_key(key: str) -> bool:
+def is_desc_row(key: str) -> bool:
     """end with /desc"""
     return key.startswith("title") and key.endswith("/desc")
 
 
 def get_title_id_from_key(key: str) -> str:
-    if key.startswith("title/"):
-        key = key.replace("title/", "")
-    return key.replace("/desc", "")
+    """Extract title ID by removing title/ prefix and /desc suffix."""
+    key = key.removeprefix("title/")
+    return key.removesuffix("/desc")
 
 
 def create_name_i18n_from_row(row) -> NameI18N:
@@ -59,8 +59,8 @@ def parse_player_title(repo_path: str) -> ParsedPlayerTitleData:
     df = pd.concat(dfs, ignore_index=True)
 
     # divide into title and desc
-    title_df = df[df[KEY_FIELD].apply(is_title_key)].copy()
-    desc_df = df[df[KEY_FIELD].apply(is_desc_key)].copy()
+    title_df = df[df[KEY_FIELD].apply(is_title_row)].copy()
+    desc_df = df[df[KEY_FIELD].apply(is_desc_row)].copy()
 
     # add title_id to both title_df and desc_df
     title_df["title_id"] = title_df[KEY_FIELD].apply(get_title_id_from_key)
