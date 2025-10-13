@@ -24,6 +24,8 @@ def get_lang_units_data(repo_path: str) -> dict[str, dict[str, str]]:
             "japanese": clean_text(row["<Japanese>"]),
             "chinese": clean_text(row["<Chinese>"]),
             "russian": row["<Russian>"],
+            "h_chinese": clean_text(row["<HChinese>"]),
+            "t_chinese": clean_text(row["<TChinese>"]),
         }
     return result
 

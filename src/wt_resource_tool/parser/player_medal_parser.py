@@ -47,6 +47,8 @@ def _get_dt_from_csv(data: csv.DictReader, game_version: str) -> list[PlayerMeda
                     japanese=clean_text(row["<Japanese>"]),
                     chinese=clean_text(row["<Chinese>"]),
                     russian=row["<Russian>"],
+                    h_chinese=clean_text(row["<HChinese>"]),
+                    t_chinese=clean_text(row["<TChinese>"]),
                 ),
                 game_version=game_version,
             )

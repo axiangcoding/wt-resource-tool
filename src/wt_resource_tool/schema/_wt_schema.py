@@ -37,12 +37,14 @@ class NameI18N(BaseModel):
     # belarusian: str
     # romanian: str
     # vietnamese: str
-    # t_chinese: str
-    # h_chinese: str
+    t_chinese: str
+    h_chinese: str
 
 
 class PlayerTitleDesc(BaseModel):
     title_id: str
+    description: str | None = Field(default=None)
+    description_i18n: NameI18N | None = Field(default=None)
     name_i18n: NameI18N
     game_version: str
 

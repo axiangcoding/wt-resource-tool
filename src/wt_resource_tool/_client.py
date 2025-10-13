@@ -48,20 +48,38 @@ class WTResourceToolABC(BaseModel, ABC):
         """
         # TODO check if the repo is empty and pull it if it is empty
         start_time = time.perf_counter()
+
+        tasks = []
+
         if "player_title" in data_types:
             logger.debug("Parsing player title data from {}", local_repo_path)
-            ts = await asyncio.to_thread(lambda: player_title_parser.parse_player_title(local_repo_path))
-            await self.save_player_title_data(ts)
+
+            async def parse_and_save_title():
+                ts = await asyncio.to_thread(lambda: player_title_parser.parse_player_title(local_repo_path))
+                await self.save_player_title_data(ts)
+
+            tasks.append(parse_and_save_title())
 
         if "player_medal" in data_types:
             logger.debug("Parsing player medal data from {}", local_repo_path)
-            ms = await asyncio.to_thread(lambda: player_medal_parser.parse_player_medal(local_repo_path))
-            await self.save_player_medal_data(ms)
+
+            async def parse_and_save_medal():
+                ms = await asyncio.to_thread(lambda: player_medal_parser.parse_player_medal(local_repo_path))
+                await self.save_player_medal_data(ms)
+
+            tasks.append(parse_and_save_medal())
 
         if "vehicle" in data_types:
             logger.debug("Parsing vehicle data from {}", local_repo_path)
-            vs = await asyncio.to_thread(lambda: vehicle_data_parser.parse_vehicle_data(local_repo_path))
-            await self.save_vehicle_data(vs)
+
+            async def parse_and_save_vehicle():
+                vs = await asyncio.to_thread(lambda: vehicle_data_parser.parse_vehicle_data(local_repo_path))
+                await self.save_vehicle_data(vs)
+
+            tasks.append(parse_and_save_vehicle())
+
+        # parallel run tasks
+        await asyncio.gather(*tasks)
 
         end_time = time.perf_counter()
         logger.info(
