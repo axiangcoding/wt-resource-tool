@@ -24,7 +24,10 @@ dev = [
     "ipykernel>=7.0.0",
     "pytest-asyncio>=1.2.0",
 ]
-types = ["pandas-stubs>=2.2.3.250308,<3"]
+types = [
+    "pandas-stubs>=2.2.3.250308,<3",
+    "types-deprecated>=1.2.15.20250304",
+]
 
 [tool.uv]
 default-groups = ["types"]

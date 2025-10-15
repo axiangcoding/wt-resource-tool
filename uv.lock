@@ -960,6 +960,15 @@ wheels = [
 ]
 
 [[package]]
+name = "types-deprecated"
+version = "1.2.15.20250304"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/0e/67/eeefaaabb03b288aad85483d410452c8bbcbf8b2bd876b0e467ebd97415b/types_deprecated-1.2.15.20250304.tar.gz", hash = "sha256:c329030553029de5cc6cb30f269c11f4e00e598c4241290179f63cda7d33f719", size = 8015, upload-time = "2025-03-04T02:48:17.894Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4d/e3/c18aa72ab84e0bc127a3a94e93be1a6ac2cb281371d3a45376ab7cfdd31c/types_deprecated-1.2.15.20250304-py3-none-any.whl", hash = "sha256:86a65aa550ea8acf49f27e226b8953288cd851de887970fbbdf2239c116c3107", size = 8553, upload-time = "2025-03-04T02:48:16.666Z" },
+]
+
+[[package]]
 name = "types-pytz"
 version = "2025.2.0.20250809"
 source = { registry = "https://pypi.org/simple" }
@@ -1090,6 +1099,7 @@ dev = [
 ]
 types = [
     { name = "pandas-stubs" },
+    { name = "types-deprecated" },
 ]
 
 [package.metadata]
@@ -1112,4 +1122,7 @@ dev = [
     { name = "pytest-asyncio", specifier = ">=1.2.0" },
     { name = "ruff", specifier = ">=0.9.10,<0.10" },
 ]
-types = [{ name = "pandas-stubs", specifier = ">=2.2.3.250308,<3" }]
+types = [
+    { name = "pandas-stubs", specifier = ">=2.2.3.250308,<3" },
+    { name = "types-deprecated", specifier = ">=1.2.15.20250304" },
+]
