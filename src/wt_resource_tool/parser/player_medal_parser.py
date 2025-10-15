@@ -2,8 +2,9 @@ from pathlib import Path
 
 import pandas as pd
 
-from wt_resource_tool.parser.tools import clean_text
-from wt_resource_tool.schema._wt_schema import Country, NameI18N, ParsedPlayerMedalData, PlayerMedalDesc
+from wt_resource_tool.parser.tools import clean_text, create_name_i18n_from_row
+from wt_resource_tool.schema._common import Country, NameI18N
+from wt_resource_tool.schema._medal import ParsedPlayerMedalData, PlayerMedalDesc
 
 KEY_FIELD = "<ID|readonly|noverify>"
 
@@ -50,21 +51,6 @@ def guess_country_from_medal_id(medal_id: str) -> Country:
         return "country_israel"
     else:
         return "unknown"
-
-
-def create_name_i18n_from_row(row) -> NameI18N:
-    return NameI18N(
-        english=row["<English>"],
-        french=row["<French>"],
-        italian=row["<Italian>"],
-        german=row["<German>"],
-        spanish=row["<Spanish>"],
-        japanese=clean_text(row["<Japanese>"]),
-        chinese=clean_text(row["<Chinese>"]),
-        russian=row["<Russian>"],
-        h_chinese=clean_text(row["<HChinese>"]),
-        t_chinese=clean_text(row["<TChinese>"]),
-    )
 
 
 def parse_player_medal(repo_path: str) -> ParsedPlayerMedalData:

@@ -1,5 +1,3 @@
-import pytest
-
 from wt_resource_tool.parser.player_title_parser import parse_player_title
 
 

@@ -1,6 +1,6 @@
 [project]
 name = "wt-resource-tool"
-version = "0.3.2"
+version = "0.4.0"
 description = ""
 authors = [{ name = "axiangcoding", email = "axiangcoding@gmail.com" }]
 requires-python = ">=3.12,<4.0"
@@ -13,6 +13,7 @@ dependencies = [
     "aiofiles (>=24.1.0,<25.0.0)",
     "loguru (>=0.7.3,<0.8.0)",
     "pandas (>=2.2.3,<3.0.0)",
+    "deprecated>=1.2.18",
 ]
 
 [dependency-groups]
@@ -44,3 +45,6 @@ build-backend = "hatchling.build"
 [tool.ruff]
 line-length = 120
 lint.select = ["I", "N", "UP", "B", "A", "ASYNC"]
+
+[tool.pytest.ini_options]
+addopts = "-s --tb=short -v"

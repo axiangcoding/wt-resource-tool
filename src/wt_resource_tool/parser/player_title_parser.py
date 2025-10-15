@@ -3,8 +3,9 @@ from pathlib import Path
 import pandas as pd
 from pandas import DataFrame
 
-from wt_resource_tool.parser.tools import clean_text
-from wt_resource_tool.schema._wt_schema import NameI18N, ParsedPlayerTitleData, PlayerTitleDesc
+from wt_resource_tool.parser.tools import clean_text, create_name_i18n_from_row
+from wt_resource_tool.schema._common import NameI18N
+from wt_resource_tool.schema._title import ParsedPlayerTitleData, PlayerTitleDesc
 
 KEY_FIELD = "<ID|readonly|noverify>"
 
@@ -23,22 +24,6 @@ def get_title_id_from_key(key: str) -> str:
     """Extract title ID by removing title/ prefix and /desc suffix."""
     key = key.removeprefix("title/")
     return key.removesuffix("/desc")
-
-
-def create_name_i18n_from_row(row) -> NameI18N:
-    """Create NameI18N object from a DataFrame row"""
-    return NameI18N(
-        english=row["<English>"],
-        french=row["<French>"],
-        italian=row["<Italian>"],
-        german=row["<German>"],
-        spanish=row["<Spanish>"],
-        japanese=clean_text(row["<Japanese>"]),
-        chinese=clean_text(row["<Chinese>"]),
-        russian=row["<Russian>"],
-        h_chinese=clean_text(row["<HChinese>"]),
-        t_chinese=clean_text(row["<TChinese>"]),
-    )
 
 
 def parse_player_title(repo_path: str) -> ParsedPlayerTitleData:
