@@ -81,8 +81,6 @@ class WTResourceToolABC(ABC):
             f"Parsed and load data {data_types} in {round(end_time - start_time, 2)} seconds",
         )
 
-    @abstractmethod
-    @deprecated(reason="Use search_player_title instead")
     async def get_player_title(
         self,
         title_id: str,
@@ -92,7 +90,38 @@ class WTResourceToolABC(ABC):
         Get title data by id.
 
         """
-        raise NotImplementedError("get_player_title not implemented")
+        founds = await self.search_player_title(title_id=title_id, game_version=game_version)
+        if not founds:
+            return None
+        return founds[0]
+
+    async def get_player_medal(
+        self,
+        medal_id: str,
+        game_version: str = "latest",
+    ) -> PlayerMedalDesc | None:
+        """
+        Get medal data by id.
+
+        """
+        founds = await self.search_player_medal(medal_id=medal_id, game_version=game_version)
+        if not founds:
+            return None
+        return founds[0]
+
+    async def get_vehicle(
+        self,
+        vehicle_id: str,
+        game_version: str = "latest",
+    ) -> VehicleDesc | None:
+        """
+        Get vehicle data by id.
+
+        """
+        founds = await self.search_vehicle(vehicle_id=vehicle_id, game_version=game_version)
+        if not founds:
+            return None
+        return founds[0]
 
     @abstractmethod
     async def search_player_title(
@@ -110,22 +139,10 @@ class WTResourceToolABC(ABC):
         raise NotImplementedError("search_player_title not implemented")
 
     @abstractmethod
-    @deprecated(reason="Use search_player_medal instead")
-    async def get_player_medal(
-        self,
-        medal_id: str,
-        game_version: str = "latest",
-    ) -> PlayerMedalDesc | None:
-        """
-        Get medal data by id.
-
-        """
-        raise NotImplementedError("get_player_medal not implemented")
-
-    @abstractmethod
     async def search_player_medal(
         self,
         medal_id: str | None = None,
+        country: str | None = None,
         game_version: str = "latest",
     ) -> list[PlayerMedalDesc]:
         """
@@ -133,27 +150,16 @@ class WTResourceToolABC(ABC):
 
         Args:
             medal_id (str | None): The medal id to filter. If None, return all medals.
+            country (str | None): The country to filter. If None, return all countries.
             game_version (str): The game version to filter. Default is "latest".
         """
         raise NotImplementedError("search_player_medal not implemented")
 
     @abstractmethod
-    @deprecated(reason="Use search_vehicle instead")
-    async def get_vehicle(
-        self,
-        vehicle_id: str,
-        game_version: str = "latest",
-    ) -> VehicleDesc | None:
-        """
-        Get vehicle data by id.
-
-        """
-        raise NotImplementedError("get_vehicle not implemented")
-
-    @abstractmethod
     async def search_vehicle(
         self,
         vehicle_id: str | None = None,
+        country: str | None = None,
         game_version: str = "latest",
     ) -> list[VehicleDesc]:
         """
@@ -161,6 +167,7 @@ class WTResourceToolABC(ABC):
 
         Args:
             vehicle_id (str | None): The vehicle id to filter. If None, return all vehicles.
+            country (str | None): The country to filter. If None, return all countries.
             game_version (str): The game version to filter. Default is "latest".
 
         """
@@ -206,17 +213,6 @@ class WTResourceToolMemory(WTResourceToolABC):
         self.vehicle_storage: DataFrame | None = None
         self.vehicle_latest_version: str | None = None
 
-    async def get_player_title(self, title_id: str, game_version: str = "latest") -> PlayerTitleDesc | None:
-        if self.player_title_storage is None or self.player_title_latest_version is None:
-            raise ValueError("Player title data not loaded")
-        if game_version == "latest":
-            game_version = self.player_title_latest_version
-        df = self.player_title_storage
-        df_result = df[(df["game_version"] == game_version) & (df["title_id"] == title_id)]
-        if df_result.empty:
-            return None
-        return PlayerTitleDesc.model_validate(df_result.iloc[0].to_dict())
-
     async def search_player_title(
         self,
         title_id: str | None = None,
@@ -227,27 +223,22 @@ class WTResourceToolMemory(WTResourceToolABC):
         if game_version == "latest":
             game_version = self.player_title_latest_version
         df = self.player_title_storage
-        df_result = df[df["game_version"] == game_version]
+
+        query_conditions = ["game_version == @game_version"]
         if title_id is not None:
-            df_result = df_result[df_result["title_id"] == title_id]
+            query_conditions.append("title_id == @title_id")
+
+        query_str = " and ".join(query_conditions)
+        df_result = df.query(query_str)
+
         if df_result.empty:
             return []
         return [PlayerTitleDesc.model_validate(item) for item in df_result.to_dict(orient="records")]
 
-    async def get_player_medal(self, medal_id: str, game_version: str = "latest") -> PlayerMedalDesc | None:
-        if self.player_medal_storage is None or self.player_medal_latest_version is None:
-            raise ValueError("Player medal data not loaded")
-        if game_version == "latest":
-            game_version = self.player_medal_latest_version
-        df = self.player_medal_storage
-        df_result = df[(df["game_version"] == game_version) & (df["medal_id"] == medal_id)]
-        if df_result.empty:
-            return None
-        return PlayerMedalDesc.model_validate(df_result.iloc[0].to_dict())
-
     async def search_player_medal(
         self,
         medal_id: str | None = None,
+        country: str | None = None,
         game_version: str = "latest",
     ) -> list[PlayerMedalDesc]:
         if self.player_medal_storage is None or self.player_medal_latest_version is None:
@@ -255,27 +246,24 @@ class WTResourceToolMemory(WTResourceToolABC):
         if game_version == "latest":
             game_version = self.player_medal_latest_version
         df = self.player_medal_storage
-        df_result = df[df["game_version"] == game_version]
+
+        query_conditions = ["game_version == @game_version"]
         if medal_id is not None:
-            df_result = df_result[df_result["medal_id"] == medal_id]
+            query_conditions.append("medal_id == @medal_id")
+        if country is not None:
+            query_conditions.append("country == @country")
+
+        query_str = " and ".join(query_conditions)
+        df_result = df.query(query_str)
+
         if df_result.empty:
             return []
         return [PlayerMedalDesc.model_validate(item) for item in df_result.to_dict(orient="records")]
 
-    async def get_vehicle(self, vehicle_id: str, game_version: str = "latest") -> VehicleDesc | None:
-        if self.vehicle_storage is None or self.vehicle_latest_version is None:
-            raise ValueError("Vehicle data not loaded")
-        if game_version == "latest":
-            game_version = self.vehicle_latest_version
-        df = self.vehicle_storage
-        df_result = df[(df["game_version"] == game_version) & (df["vehicle_id"] == vehicle_id)]
-        if df_result.empty:
-            return None
-        return VehicleDesc.model_validate(df_result.iloc[0].to_dict())
-
     async def search_vehicle(
         self,
         vehicle_id: str | None = None,
+        country: str | None = None,
         game_version: str = "latest",
     ) -> list[VehicleDesc]:
         if self.vehicle_storage is None or self.vehicle_latest_version is None:
@@ -283,15 +271,23 @@ class WTResourceToolMemory(WTResourceToolABC):
         if game_version == "latest":
             game_version = self.vehicle_latest_version
         df = self.vehicle_storage
-        df_result = df[df["game_version"] == game_version]
+
+        query_conditions = ["game_version == @game_version"]
         if vehicle_id is not None:
-            df_result = df_result[df_result["vehicle_id"] == vehicle_id]
+            query_conditions.append("vehicle_id == @vehicle_id")
+        if country is not None:
+            query_conditions.append("country == @country")
+
+        query_str = " and ".join(query_conditions)
+        df_result = df.query(query_str)
+
         if df_result.empty:
             return []
         return [VehicleDesc.model_validate(item) for item in df_result.to_dict(orient="records")]
 
     async def save_player_title_data(self, title_data: ParsedPlayerTitleData):
-        self.player_title_storage = DataFrame([item.model_dump() for item in title_data.titles])
+        df = DataFrame([item.model_dump() for item in title_data.titles])
+        self.player_title_storage = df
         self.player_title_latest_version = title_data.titles[0].game_version
 
     async def save_player_medal_data(self, medal_data: ParsedPlayerMedalData):
