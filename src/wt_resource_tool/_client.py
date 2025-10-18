@@ -307,6 +307,10 @@ class WTResourceToolParser:
             raise ValueError(f"Repo path {repo_path} is not a directory")
         self.repo_path = repo_path
 
+    async def current_game_version(self) -> str:
+        game_version = (Path(self.repo_path) / "version").read_text(encoding="utf-8").strip()
+        return game_version
+
     async def parse_player_title(self) -> ParsedPlayerTitleData:
         return await asyncio.to_thread(lambda: player_title_parser.parse_player_title(self.repo_path))
 
