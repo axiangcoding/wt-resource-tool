@@ -71,4 +71,4 @@ def parse_vehicle_data(repo_path: str) -> ParsedVehicleData:
             logger.warning("error when parsing vehicle id: {}, skip", key)
             raise e
 
-    return ParsedVehicleData(vehicles=vehicles, max_economic_rank=max_economic_rank)
+    return ParsedVehicleData(vehicles=vehicles, max_economic_rank=max_economic_rank, game_version=game_version)

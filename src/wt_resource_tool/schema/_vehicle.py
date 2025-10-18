@@ -231,3 +231,4 @@ class VehicleDesc(BaseModel):
 class ParsedVehicleData(BaseModel):
     vehicles: list[VehicleDesc]
     max_economic_rank: int
+    game_version: str

@@ -1,10 +1,10 @@
 import asyncio
 import time
 from abc import ABC, abstractmethod
+from pathlib import Path
 from typing import Literal
 
 import numpy as np
-from deprecated import deprecated
 from loguru import logger
 from pandas import DataFrame
 
@@ -299,3 +299,19 @@ class WTResourceToolMemory(WTResourceToolABC):
         df = df.replace({np.nan: None})
         self.vehicle_storage = df
         self.vehicle_latest_version = vehicle_data.vehicles[0].game_version
+
+
+class WTResourceToolParser:
+    def __init__(self, repo_path: str) -> None:
+        if Path(repo_path).is_dir() is False:
+            raise ValueError(f"Repo path {repo_path} is not a directory")
+        self.repo_path = repo_path
+
+    async def parse_player_title(self) -> ParsedPlayerTitleData:
+        return await asyncio.to_thread(lambda: player_title_parser.parse_player_title(self.repo_path))
+
+    async def parse_player_medal(self) -> ParsedPlayerMedalData:
+        return await asyncio.to_thread(lambda: player_medal_parser.parse_player_medal(self.repo_path))
+
+    async def parse_vehicle_data(self) -> ParsedVehicleData:
+        return await asyncio.to_thread(lambda: vehicle_data_parser.parse_vehicle_data(self.repo_path))

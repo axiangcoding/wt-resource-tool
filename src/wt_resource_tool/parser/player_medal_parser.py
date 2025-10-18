@@ -78,4 +78,4 @@ def parse_player_medal(repo_path: str) -> ParsedPlayerMedalData:
         )
         for record in medal_records
     ]
-    return ParsedPlayerMedalData(medals=all_medals)
+    return ParsedPlayerMedalData(medals=all_medals, game_version=game_version)

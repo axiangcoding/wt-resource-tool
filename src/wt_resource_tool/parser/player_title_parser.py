@@ -84,4 +84,4 @@ def parse_player_title(repo_path: str) -> ParsedPlayerTitleData:
         )
         for record in title_records
     ]
-    return ParsedPlayerTitleData(titles=all_titles)
+    return ParsedPlayerTitleData(titles=all_titles, game_version=game_version)

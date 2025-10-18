@@ -12,3 +12,4 @@ class PlayerTitleDesc(BaseModel):
 
 class ParsedPlayerTitleData(BaseModel):
     titles: list[PlayerTitleDesc]
+    game_version: str

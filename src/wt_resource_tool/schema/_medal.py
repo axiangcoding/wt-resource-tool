@@ -42,3 +42,4 @@ class PlayerMedalDesc(BaseModel):
 
 class ParsedPlayerMedalData(BaseModel):
     medals: list[PlayerMedalDesc]
+    game_version: str
