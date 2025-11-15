@@ -48,6 +48,7 @@ def _read_model_info(repo_dir: Path, vehicle: VehicleDesc) -> tuple[str, FlightM
                 data = json.load(f)
             model_info = FlightModel.model_validate(convert_keys_to_snake_case(data))
             return vehicle_id, model_info
+    # TODO: implement tank and ship model reading
     elif vehicle.unit_class_type == "ground":
         ...
     elif vehicle.unit_class_type == "naval":
@@ -57,8 +58,18 @@ def _read_model_info(repo_dir: Path, vehicle: VehicleDesc) -> tuple[str, FlightM
 
 def parse_vehicle_data(
     repo_path: str,
+    read_model_info: bool = False,
     max_workers: int | None = None,
 ) -> ParsedVehicleData:
+    """Parse vehicle data from the given repository path.
+
+    Args:
+        repo_path (str): Path to the repository containing vehicle data.
+        read_model_info (bool): Whether to read detailed model information for each vehicle.
+        max_workers (int | None): Maximum number of worker threads to use when reading model info.
+
+    """
+
     repo_dir = Path(repo_path)
 
     lang_units = _get_units_lang_dict(repo_dir)
@@ -93,39 +104,40 @@ def parse_vehicle_data(
             logger.warning("error when parsing vehicle id: {}, skip", key)
             raise e
 
-    # add model info using thread pool
-    logger.info(f"Reading model info for {len(vehicles)} vehicles using thread pool")
+    if read_model_info:
+        # add model info using thread pool
+        logger.info(f"Reading model info for {len(vehicles)} vehicles using thread pool")
 
-    model_info_dict: dict[str, FlightModel | TankModel | ShipModel | None] = {}
+        model_info_dict: dict[str, FlightModel | TankModel | ShipModel | None] = {}
 
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = [executor.submit(_read_model_info, repo_dir, vehicle) for vehicle in vehicles]
-        completed_count = 0
-        for future in as_completed(futures):
-            try:
-                vehicle_id, model_info = future.result()
-                model_info_dict[vehicle_id] = model_info
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = [executor.submit(_read_model_info, repo_dir, vehicle) for vehicle in vehicles]
+            completed_count = 0
+            for future in as_completed(futures):
+                try:
+                    vehicle_id, model_info = future.result()
+                    model_info_dict[vehicle_id] = model_info
 
-                completed_count += 1
-                if completed_count % 1000 == 0:
-                    logger.info(f"Processed {completed_count}/{len(vehicles)} vehicles")
-            except Exception as e:
-                logger.error(f"Error processing vehicle: {e}")
+                    completed_count += 1
+                    if completed_count % 1000 == 0:
+                        logger.info(f"Processed {completed_count}/{len(vehicles)} vehicles")
+                except Exception as e:
+                    logger.error(f"Error processing vehicle: {e}")
 
-    logger.info(f"Completed reading model info for all {len(vehicles)} vehicles")
+        logger.info(f"Completed reading model info for all {len(vehicles)} vehicles")
 
-    updated_vehicles: list[VehicleDesc] = []
-    for vehicle in vehicles:
-        model_info = model_info_dict.get(vehicle.vehicle_id)
-        if model_info is None:
-            updated_vehicles.append(vehicle)
-        else:
-            if isinstance(model_info, FlightModel):
-                vehicle.flight_model = model_info
-            elif isinstance(model_info, TankModel):
-                vehicle.tank_model = model_info
-            elif isinstance(model_info, ShipModel):
-                vehicle.ship_model = model_info
-            updated_vehicles.append(vehicle)
-
-    return ParsedVehicleData(vehicles=updated_vehicles, max_economic_rank=max_economic_rank, game_version=game_version)
+        updated_vehicles: list[VehicleDesc] = []
+        for vehicle in vehicles:
+            model_info = model_info_dict.get(vehicle.vehicle_id)
+            if model_info is None:
+                updated_vehicles.append(vehicle)
+            else:
+                if isinstance(model_info, FlightModel):
+                    vehicle.flight_model = model_info
+                elif isinstance(model_info, TankModel):
+                    vehicle.tank_model = model_info
+                elif isinstance(model_info, ShipModel):
+                    vehicle.ship_model = model_info
+                updated_vehicles.append(vehicle)
+        vehicles = updated_vehicles
+    return ParsedVehicleData(vehicles=vehicles, max_economic_rank=max_economic_rank, game_version=game_version)
