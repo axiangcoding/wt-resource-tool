@@ -1,5 +1,6 @@
 import re
 import unicodedata
+from typing import Any
 
 from wt_resource_tool.schema._common import NameI18N
 
@@ -17,6 +18,16 @@ def camel_to_snake(name: str) -> str:
 
     s2 = re.sub("([A-Z])([A-Z][a-z])", r"\1_\2", s1)
     return s2.lower()
+
+
+def convert_keys_to_snake_case(data) -> Any:
+    """Recursively convert all dictionary keys from camelCase to snake_case"""
+    if isinstance(data, dict):
+        return {camel_to_snake(k): convert_keys_to_snake_case(v) for k, v in data.items()}
+    elif isinstance(data, list):
+        return [convert_keys_to_snake_case(item) for item in data]
+    else:
+        return data
 
 
 def create_name_i18n_from_row(row) -> NameI18N:

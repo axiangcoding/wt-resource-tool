@@ -1,7 +1,27 @@
+from typing import Any, Literal
+
 from deprecated import deprecated
 from pydantic import BaseModel, Field
 
 from wt_resource_tool.schema._common import Country, NameI18N
+
+
+class FlightModel(BaseModel):
+    model: str
+
+    have_ccip_for_rocket: bool | None = Field(default=None)
+    """Whether the flight model has CCIP for rockets"""
+
+    have_ccrp_for_rocket: bool | None = Field(default=None)
+    """Whether the flight model has CCRP for rockets"""
+
+
+class TankModel(BaseModel):
+    model: str
+
+
+class ShipModel(BaseModel):
+    model: str
 
 
 class VehicleDesc(BaseModel):
@@ -12,6 +32,15 @@ class VehicleDesc(BaseModel):
     name_0_i18n: NameI18N | None
     name_1_i18n: NameI18N | None
     name_2_i18n: NameI18N | None
+
+    flight_model: FlightModel | None = Field(default=None)
+    """Flight model data for aircraft vehicles"""
+
+    tank_model: TankModel | None = Field(default=None)
+    """Tank model data for tank vehicles"""
+
+    ship_model: ShipModel | None = Field(default=None)
+    """Ship model data for ship vehicles"""
 
     rank: int
     """Vehicle rank, from 1 to 10+"""
@@ -175,13 +204,28 @@ class VehicleDesc(BaseModel):
     reload_time_mgun: float | None = Field(default=None)
     """Reload time of the machine gun in seconds"""
 
+    reload_time_additional_gun: float | None = Field(default=None)
+    """Reload time of the additional gun in seconds"""
+
+    max_delta_angle_atgm: float | None = Field(default=None)
+    """Maximum delta angle for ATGMs"""
+
+    max_delta_angle_rockets: float | None = Field(default=None)
+    """Maximum delta angle for rockets"""
+
     max_ammo: int | None = Field(default=None)
     """Maximum ammunition count"""
 
     max_flight_time_minutes: int | None = Field(default=None)
 
+    has_weapon_slots: bool | None = Field(default=None)
+    """Whether the vehicle has customizable weapon slots"""
+
     crew_total_count: int | None = Field(default=None)
     """Total crew count"""
+
+    kill_streak: bool | None = Field(default=None)
+    """kill streak vehicle in arcade mode"""
 
     primary_weapon_auto_loader: bool | None = Field(default=None)
     """Whether the primary weapon is an auto-loader"""
@@ -211,6 +255,15 @@ class VehicleDesc(BaseModel):
     research_type: str | None = Field(default=None)
     """Research type of vehicle. For now only clanVehicle is known"""
 
+    # weapons: dict[str, dict[str, Any]] | None = Field(default=None)
+    # """Weapons data, not fully parsed yet"""
+
+    # modifications: dict[str, dict[str, Any]] | None = Field(default=None)
+    # """Modifications data"""
+
+    spare: dict[str, Any] | None = Field(default=None)
+    """Spare parts data, not fully parsed yet"""
+
     game_version: str
     """Game version when the vehicle data is parsed"""
 
@@ -227,8 +280,43 @@ class VehicleDesc(BaseModel):
         """
         return f"https://cdn.jsdelivr.net/gh/gszabi99/War-Thunder-Datamine@refs/heads/master/atlases.vromfs.bin_u/units/{self.vehicle_id}.png"
 
+    @property
+    def unit_class_type(self) -> Literal["air", "ground", "naval", "unknown"]:
+        if self.unit_class in [
+            "exp_assault",
+            "exp_bomber",
+            "exp_fighter",
+            "exp_helicopter",
+        ]:
+            return "air"
+        elif self.unit_class in [
+            "exp_SPAA",
+            "exp_tank",
+            "exp_heavy_tank",
+            "exp_tank_destroyer",
+        ]:
+            return "ground"
+        elif self.unit_class in [
+            "exp_cruiser",
+            "exp_destroyer",
+            "exp_gun_boat",
+            "exp_torpedo_boat",
+            "exp_torpedo_gun_boat",
+            "exp_naval_ferry_barge",
+            "exp_submarine_chaser",
+        ]:
+            return "naval"
+        else:
+            return "unknown"
+
 
 class ParsedVehicleData(BaseModel):
     vehicles: list[VehicleDesc]
     max_economic_rank: int
     game_version: str
+
+    def get_vehicle_by_id(self, vehicle_id: str) -> VehicleDesc | None:
+        for vehicle in self.vehicles:
+            if vehicle.vehicle_id == vehicle_id:
+                return vehicle
+        return None

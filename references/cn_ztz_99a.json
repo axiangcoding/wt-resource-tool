@@ -1,0 +1,311 @@
+{
+    "value": 1080000,
+    "reqExp": 400000,
+    "trainCost": 310000,
+    "train2Cost": 1080000,
+    "train3Cost_gold": 2200,
+    "train3Cost_exp": 1280000,
+    "repairTimeHrsArcade": 189.18,
+    "repairTimeHrsHistorical": 378.36,
+    "repairTimeHrsSimulation": 396.36,
+    "repairTimeHrsNoCrewArcade": 714.36,
+    "repairTimeHrsNoCrewHistorical": 1092.72,
+    "repairTimeHrsNoCrewSimulation": 1128.72,
+    "repairCostArcade": 4235,
+    "repairCostHistorical": 4112,
+    "repairCostSimulation": 5208,
+    "repairCostPerMinArcade": 1000,
+    "repairCostPerMinHistorical": 1000,
+    "repairCostPerMinSimulation": 1008,
+    "repairCostFullUpgradedArcade": 6943,
+    "repairCostFullUpgradedHistorical": 6742,
+    "repairCostFullUpgradedSimulation": 8538,
+    "battleTimeAwardArcade": 940,
+    "battleTimeAwardHistorical": 990,
+    "battleTimeAwardSimulation": 1200,
+    "avgAwardArcade": 7013,
+    "avgAwardHistorical": 6810,
+    "avgAwardSimulation": 8624,
+    "rewardMulArcade": 1.55,
+    "rewardMulHistorical": 1.94,
+    "rewardMulSimulation": 2.06,
+    "expMul": 2.5,
+    "battleTimeArcade": 92.35,
+    "battleTimeHistorical": 89.67,
+    "battleTimeSimulation": 83.29,
+    "rank": 8,
+    "economicRankArcade": 34,
+    "economicRankHistorical": 34,
+    "economicRankSimulation": 34,
+    "country": "country_china",
+    "unitClass": "exp_tank",
+    "spawnType": "tank",
+    "unitMoveType": "tank",
+    "speed": 50.0,
+    "reqAir": "cn_ztz_99",
+    "commonWeaponImage": "!#ui/gameuiskin#tank_cannon.avif",
+    "crewTotalCount": 3,
+    "turretSpeed": [
+        38.0,
+        15.0
+    ],
+    "primaryWeaponAutoLoader": true,
+    "economicRank": 27,
+    "doesItGiveNationBonus": true,
+    "reloadTime_cannon": 7.1,
+    "weaponUpgrade1": "new_tank_horizontal_aiming",
+    "weaponUpgrade2": "new_tank_vertical_aiming",
+    "weaponUpgrade3": "tank_new_gun",
+    "needBuyToOpenNextInTier1": 1,
+    "needBuyToOpenNextInTier2": 2,
+    "needBuyToOpenNextInTier3": 3,
+    "needBuyToOpenNextInTier4": 3,
+    "maxDmPartRepairTimeSec": 140,
+    "bulletsIconParam": 13,
+    "weapons": {
+        "cn_ztz_99a_default": {
+            "image": "!#ui/gameuiskin#pilons.avif",
+            "value": 0
+        }
+    },
+    "bulletsIconParams": {
+        "125mm_type_99a_user_cannon": 13
+    },
+    "modifications": {
+        "tank_tool_kit": {
+            "tier": 1,
+            "repairCostCoef": 0.011,
+            "reqExp": 4500,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 390
+        },
+        "manual_extinguisher": {
+            "tier": 2,
+            "repairCostCoef": 0.011,
+            "reqExp": 4200,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 360
+        },
+        "new_tank_tracks": {
+            "tier": 1,
+            "repairCostCoef": 0.016,
+            "reqExp": 15000,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 390
+        },
+        "new_tank_suspension": {
+            "tier": 2,
+            "repairCostCoef": 0.013,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 360
+        },
+        "new_tank_filter": {
+            "tier": 3,
+            "repairCostCoef": 0.041,
+            "reqExp": 15000,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 390
+        },
+        "new_tank_brakes": {
+            "tier": 2,
+            "repairCostCoef": 0.021,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 360
+        },
+        "new_tank_transmission": {
+            "tier": 4,
+            "repairCostCoef": 0.056,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 360
+        },
+        "new_tank_engine": {
+            "tier": 4,
+            "repairCostCoef": 0.064,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 360
+        },
+        "new_tank_horizontal_aiming": {
+            "tier": 1,
+            "repairCostCoef": 0.016,
+            "reqExp": 15000,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 390
+        },
+        "new_tank_vertical_aiming": {
+            "tier": 3,
+            "repairCostCoef": 0.038,
+            "reqExp": 15000,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 390
+        },
+        "tank_new_gun": {
+            "tier": 2,
+            "repairCostCoef": 0.026,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 360
+        },
+        "art_support": {
+            "tier": 4,
+            "repairCostCoef": 0.049,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 360
+        },
+        "tank_engine_smoke_screen_system": {
+            "tier": 4,
+            "repairCostCoef": 0.062,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 360
+        },
+        "tank_medical_kit": {
+            "tier": 3,
+            "image": "!#ui/gameuiskin#tank_reinforcement_cn.avif",
+            "reqExp": 15000,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 390
+        },
+        "tank_medical_kit_expendable": {
+            "reqModification": "tank_medical_kit",
+            "tier": 0,
+            "image": "!#ui/gameuiskin#tank_reinforcement_cn.avif",
+            "value": 800,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true
+        },
+        "laser_rangefinder_lws": {
+            "tier": 2,
+            "repairCostCoef": 0.025,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 360,
+            "tutorialMission": "tank_laser_rangefinder_tft"
+        },
+        "tank_bulldozer_blade": {
+            "tier": 1,
+            "repairCostCoef": 0.039,
+            "reqExp": 15000,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 390
+        },
+        "USSR_APDS_FS": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 0,
+            "ammoCount": 1,
+            "bulletsIconParam": 22
+        },
+        "125mm_china_HE": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 0,
+            "ammoCount": 1,
+            "bulletsIconParam": 51
+        },
+        "125mm_china_DTW_APDS_FS": {
+            "reqModification": "125mm_china_DTW_APDS_FS_ammo_pack",
+            "tier": 0,
+            "value": 240,
+            "costGold": 0,
+            "maxCount": 117,
+            "validIfBought": true,
+            "ammoCount": 1,
+            "bulletsIconParam": 23
+        },
+        "125mm_china_DTW_APDS_FS_ammo_pack": {
+            "tier": 4,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 360
+        },
+        "125mm_china_ATGM": {
+            "reqModification": "125mm_china_ATGM_ammo_pack",
+            "tier": 0,
+            "value": 200,
+            "costGold": 0,
+            "maxCount": 117,
+            "validIfBought": true,
+            "ammoCount": 1,
+            "bulletsIconParam": 14
+        },
+        "125mm_china_ATGM_ammo_pack": {
+            "tier": 3,
+            "reqExp": 15000,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 390
+        },
+        "125mm_china_HE_VT": {
+            "reqModification": "125mm_china_HE_VT_ammo_pack",
+            "tier": 0,
+            "value": 240,
+            "costGold": 0,
+            "maxCount": 117,
+            "validIfBought": true,
+            "ammoCount": 1,
+            "bulletsIconParam": 51
+        },
+        "125mm_china_HE_VT_ammo_pack": {
+            "tier": 4,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 360
+        },
+        "tank_smoke_screen_system_mod": {
+            "tier": 4,
+            "modClass": "protection",
+            "repairCostCoef": 0.062,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 360,
+            "weaponUpgrade1": "new_tank_horizontal_aiming",
+            "weaponUpgrade2": "new_tank_vertical_aiming",
+            "weaponUpgrade3": "tank_new_gun"
+        },
+        "night_vision_system": {
+            "tier": 3,
+            "modClass": "protection",
+            "repairCostCoef": 0.087,
+            "image": "!#ui/gameuiskin#thermal_sight.avif",
+            "animation": "video/unitModifications/night_vision_system_thermal.ivf",
+            "reqExp": 15000,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 390
+        },
+        "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 3100
+        }
+    },
+    "spare": {
+        "value": 0,
+        "costGold": 65
+    }
+}

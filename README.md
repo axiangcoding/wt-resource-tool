@@ -1,7 +1,6 @@
 # WT Resource Tool
 
 [![PyPI version](https://img.shields.io/pypi/v/wt-resource-tool.svg)](https://pypi.org/project/wt-resource-tool/)
-[![Python Version](https://img.shields.io/pypi/pyversions/wt-resource-tool.svg)](https://pypi.org/project/wt-resource-tool/)
 [![License](https://img.shields.io/github/license/axiangcoding/wt-resource-tool.svg)](https://github.com/axiangcoding/wt-resource-tool/blob/main/LICENSE)
 
 > [!WARNING]

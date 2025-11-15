@@ -1,0 +1,540 @@
+{
+    "value": 1030000,
+    "reqExp": 400000,
+    "trainCost": 300000,
+    "train2Cost": 1030000,
+    "train3Cost_gold": 3000,
+    "train3Cost_exp": 1140000,
+    "repairTimeHrsArcade": 144.18,
+    "repairTimeHrsHistorical": 342.36,
+    "repairTimeHrsSimulation": 360.36,
+    "repairTimeHrsNoCrewArcade": 624.36,
+    "repairTimeHrsNoCrewHistorical": 1020.72,
+    "repairTimeHrsNoCrewSimulation": 1056.72,
+    "repairCostArcade": 8815,
+    "repairCostHistorical": 4591,
+    "repairCostSimulation": 5222,
+    "repairCostPerMinArcade": 646,
+    "repairCostPerMinHistorical": 1045,
+    "repairCostPerMinSimulation": 1046,
+    "repairCostFullUpgradedArcade": 14967,
+    "repairCostFullUpgradedHistorical": 7795,
+    "repairCostFullUpgradedSimulation": 8867,
+    "battleTimeAwardArcade": 0,
+    "battleTimeAwardHistorical": 860,
+    "battleTimeAwardSimulation": 1100,
+    "avgAwardArcade": 18117,
+    "avgAwardHistorical": 7086,
+    "avgAwardSimulation": 8061,
+    "timedAwardArcade": 1660,
+    "rewardMulArcade": 1.0,
+    "rewardMulHistorical": 2.02,
+    "rewardMulSimulation": 3.31,
+    "expMul": 2.38,
+    "battleTimeArcade": 0.0,
+    "battleTimeHistorical": 19.22,
+    "battleTimeSimulation": 15.57,
+    "rank": 7,
+    "economicRankArcade": 30,
+    "economicRankHistorical": 36,
+    "economicRankSimulation": 30,
+    "country": "country_china",
+    "gunnersCount": 1,
+    "unitClass": "exp_helicopter",
+    "unitMoveType": "helicopter",
+    "speed": 165.0,
+    "maxFlightTimeMinutes": 75,
+    "reqAir": "z_10",
+    "commonWeaponImage": "!#ui/gameuiskin#turret_gun.avif",
+    "crewTotalCount": 2,
+    "killStreak": true,
+    "weaponmask": 1252,
+    "economicRank": 25,
+    "doesItGiveNationBonus": true,
+    "reloadTime_gunner": 40.0,
+    "maxDeltaAngle_atgm": 0.02,
+    "maxDeltaAngle_rockets": 1.3,
+    "reloadTime_additionalGun": 20.0,
+    "hasWeaponSlots": true,
+    "needBuyToOpenNextInTier1": 1,
+    "needBuyToOpenNextInTier2": 2,
+    "needBuyToOpenNextInTier3": 3,
+    "needBuyToOpenNextInTier4": 2,
+    "weapons": {
+        "z_10_default": {
+            "image": "!#ui/gameuiskin#pilons.avif",
+            "hasCountermeasures": true,
+            "weaponmask": 4
+        },
+        "z_10_akd_9_default": {
+            "image": "!#ui/gameuiskin#atgm_heli_preset.avif",
+            "atgmVisibilityType": "default",
+            "atgmMaxDistance": 6000.0,
+            "hasCountermeasures": true,
+            "weaponmask": 68,
+            "sum_weapons": {
+                "containers_akd_9_x4": 1
+            }
+        },
+        "z_10_akd_9": {
+            "image": "!#ui/gameuiskin#atgm_heli_preset.avif",
+            "atgmVisibilityType": "default",
+            "atgmMaxDistance": 6000.0,
+            "hasCountermeasures": true,
+            "weaponmask": 68,
+            "sum_weapons": {
+                "containers_akd_9_x4": 1,
+                "containers_akd_9_x4_default": 1
+            }
+        },
+        "z_10_akd_10": {
+            "image": "!#ui/gameuiskin#atgm_heli_preset.avif",
+            "atgmVisibilityType": "default",
+            "atgmMaxDistance": 10000.0,
+            "hasCountermeasures": true,
+            "weaponmask": 68,
+            "sum_weapons": {
+                "containers_akd_10_x4": 2
+            }
+        },
+        "z_10_cm_502kg": {
+            "image": "!#ui/gameuiskin#atgm_heli_preset.avif",
+            "atgmVisibilityType": "infraRed",
+            "atgmMaxDistance": 25000.0,
+            "hasCountermeasures": true,
+            "weaponmask": 68,
+            "sum_weapons": {
+                "containers_ch_cm502kg_4_left": 2,
+                "containers_ch_cm502kg_4_right": 2
+            }
+        },
+        "z_10_cm_ba_11": {
+            "image": "!#ui/gameuiskin#atgm_heli_preset.avif",
+            "atgmVisibilityType": "infraRed",
+            "atgmMaxDistance": 16000.0,
+            "hasCountermeasures": true,
+            "weaponmask": 68,
+            "sum_weapons": {
+                "containers_ba_11_x4": 2
+            }
+        },
+        "z_10_hf_7d": {
+            "image": "!#ui/gameuiskin#rocket.avif",
+            "totalBombRocketMass": 299,
+            "maxRocketTntMass": 1.43,
+            "hasCountermeasures": true,
+            "weaponmask": 36,
+            "sum_weapons": {
+                "containers_hf7d_cn_fs_70": 4
+            }
+        },
+        "z_10_hf_25": {
+            "image": "!#ui/gameuiskin#rocket.avif",
+            "totalBombRocketMass": 131,
+            "maxRocketTntMass": 0.47,
+            "hasCountermeasures": true,
+            "weaponmask": 36,
+            "sum_weapons": {
+                "containers_hf25_type_57": 2
+            }
+        },
+        "z_10_ty_90": {
+            "image": "!#ui/gameuiskin#air_to_air_missile.avif",
+            "aamGuidanceType": "default",
+            "hasCountermeasures": true,
+            "weaponmask": 132,
+            "sum_weapons": {
+                "containers_ty_90_x4": 4
+            }
+        },
+        "z_10_gun_pod": {
+            "image": "!#ui/gameuiskin#gunpods.avif",
+            "hasCountermeasures": true,
+            "mass_per_sec": 1.29,
+            "weaponmask": 1028,
+            "sum_weapons": {
+                "weapons_gun_qjk_99_12_7_1": 2
+            }
+        },
+        "containers_ch_cm502kg_4_left": {
+            "isWeaponForCustomSlot": true,
+            "atgmVisibilityType": "infraRed",
+            "atgmMaxDistance": 25000.0,
+            "weaponmask": 64,
+            "reqModification": "cn_cm_502kg"
+        },
+        "containers_hf7d_cn_fs_70": {
+            "isWeaponForCustomSlot": true,
+            "maxRocketTntMass": 1.43,
+            "totalBombRocketMass": 74,
+            "weaponDamage": 892,
+            "weaponmask": 32,
+            "reqModification": "cn_hf7d"
+        },
+        "containers_ch_cm502kg_4_right": {
+            "isWeaponForCustomSlot": true,
+            "atgmVisibilityType": "infraRed",
+            "atgmMaxDistance": 25000.0,
+            "weaponmask": 64,
+            "reqModification": "cn_cm_502kg"
+        },
+        "weapons_gun_qjk_99_12_7_1": {
+            "isWeaponForCustomSlot": true,
+            "mass_per_sec": 0.64505,
+            "weaponmask": 1024
+        },
+        "containers_akd_9_x4_default": {
+            "isWeaponForCustomSlot": true,
+            "atgmVisibilityType": "default",
+            "atgmMaxDistance": 6000.0,
+            "weaponmask": 64,
+            "reqModification": "cn_akd_9"
+        },
+        "containers_hf25_type_57": {
+            "isWeaponForCustomSlot": true,
+            "maxRocketTntMass": 0.47,
+            "totalBombRocketMass": 65,
+            "weaponDamage": 719,
+            "weaponmask": 32
+        },
+        "containers_akd_9_x4": {
+            "isWeaponForCustomSlot": true,
+            "atgmVisibilityType": "default",
+            "atgmMaxDistance": 6000.0,
+            "weaponmask": 64
+        },
+        "containers_ty_90_x4": {
+            "isWeaponForCustomSlot": true,
+            "aamGuidanceType": "default",
+            "weaponmask": 128,
+            "reqModification": "cn_ty_90"
+        },
+        "containers_ba_11_x4": {
+            "isWeaponForCustomSlot": true,
+            "atgmVisibilityType": "infraRed",
+            "atgmMaxDistance": 16000.0,
+            "weaponmask": 64,
+            "reqModification": "cn_ba_11"
+        },
+        "containers_akd_10_x4": {
+            "isWeaponForCustomSlot": true,
+            "atgmVisibilityType": "default",
+            "atgmMaxDistance": 10000.0,
+            "weaponmask": 64,
+            "reqModification": "cn_akd_10"
+        },
+        "custom_presets": {
+            "slot": [
+                {
+                    "index": 1,
+                    "hf27": {
+                        "containers_hf7d_cn_fs_70": 1
+                    },
+                    "akd_9_default": {
+                        "containers_akd_9_x4": 1
+                    },
+                    "akd_10": {
+                        "containers_akd_10_x4": 1
+                    },
+                    "cm_502kg_slot1": {
+                        "containers_ch_cm502kg_4_left": 1
+                    },
+                    "ba_11_slot1": {
+                        "containers_ba_11_x4": 1
+                    },
+                    "ty_90": {
+                        "containers_ty_90_x4": 1
+                    }
+                },
+                {
+                    "index": 2,
+                    "hf25": {
+                        "containers_hf25_type_57": 1
+                    },
+                    "hf27": {
+                        "containers_hf7d_cn_fs_70": 1
+                    },
+                    "gun_pod": {
+                        "weapons_gun_qjk_99_12_7_1": 1
+                    },
+                    "ty_90": {
+                        "containers_ty_90_x4": 1
+                    },
+                    "cm_502kg_slot2": {
+                        "containers_ch_cm502kg_4_left": 1
+                    }
+                },
+                {
+                    "index": 3,
+                    "hf25": {
+                        "containers_hf25_type_57": 1
+                    },
+                    "hf27": {
+                        "containers_hf7d_cn_fs_70": 1
+                    },
+                    "gun_pod": {
+                        "weapons_gun_qjk_99_12_7_1": 1
+                    },
+                    "ty_90": {
+                        "containers_ty_90_x4": 1
+                    },
+                    "cm_502kg_slot3": {
+                        "containers_ch_cm502kg_4_right": 1
+                    }
+                },
+                {
+                    "index": 4,
+                    "hf27": {
+                        "containers_hf7d_cn_fs_70": 1
+                    },
+                    "akd_9": {
+                        "containers_akd_9_x4_default": 1
+                    },
+                    "akd_10": {
+                        "containers_akd_10_x4": 1
+                    },
+                    "cm_502kg_slot4": {
+                        "containers_ch_cm502kg_4_right": 1
+                    },
+                    "ba_11_slot4": {
+                        "containers_ba_11_x4": 1
+                    },
+                    "ty_90": {
+                        "containers_ty_90_x4": 1
+                    }
+                }
+            ]
+        }
+    },
+    "modifications": {
+        "new_compressor_heli": {
+            "tier": 1,
+            "repairCostCoef": 0.048,
+            "reqExp": 10000,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 290
+        },
+        "cd_98_main_rotor": {
+            "tier": 2,
+            "repairCostCoef": 0.065,
+            "reqExp": 17000,
+            "value": 25000,
+            "costGold": 0,
+            "openCostGold": 500
+        },
+        "hp_105_jet": {
+            "prevModification": "cd_98_main_rotor",
+            "tier": 3,
+            "repairCostCoef": 0.098,
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 440
+        },
+        "new_heli_cover": {
+            "tier": 4,
+            "repairCostCoef": 0.085,
+            "reqExp": 25000,
+            "value": 37000,
+            "costGold": 0,
+            "openCostGold": 730
+        },
+        "heli_flak_jacket": {
+            "tier": 1,
+            "reqExp": 10000,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 290
+        },
+        "automatic_air_extinguisher": {
+            "prevModification": "new_heli_cover",
+            "tier": 3,
+            "modClass": "weapon",
+            "repairCostCoef": 0.09,
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 440
+        },
+        "heli_structure": {
+            "tier": 2,
+            "repairCostCoef": 0.046,
+            "reqExp": 17000,
+            "value": 25000,
+            "costGold": 0,
+            "openCostGold": 500
+        },
+        "type_23l_armor_targets": {
+            "reqModification": "type_23l_belt_pack",
+            "tier": 0,
+            "value": 510,
+            "costGold": 0,
+            "hasTracer": false,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 350
+        },
+        "type_23l_air_targets": {
+            "reqModification": "type_23l_belt_pack",
+            "tier": 0,
+            "value": 510,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 350
+        },
+        "type_23l_belt_pack": {
+            "tier": 1,
+            "reqExp": 10000,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 290
+        },
+        "type_23l_new_gun": {
+            "reqModification": "type_23l_belt_pack",
+            "tier": 2,
+            "repairCostCoef": 0.019,
+            "reqExp": 17000,
+            "value": 25000,
+            "costGold": 0,
+            "openCostGold": 500
+        },
+        "qjk_99_universal": {
+            "reqModification": "qjk_99_belt_pack",
+            "tier": 0,
+            "value": 770,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 1000
+        },
+        "qjk_99_ground_targets": {
+            "reqModification": "qjk_99_belt_pack",
+            "tier": 0,
+            "value": 770,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 1000
+        },
+        "qjk_99_air_targets": {
+            "reqModification": "qjk_99_belt_pack",
+            "tier": 0,
+            "value": 770,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 1000
+        },
+        "qjk_99_stealth": {
+            "reqModification": "qjk_99_belt_pack",
+            "tier": 0,
+            "value": 1200,
+            "costGold": 0,
+            "hasTracer": false,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 1000
+        },
+        "qjk_99_belt_pack": {
+            "prevModification": "type_23l_new_gun",
+            "tier": 3,
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 440
+        },
+        "qjk_99_new_gun": {
+            "reqModification": "qjk_99_belt_pack",
+            "tier": 4,
+            "repairCostCoef": 0.019,
+            "reqExp": 25000,
+            "value": 37000,
+            "costGold": 0,
+            "openCostGold": 730
+        },
+        "cn_hf7d": {
+            "tier": 1,
+            "reqExp": 10000,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 290
+        },
+        "cn_akd_9": {
+            "tier": 1,
+            "reqExp": 10000,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 290
+        },
+        "cn_akd_10": {
+            "reqModification": "cn_akd_9",
+            "tier": 2,
+            "reqExp": 17000,
+            "value": 25000,
+            "costGold": 0,
+            "openCostGold": 500
+        },
+        "cn_cm_502kg": {
+            "reqModification": "cn_akd_10",
+            "tier": 3,
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 440
+        },
+        "cn_ba_11": {
+            "reqModification": "cn_cm_502kg",
+            "tier": 4,
+            "reqExp": 25000,
+            "value": 37000,
+            "costGold": 0,
+            "openCostGold": 730
+        },
+        "maw_countermeasures_launcher_chaff": {
+            "reqModification": "MAW_system_heli_false_thermal_targets_large",
+            "tier": 0,
+            "value": 0,
+            "costGold": 0,
+            "ammoCount": 1
+        },
+        "MAW_system_heli_false_thermal_targets_large": {
+            "tier": 1,
+            "repairCostCoef": 0.139,
+            "reqExp": 10000,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 290,
+            "deactivationIsAllowed": true
+        },
+        "heli_night_vision_system": {
+            "prevModification": "MAW_system_heli_false_thermal_targets_large",
+            "tier": 3,
+            "modClass": "weapon",
+            "repairCostCoef": 0.09,
+            "image": "!#ui/gameuiskin#thermal_sight.avif",
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 440
+        },
+        "cn_ty_90": {
+            "prevModification": "heli_night_vision_system",
+            "tier": 4,
+            "reqExp": 25000,
+            "value": 37000,
+            "costGold": 0,
+            "openCostGold": 730
+        },
+        "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 2900
+        }
+    },
+    "spare": {
+        "value": 0,
+        "costGold": 60
+    }
+}

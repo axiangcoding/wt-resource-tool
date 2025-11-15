@@ -1076,7 +1076,7 @@ wheels = [
 
 [[package]]
 name = "wt-resource-tool"
-version = "0.4.1"
+version = "0.4.2"
 source = { editable = "." }
 dependencies = [
     { name = "aiofiles" },
@@ -1120,7 +1120,7 @@ dev = [
     { name = "mypy", specifier = ">=1.15.0,<2" },
     { name = "pytest", specifier = ">=8.3.5,<9" },
     { name = "pytest-asyncio", specifier = ">=1.2.0" },
-    { name = "ruff", specifier = ">=0.9.10,<0.10" },
+    { name = "ruff", specifier = ">=0.9.10" },
 ]
 types = [
     { name = "pandas-stubs", specifier = ">=2.2.3.250308,<3" },

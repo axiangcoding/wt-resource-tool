@@ -3,8 +3,7 @@ from pathlib import Path
 import pandas as pd
 from pandas import DataFrame
 
-from wt_resource_tool.parser.tools import clean_text, create_name_i18n_from_row
-from wt_resource_tool.schema._common import NameI18N
+from wt_resource_tool.parser.tools import create_name_i18n_from_row
 from wt_resource_tool.schema._title import ParsedPlayerTitleData, PlayerTitleDesc
 
 KEY_FIELD = "<ID|readonly|noverify>"
