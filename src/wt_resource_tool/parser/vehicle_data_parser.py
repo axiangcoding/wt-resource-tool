@@ -40,7 +40,7 @@ def _get_units_lang_dict(repo_dir: Path) -> dict[str, NameI18N]:
 def _read_model_info(repo_dir: Path, vehicle: VehicleDesc) -> tuple[str, FlightModel | TankModel | ShipModel | None]:
     base_path = Path(repo_dir / "aces.vromfs.bin_u/gamedata")
     vehicle_id = vehicle.vehicle_id
-    
+
     if vehicle.unit_class_type == "air":
         air_path = base_path / f"flightmodels/{vehicle_id}.blkx"
         if air_path.exists():
@@ -107,7 +107,7 @@ def parse_vehicle_data(
                 model_info_dict[vehicle_id] = model_info
 
                 completed_count += 1
-                if completed_count % 100 == 0:
+                if completed_count % 1000 == 0:
                     logger.info(f"Processed {completed_count}/{len(vehicles)} vehicles")
             except Exception as e:
                 logger.error(f"Error processing vehicle: {e}")
