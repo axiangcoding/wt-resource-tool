@@ -1,6 +1,6 @@
 [project]
 name = "wt-resource-tool"
-version = "0.4.2"
+version = "0.5.0"
 description = ""
 authors = [{ name = "axiangcoding", email = "axiangcoding@gmail.com" }]
 requires-python = ">=3.12,<4.0"
