@@ -82,7 +82,7 @@ class VehicleDesc(BaseModel):
     
     For example, bomber, etc..."""
 
-    unit_move_type: str
+    unit_move_type: str | None = Field(default=None)
     """Movement type of vehicle.
     
     For example, air, tank, etc...

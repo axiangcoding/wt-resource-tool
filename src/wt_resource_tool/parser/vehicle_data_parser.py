@@ -63,6 +63,8 @@ def parse_vehicle_data(
 ) -> ParsedVehicleData:
     """Parse vehicle data from the given repository path.
 
+    TODO: model info parser still broken, do not use parameter `read_model_info` and `max_workers` for now.
+
     Args:
         repo_path (str): Path to the repository containing vehicle data.
         read_model_info (bool): Whether to read detailed model information for each vehicle.
